@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -24,7 +25,9 @@ export default function Navbar() {
       <nav className="mx-auto flex items-center justify-between px-32 py-2.5 h-19.25">
         {/* Logo / Brand */}
         <Link href="/" className="text-lg font-semibold tracking-tight">
-          MySite
+          <div className="border border-red-500 bg-black w-36 h-6 p-4 flex items-center justify-center relative">
+            <Image src="/logo.svg" alt="Logo" width={146} height={24} />
+          </div>
         </Link>
 
         {/* Links */}
