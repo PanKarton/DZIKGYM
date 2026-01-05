@@ -1,3 +1,9 @@
+import Hero from "@/components/landing/Hero";
+
 export default function Home() {
-  return <div>Tutaj powstaną cuda.</div>;
+  return (
+    <div>
+      <Hero />
+    </div>
+  );
 }

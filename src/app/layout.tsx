@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Nav/Nav";
+import SvgDefs from "@/components/SvgDefs/SvgDefs";
 
 const myFontConfig = localFont({
   src: [
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="pl">
       <body className={` ${myFontConfig.variable} antialiased`}>
+        <SvgDefs />
         <Navbar />
         {children}
       </body>

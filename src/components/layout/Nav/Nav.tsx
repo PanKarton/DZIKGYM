@@ -17,16 +17,27 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Kontakt", href: "/kontakt" },
 ];
 
+const logoSize = 1;
+
 export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full border-b">
-      <nav className="mx-auto flex items-center justify-between px-32 py-2.5 h-19.25">
+    <header className="w-full fixed top-0 left-0  z-50">
+      <nav className="mx-auto flex items-center justify-between pl-[5%] pr-32 py-2.5 h-19.25">
         {/* Logo / Brand */}
-        <Link href="/" className="text-lg font-semibold tracking-tight">
-          <div className="border border-red-500 bg-black w-36 h-6 p-4 flex items-center justify-center relative">
-            <Image src="/logo.svg" alt="Logo" width={146} height={24} />
+        <Link href="/" className="text-lg font-semibold tracking-tight mr-auto">
+          <div
+            className="flex items-center justify-center relative aspect-[146/24]"
+            style={{ width: `${logoSize * 146}px` }}
+          >
+            <Image
+              src="/logo.svg"
+              alt="Logo"
+              fill
+              className="object-contain"
+              priority
+            />
           </div>
         </Link>
 
