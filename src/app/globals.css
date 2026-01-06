@@ -1,19 +1,38 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #001139;
+  --primary: #ffffff;
+  --primaryHover: #f1f1f1;
+  --secondary: #001139;
+  --cta: #e00000;
+  --ctaHover: #990000;
 }
 
 body {
-  background: var(--background);
+  background: var(--primary);
   color: var(--foreground);
   font-family: var(--font-obviously), system-ui, sans-serif;
 }
 
 @layer utilities {
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .clip-hero {
+    -webkit-clip-path: url(#customHeroClipPath);
     clip-path: url(#customHeroClipPath);
+  }
+  .cta-path {
+    clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
+  }
+  .hero-rounded {
+    border-radius: 10px;
+    border-start-start-radius: 0;
+  }
+  .nav-transition {
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
   .h1-hero {
     font-size: 5.375rem;
