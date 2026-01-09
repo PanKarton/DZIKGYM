@@ -1,13 +1,15 @@
+import CTA from "@/components/ui/cta";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="w-full border-t p-4 flex flex-col items-center gap-4 text-(--primary) pt-20">
-      <div className="w-full hero-rounded relative pl-62 py-24 clip-hero">
+      <div className="w-full  relative pl-62 pt-33 pb-21 clip-hero">
         <div>
           <div className="absolute inset-0 bg-black/80 z-[-1]" />
-          <h2 className="h2-footer font-bold italic mb-3">Marka DZIK</h2>
-          <p className="text-sm/[1.5] font-regular max-w-[33rem] mb-12 ">
+          <h2 className="h2-footer font-black italic mb-3">Marka DZIK</h2>
+          <p className="text-sm/[1.5] font-light max-w-[33rem] mb-12 ">
             DZIK® to marka sportowa założona w piwnicy przez czterech młodych
             przyjaciół, obecnie dająca zatrudnienie około 200 osobom. Wszystko
             zaczęło się od twórczości internetowej, <br />
@@ -15,7 +17,18 @@ export default function Footer() {
             znajdują się ubrania sportowe, suplementy diety i żywność
             funkcjonalna.
           </p>
-          <button>Wejdź na wkdzik.pl -</button>
+          <Link
+            className="w-60 block"
+            href="https://wkdzik.pl"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <CTA variant="blue">
+              <span className="font-light text-sm non-italic">
+                Wejdź na wkdzik.pl
+              </span>
+            </CTA>
+          </Link>
           <Image
             src="/footer-top-background.jpg"
             alt="tło stopki siłownia plenerowa"

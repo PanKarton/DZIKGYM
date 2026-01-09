@@ -7,6 +7,11 @@ import SvgDefs from "@/components/SvgDefs/SvgDefs";
 const myFontConfig = localFont({
   src: [
     {
+      path: "../fonts/Obviously/Obviously-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
       path: "../fonts/Obviously/Obviously-Regular.otf",
       weight: "400",
       style: "normal",
@@ -19,6 +24,16 @@ const myFontConfig = localFont({
     {
       path: "../fonts/Obviously/Obviously-Bold.otf",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Obviously/Obviously-Super.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Obviously/Obviously-Black.otf",
+      weight: "900",
       style: "normal",
     },
   ],

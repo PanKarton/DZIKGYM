@@ -1,5 +1,5 @@
 import Image from "next/image";
-import CTA from "./cta";
+import CTA from "../ui/cta";
 
 const imgScale = 1;
 
@@ -8,7 +8,7 @@ export default function Hero() {
     <section className="px-4 py-2 border text-(--primary) relative">
       <div className="relative  ">
         {/* <div className="absolute left-[0] top-[3px] w-[45rem] h-[60px] bg-gray-900 clip-hero"></div> */}
-        <div className="flex flex-col items-center justify-center h-full gap-12 text-center py-25 border-green-500 bg-gray-900  h-full hero-rounded clip-hero ">
+        <div className="flex flex-col items-center justify-center h-full gap-12 text-center py-25 border-green-500 bg-gray-900  h-full clip-hero ">
           <div
             className="p-4 flex items-center justify-center relative aspect-[265/175]"
             style={{ width: `${imgScale * 265}px` }}
@@ -30,7 +30,11 @@ export default function Hero() {
               Polaków.
             </h2>
           </div>
-          <CTA />
+          <div className="w-57">
+            <CTA variant="red">
+              <span className="font-bold text-lg italic">CTA</span>
+            </CTA>
+          </div>
         </div>
       </div>
     </section>
