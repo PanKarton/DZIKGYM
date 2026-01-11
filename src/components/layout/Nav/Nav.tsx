@@ -1,26 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect } from "react";
 import { cn } from "@/lib/utils/cn";
-
-type NavItem = {
-  label: string;
-  href: string;
-};
-
-const NAV_ITEMS: NavItem[] = [
-  { label: "Strona główna", href: "/" },
-  { label: "O projekcie", href: "/o-projekcie" },
-  { label: "Budżety Obywatelskie", href: "/budżety-obywatelskie" },
-  { label: "Dla Samożądów", href: "/dla-samożądów" },
-  { label: "Blog", href: "/blog" },
-  { label: "Kontakt", href: "/kontakt" },
-];
-
-const logoSize = 1;
+import { NAV_ITEMS } from "@/data/nav-items";
+import BasicLogo from "@/components/ui/BasicLogo";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -57,17 +42,8 @@ export default function Navbar() {
             scrolled ? "pt-0" : "pt-4"
           }`}
         >
-          <div
-            className="flex-center relative aspect-[146/24] "
-            style={{ width: `${logoSize * 146}px` }}
-          >
-            <Image
-              src="/logo.svg"
-              alt="Logo"
-              fill
-              className={`object-contain ${scrolled ? "invert" : ""}`}
-              priority
-            />
+          <div className="w-36">
+            <BasicLogo isInverted={scrolled} />
           </div>
         </Link>
 

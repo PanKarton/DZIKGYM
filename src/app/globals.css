@@ -3,11 +3,13 @@
 :root {
   --primary: #ffffff;
   --primaryHover: #f1f1f1;
+  --offWhite: #c4cccf;
   --secondary: #001139;
   --red: #e00000;
   --redHover: #990000;
   --blue: #00b4de;
   --green: #2def00;
+  --gray: #757676;
 }
 
 body {

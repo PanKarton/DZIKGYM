@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Nav/Nav";
 import SvgDefs from "@/components/SvgDefs/SvgDefs";
+import Copyrights from "@/components/layout/Copyrights/Copyrights";
+import Footer from "@/components/layout/Footer/Footer";
 
 const myFontConfig = localFont({
   src: [
@@ -57,6 +59,8 @@ export default function RootLayout({
         <SvgDefs />
         <Navbar />
         {children}
+        <Footer />
+        <Copyrights />
       </body>
     </html>
   );
