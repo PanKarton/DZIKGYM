@@ -3,9 +3,13 @@
 :root {
   --primary: #ffffff;
   --primaryHover: #f1f1f1;
+  --offWhite: #c4cccf;
   --secondary: #001139;
-  --cta: #e00000;
-  --ctaHover: #990000;
+  --red: #e00000;
+  --redHover: #990000;
+  --blue: #00b4de;
+  --green: #2def00;
+  --gray: #757676;
 }
 
 body {
@@ -25,11 +29,7 @@ body {
     clip-path: url(#customHeroClipPath);
   }
   .cta-path {
-    clip-path: polygon(6% 0%, 100% 0%, 94% 100%, 0% 100%);
-  }
-  .hero-rounded {
-    border-radius: 10px;
-    border-start-start-radius: 0;
+    transform: skewX(-15deg);
   }
   .nav-transition {
     transition: all 0.3s ease, box-shadow 0.3s ease;

@@ -3,9 +3,16 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/layout/Nav/Nav";
 import SvgDefs from "@/components/SvgDefs/SvgDefs";
+import Copyrights from "@/components/layout/Copyrights/Copyrights";
+import Footer from "@/components/layout/Footer/Footer";
 
 const myFontConfig = localFont({
   src: [
+    {
+      path: "../fonts/Obviously/Obviously-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
     {
       path: "../fonts/Obviously/Obviously-Regular.otf",
       weight: "400",
@@ -19,6 +26,16 @@ const myFontConfig = localFont({
     {
       path: "../fonts/Obviously/Obviously-Bold.otf",
       weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Obviously/Obviously-Super.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../fonts/Obviously/Obviously-Black.otf",
+      weight: "900",
       style: "normal",
     },
   ],
@@ -42,6 +59,8 @@ export default function RootLayout({
         <SvgDefs />
         <Navbar />
         {children}
+        <Footer />
+        <Copyrights />
       </body>
     </html>
   );

@@ -1,25 +1,14 @@
-import Image from "next/image";
-import CTA from "./cta";
-
-const imgScale = 1;
+import CTA from "../ui/Cta";
+import ColorLogo from "../ui/ColorLogo";
 
 export default function Hero() {
   return (
     <section className="px-4 py-2 border text-(--primary) relative">
       <div className="relative  ">
         {/* <div className="absolute left-[0] top-[3px] w-[45rem] h-[60px] bg-gray-900 clip-hero"></div> */}
-        <div className="flex flex-col items-center justify-center h-full gap-12 text-center py-25 border-green-500 bg-gray-900  h-full hero-rounded clip-hero ">
-          <div
-            className="p-4 flex items-center justify-center relative aspect-[265/175]"
-            style={{ width: `${imgScale * 265}px` }}
-          >
-            <Image
-              src="/logo-color.svg"
-              alt="Logo z kolorami"
-              fill
-              className={`object-contain`}
-              priority
-            />
+        <div className="flex flex-col items-center justify-center h-full gap-12 text-center py-35  bg-gray-900  h-full clip-hero ">
+          <div className="w-66">
+            <ColorLogo />
           </div>
           <div className="flex flex-col gap-6">
             <h1 className="text-7xl font-bold italic h1-hero max-w-[17ch]">
@@ -30,7 +19,11 @@ export default function Hero() {
               Polaków.
             </h2>
           </div>
-          <CTA />
+          <div className="w-57">
+            <CTA variant="red">
+              <span className="font-bold text-lg italic">CTA</span>
+            </CTA>
+          </div>
         </div>
       </div>
     </section>
