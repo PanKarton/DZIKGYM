@@ -46,7 +46,7 @@ export default function Footer() {
         </nav>
         <div>
           <h3 className="font-bold italic text-sm mb-5">WARTO ZAJRZEĆ</h3>
-          <ul className="space-y-2 text-sm font-thin text-white/80">
+          <ul className="space-y-2 text-sm font-thin text-(--offWhite)">
             <li>
               <Link href="/blog">Sklep WKDZIK.pl</Link>
             </li>
