@@ -3,7 +3,7 @@ import ColorLogo from "../ui/ColorLogo";
 
 export default function Hero() {
   return (
-    <section className="px-4 py-2 border text-(--primary) relative">
+    <section className="px-4 py-4 border text-(--primary) relative">
       <div className="relative  ">
         {/* <div className="absolute left-[0] top-[3px] w-[45rem] h-[60px] bg-gray-900 clip-hero"></div> */}
         <div className="flex flex-col items-center justify-center h-full gap-12 text-center py-35  bg-gray-900  h-full clip-hero ">
