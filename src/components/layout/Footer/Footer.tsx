@@ -1,14 +1,12 @@
 import ColorLogo from "@/components/ui/ColorLogo";
-import Image from "next/image";
 import Link from "next/link";
 import { NAV_ITEMS } from "@/data/nav-items";
 
 import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import CircleLink from "@/components/ui/CircleLink";
-import BrandInfoSection from "../BrandInfoSection/BrandInfoSection";
+import BrandInfoSection from "../../landing/BrandInfoSection/BrandInfoSection";
 
 export default function Footer() {
-  console.log("navitems to ", typeof NAV_ITEMS);
   return (
     <footer className="w-full p-4 flex flex-col items-center gap-4 text-(--primary) pt-20">
       <BrandInfoSection />
