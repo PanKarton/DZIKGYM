@@ -4,6 +4,7 @@
   --primary: #ffffff;
   --primaryHover: #f1f1f1;
   --offWhite: #c4cccf;
+  --offWhiteDarker: #949494;
   --secondary: #001139;
   --red: #e00000;
   --redHover: #990000;
@@ -46,9 +47,8 @@ body {
   .h2-footer {
     font-size: 2.5rem;
   }
-  .blue-red-gradient {
-  }
-
-  .blue-green-gradient {
+  .content-max-width {
+    width: min(100%, 90rem);
+    padding-inline: 3.75rem;
   }
 }
