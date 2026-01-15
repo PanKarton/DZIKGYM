@@ -52,4 +52,7 @@ body {
     width: min(100%, 90rem);
     padding-inline: 3.75rem;
   }
+  .aspect-map {
+    aspect-ratio: 1920/800;
+  }
 }
