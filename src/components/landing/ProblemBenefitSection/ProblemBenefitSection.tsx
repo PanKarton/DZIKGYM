@@ -1,6 +1,8 @@
 import CTA from "@/components/ui/Cta";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
+import PercentageIncreasing from "@/components/ui/PercentageIncreasing";
 import Image from "next/image";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function ProblemBenefitSection() {
   return (
@@ -17,12 +19,10 @@ export default function ProblemBenefitSection() {
                 className="object-contain"
               />
             </div>
-            <p className="text-[5.375rem] leading-none font-extrabold italic text-(--red) mb-2">
-              70%
-            </p>
+            <PercentageIncreasing />
             <p className="text-(--offWhite) font-thin text-sm leading-[1.5]">
               Taki procent Polaków{" "}
-              <span className="text-[var(--red)] font-semibold">
+              <span className="text-[var(--red)] font-medium">
                 ma nadwagę lub jest otyła
               </span>
               . Jeszcze więcej nie spełnia podstawowych norm aktywności
@@ -31,16 +31,16 @@ export default function ProblemBenefitSection() {
           </div>
 
           <div className="hidden lg:block">
-            <div className="w-22 aspect-square flex items-center justify-center border-2">
-              {/* SVG Arrow Here */}
+            <div className="w-12 aspect-square flex items-center justify-center relative">
+              <Image src="./right-arrow.svg" alt="arrow" fill />
             </div>
           </div>
 
           <div className="flex-1 max-w-2xl text-left  ">
-            <p className="inline-flex items-center justify-center bg-(--blue) px-4 py-2.5 text-(--primary) uppercase tracking-wide text-sm leading-[1] mb-5">
+            <p className="inline-flex items-center justify-center bg-(--blue) px-4 text-(--primary) uppercase tracking-wide text-sm leading-8 mb-5">
               Nasze rozwiązanie
             </p>
-            <h2 className="text-3xl md:text-4xl font-extrabold italic text-[#0f172a] leading-tight mb-4">
+            <h2 className="text-3xl md:text-[2.5rem] font-extrabold italic text-[#0f172a] leading-tight mb-4">
               Pełnowartościowy i bezpieczny trening siłowy dla wszystkich.{" "}
               <span className="text-[var(--blue)]">Za darmo.</span>
             </h2>
@@ -61,7 +61,12 @@ export default function ProblemBenefitSection() {
               aktywności fizycznej.
             </p>
             <div className="w-50">
-              <CTA variant="blue">Dupa</CTA>
+              <CTA variant="blueTaller">
+                <span className="font-sm font-semibold leading-0">
+                  O projekcie{" "}
+                </span>
+                <FaArrowRightLong className="relative -translate-y-[1px] scale-[1.2]" />
+              </CTA>
             </div>
           </div>
         </div>

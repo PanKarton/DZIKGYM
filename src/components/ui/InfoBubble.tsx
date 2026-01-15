@@ -3,7 +3,7 @@ import { IoIosInformationCircleOutline } from "react-icons/io";
 const styles = {
   bubble: {
     animationStyles:
-      "opacity-0 scale-95 group-hover:scale-100 group-hover:opacity-100 transition-all duration-200 ease-out pointer-events-none group-hover:pointer-events-auto",
+      "opacity-0 scale-y-50 group-hover:scale-100 group-hover:opacity-100 transition-all duration-100 ease-out pointer-events-none group-hover:pointer-events-auto",
   },
   leftTranslate: "left-full -translate-x-full",
   rightTranslate: "left-0",
