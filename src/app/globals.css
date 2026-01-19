@@ -26,18 +26,18 @@ body {
     align-items: center;
     justify-content: center;
   }
-  /* .clip-hero {
+  .clip-hero {
     -webkit-clip-path: url(#customHeroClipPath);
     clip-path: url(#customHeroClipPath);
-  } */
-  /* .clip-footer {
+  }
+  .clip-footer {
     -webkit-clip-path: url(#customFooterClipPath);
     clip-path: url(#customFooterClipPath);
   }
   .clip-sub-hero {
     -webkit-clip-path: url(#customSubHeroClipPath);
     clip-path: url(#customSubHeroClipPath);
-  } */
+  }
   .cta-path {
     transform: skewX(-15deg);
   }
