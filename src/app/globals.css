@@ -1,26 +1,76 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --primary: #ffffff;
+  --primaryHover: #f1f1f1;
+  --offWhite: #c4cccf;
+  --offWhiteDarker: #949494;
+  --secondary: #001139;
+  --red: #e00000;
+  --redHover: #990000;
+  --blue: #00b4de;
+  --green: #2def00;
+  --gray: #757676;
+  --lightGray: #f1f1f1;
 }
 
 body {
-  background: var(--background);
+  background: var(--primary);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-obviously), system-ui, sans-serif;
+}
+
+@layer utilities {
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .clip-hero {
+    -webkit-clip-path: url(#customHeroClipPath);
+    clip-path: url(#customHeroClipPath);
+  }
+  .clip-footer {
+    -webkit-clip-path: url(#customFooterClipPath);
+    clip-path: url(#customFooterClipPath);
+  }
+  .clip-sub-hero {
+    -webkit-clip-path: url(#customSubHeroClipPath);
+    clip-path: url(#customSubHeroClipPath);
+  }
+  .cta-path {
+    transform: skewX(-15deg);
+  }
+  .nav-transition {
+    transition:
+      all 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+  .h1-hero {
+    font-size: 5.375rem;
+    letter-spacing: 0.3%;
+    line-height: 105%;
+  }
+  .h2-hero {
+    font-size: 1.25rem;
+    line-height: 130%;
+  }
+  .h2-footer {
+    font-size: 2.5rem;
+  }
+  .content-max-width {
+    width: min(100%, 90rem);
+    padding-inline: 3.75rem;
+  }
+  .aspect-map {
+    aspect-ratio: 1920/800;
+  }
+  .sub-hero-gradient {
+    background: linear-gradient(
+      180deg,
+      #000000 13.71%,
+      rgba(0, 0, 0, 0) 56.86%,
+      #000000 100%
+    );
+  }
 }
