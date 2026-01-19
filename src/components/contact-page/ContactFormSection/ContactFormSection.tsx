@@ -7,10 +7,10 @@ export default function ContactFormSection() {
   return (
     <section className="w-full bg-(--primary) text-(--secondary)">
       <div className="content-max-width mx-auto py-24 ">
-        <div className="flex gap-16">
+        <div className="flex flex-col xl:flex-row gap-16">
           {/* Left column */}
-          <div className="min-w-116">
-            <h2 className="text-[2.5rem] font-extrabold italic leading-[1.05] ">
+          <div className="sm:min-w-116">
+            <h2 className="text-3xl sm:text-[2.5rem] font-extrabold italic leading-[1.05] ">
               Napisz, a chętnie
               <br />
               dopowiemy co
