@@ -1,0 +1,66 @@
+import Image from "next/image";
+import { MdOutlineMail } from "react-icons/md";
+
+const team = [
+  {
+    name: "Damian",
+    lastName: "Dąbrowski",
+    email: "gym@wkdzik.pl",
+    image: "/",
+  },
+  {
+    name: "Damian",
+    lastName: " Dąbrowski",
+    email: "gym@wkdzik.pl",
+    image: "/",
+  },
+  {
+    name: "Damian",
+    lastName: "Dąbrowski",
+    email: "gym@wkdzik.pl",
+    image: "/",
+  },
+];
+
+export default function TeamSection() {
+  return (
+    <section className="bg-(--lightGray) py-24 text-center">
+      <div className="content-max-width mx-auto flex-center flex-col">
+        <h2 className="text-2xl md:text-[2.5rem] font-bold italic text-(--secondary) mb-12">
+          Osoby odpowiedzialne za DZIK GYM
+        </h2>
+
+        <div className="w-full grid grid-cols-3 justify-between gap-8 ">
+          {team.map((member, index) => (
+            <div
+              key={index}
+              className="bg-white aspect-[420/590] rounded-3xl py-16 px-12 shadow-md flex flex-col items-center gap-12"
+            >
+              <div className="relative w-full aspect-[320/240] bg-gray-200 rounded-md overflow-hidden">
+                <Image
+                  src={member.image}
+                  alt={member.name + " " + member.lastName}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              {/* <div className="border-1 py"> */}
+              <h3 className="mt-4 font-bold italic text-(--secondary) text-4xl">
+                {member.name}
+                <br />
+                {member.lastName}
+              </h3>
+              <div className="flex items-center gap-2 text-sm  font-medium  ">
+                <MdOutlineMail
+                  style={{ color: "var(--blue)", fontSize: "1.5rem" }}
+                />
+                <span>{member.email}</span>
+              </div>
+            </div>
+            // </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

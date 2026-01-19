@@ -30,6 +30,14 @@ body {
     -webkit-clip-path: url(#customHeroClipPath);
     clip-path: url(#customHeroClipPath);
   }
+  .clip-footer {
+    -webkit-clip-path: url(#customFooterClipPath);
+    clip-path: url(#customFooterClipPath);
+  }
+  .clip-sub-hero {
+    -webkit-clip-path: url(#customSubHeroClipPath);
+    clip-path: url(#customSubHeroClipPath);
+  }
   .cta-path {
     transform: skewX(-15deg);
   }
@@ -54,5 +62,13 @@ body {
   }
   .aspect-map {
     aspect-ratio: 1920/800;
+  }
+  .sub-hero-gradient {
+    background: linear-gradient(
+      180deg,
+      #000000 13.71%,
+      rgba(0, 0, 0, 0) 56.86%,
+      #000000 100%
+    );
   }
 }

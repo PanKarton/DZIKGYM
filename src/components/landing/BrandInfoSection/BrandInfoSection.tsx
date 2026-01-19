@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function BrandInfoSection() {
   return (
-    <div className="w-full  relative pt-33 pb-21 clip-hero flex items-center justify-center">
+    <div className="w-full  relative pt-33 pb-21 clip-footer flex items-center justify-center">
       <div className="content-max-width">
         <div className="absolute inset-0 bg-black/80 z-[-1]" />
         <h2 className="h2-footer font-black italic mb-3">Marka DZIK</h2>
