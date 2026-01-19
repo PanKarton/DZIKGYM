@@ -42,7 +42,9 @@ body {
     transform: skewX(-15deg);
   }
   .nav-transition {
-    transition: all 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      all 0.3s ease,
+      box-shadow 0.3s ease;
   }
   .h1-hero {
     font-size: 5.375rem;

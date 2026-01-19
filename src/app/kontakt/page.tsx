@@ -1,3 +1,4 @@
+import ContactFormSection from "@/components/contact-page/ContactFormSection/ContactFormSection";
 import TeamSection from "@/components/contact-page/TeamSection/TeamSection";
 import SubHero from "@/components/layout/SubHero/SubHero";
 import CTA from "@/components/ui/Cta";
@@ -17,6 +18,7 @@ export default function Home() {
           </CTA>
         </div>
       </SubHero>
+      <ContactFormSection />
       <TeamSection />
     </div>
   );

@@ -34,7 +34,7 @@ export default function TeamSection() {
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-white aspect-[420/590] rounded-3xl py-16 px-12 shadow-md flex flex-col items-center gap-12"
+              className="bg-white aspect-[420/590] rounded-3xl py-16 px-12 shadow-2xl flex flex-col items-center gap-12 transition-transform duration-100 ease-out hover:scale-102"
             >
               <div className="relative w-full aspect-[320/240] bg-gray-200 rounded-md overflow-hidden">
                 <Image
