@@ -1,5 +1,7 @@
 import FoundersSection from "@/components/about-page/FoundersSection/FoundersSection";
 import ProblemStatsSection from "@/components/about-page/ProblemStatsSection/ProblemStatsSection";
+import UniqueProjectSection from "@/components/about-page/UniqueProjectSection/UniqueProjectSection";
+import GymComparison from "@/components/landing/GymComparison/GymComparison";
 import SubHero from "@/components/layout/SubHero/SubHero";
 
 export default function About() {
@@ -11,6 +13,8 @@ export default function About() {
       />
       <FoundersSection />
       <ProblemStatsSection />
+      <UniqueProjectSection />
+      <GymComparison />
     </div>
   );
 }
