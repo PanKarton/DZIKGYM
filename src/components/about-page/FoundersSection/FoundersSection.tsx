@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/Cta";
+import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import Image from "next/image";
 
 export default function FoundersSection() {
@@ -6,9 +7,7 @@ export default function FoundersSection() {
     <section className="px-6">
       <div className="content-max-width">
         <div className="text-center mb-12">
-          <h2 className="text-2xl md:text-[2.5rem] font-extrabold italic text-[var(--secondary)]">
-            Kto stworzył DZIK GYM?
-          </h2>
+          <SectionHeading>Kto stworzył DZIK GYM?</SectionHeading>
           <p className="mt-4  mx-auto text-sm md:text-lg text-[var(--secondary)]/80">
             Jesteśmy grupą przyjaciół z Warszawy, która od lat inspiruje i
             motywuje do aktywnego stylu życia.

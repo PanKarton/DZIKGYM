@@ -2,11 +2,11 @@
 
 import { useEffect, useState } from "react";
 
-export default function PercentageIncreasing() {
+export default function PercentageIncreasing({ target }: { target: number }) {
   const [percentage, setPercentage] = useState(0);
 
   useEffect(() => {
-    const targetPercentage = 70;
+    const targetPercentage = target;
     const duration = 1500; // milliseconds
     const startTime = Date.now();
 
@@ -29,7 +29,7 @@ export default function PercentageIncreasing() {
     return () => {
       // Cleanup if needed, though requestAnimationFrame handles its own lifecycle
     };
-  }, []);
+  }, [target]);
 
   return (
     <p className="text-[5.375rem] leading-none font-black italic text-(--red) mb-2">

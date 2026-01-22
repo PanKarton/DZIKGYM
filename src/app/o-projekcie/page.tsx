@@ -1,4 +1,5 @@
 import FoundersSection from "@/components/about-page/FoundersSection/FoundersSection";
+import ProblemStatsSection from "@/components/about-page/ProblemStatsSection/ProblemStatsSection";
 import SubHero from "@/components/layout/SubHero/SubHero";
 
 export default function About() {
@@ -9,6 +10,7 @@ export default function About() {
         subheading="Nowoczesna siłownia plenerowa DZIK GYM dla Twojej Gminy."
       />
       <FoundersSection />
+      <ProblemStatsSection />
     </div>
   );
 }

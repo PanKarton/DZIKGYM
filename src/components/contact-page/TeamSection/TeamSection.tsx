@@ -1,3 +1,4 @@
+import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import Image from "next/image";
 import { MdOutlineMail } from "react-icons/md";
 
@@ -26,9 +27,9 @@ export default function TeamSection() {
   return (
     <section className="bg-(--lightGray) py-24 text-center">
       <div className="content-max-width mx-auto flex-center flex-col">
-        <h2 className="text-2xl md:text-[2.5rem] font-bold italic text-(--secondary) mb-12">
+        <SectionHeading className="mb-12">
           Osoby odpowiedzialne za DZIK GYM
-        </h2>
+        </SectionHeading>
 
         <div className="w-full grid grid-cols-3 justify-between gap-8 ">
           {team.map((member, index) => (
