@@ -61,6 +61,7 @@ body {
   .content-max-width {
     width: min(100%, 90rem);
     padding-inline: 3.75rem;
+    margin-inline: auto;
   }
   .aspect-map {
     aspect-ratio: 1920/800;
@@ -72,5 +73,8 @@ body {
       rgba(0, 0, 0, 0) 56.86%,
       #000000 100%
     );
+  }
+  .founders-gradient {
+    background: linear-gradient(180deg, rgba(0, 17, 57, 0) 0%, #001139 100%);
   }
 }

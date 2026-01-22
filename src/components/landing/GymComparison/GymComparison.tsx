@@ -2,6 +2,7 @@ import GradientBlueGreen from "@/components/ui/GradientBlueGreen";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import GreenPlus from "@/components/ui/GreenPlus";
 import RedMinus from "@/components/ui/RedMinus";
+import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import Image from "next/image";
 
 const styles = {
@@ -28,9 +29,10 @@ export default function GymComparison() {
     <section className="mx-auto px-4 pt-16 pb-100 text-center flex-center">
       <div className="content-max-width">
         {/* Title */}
-        <h2 className="text-2xl md:text-[2.5rem] font-black italic text-[#0f172a] mb-12">
+
+        <SectionHeading className="mb-12">
           Dlaczego nasza siłownia jest lepsza?
-        </h2>
+        </SectionHeading>
 
         {/* Image Section */}
         <div className="relative flex flex-col md:flex-row justify-center items-center gap-4 ">

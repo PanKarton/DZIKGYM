@@ -19,7 +19,7 @@ export default function ProblemBenefitSection() {
                 className="object-contain"
               />
             </div>
-            <PercentageIncreasing />
+            <PercentageIncreasing target={70} />
             <p className="text-(--offWhite) font-thin text-sm leading-[1.5]">
               Taki procent Polaków{" "}
               <span className="text-[var(--red)] font-medium">
