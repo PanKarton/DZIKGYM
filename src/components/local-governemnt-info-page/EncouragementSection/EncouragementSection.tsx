@@ -1,4 +1,4 @@
-import CTA from "@/components/ui/Cta";
+import CTA from "@/components/ui/cta";
 
 export default function EncouragementSection() {
   return (
