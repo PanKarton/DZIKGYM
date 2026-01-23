@@ -1,6 +1,6 @@
 type CTAProps = {
   children: React.ReactNode;
-  variant?: "red" | "blue" | "blueTaller" | "redWide";
+  variant?: "red" | "blue" | "blueTaller" | "redWide" | "blueGradient";
 };
 
 const variantClasses = {
@@ -10,6 +10,8 @@ const variantClasses = {
   blue: "bg-transparent py-1 border-[2px] border-[--blue] text-(--blue)  hover:bg-(--blue) hover:text-white aspect-[252/56]",
   blueTaller:
     "bg-transparent py-1 border-[2px] border-[--blue] text-(--blue)  hover:bg-(--blue) hover:text-white aspect-[200/56]",
+  blueGradient:
+    "py-3 text-white aspect-[252/56] bg-gradient-to-r from-[#00B4DE] to-[#005B70] hover:brightness-110",
 };
 
 export default function CTA({ children, variant }: CTAProps) {

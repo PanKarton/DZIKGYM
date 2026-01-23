@@ -2,6 +2,7 @@ import ProblemStatsSection from "@/components/about-page/ProblemStatsSection/Pro
 import SubHero from "@/components/layout/SubHero/SubHero";
 import BenefitCarousel from "@/components/local-governemnt-info-page/BenefitCarousel/BenefitCarousel";
 import EncouragementSection from "@/components/local-governemnt-info-page/EncouragementSection/EncouragementSection";
+import OutdoorGymDescriptionSection from "@/components/local-governemnt-info-page/OutdoorGymDescriptionSection/OutdoorGymDescriptionSection";
 
 const heroData = {
   heading: "Dla samorządów",
@@ -16,6 +17,7 @@ export default function Home() {
         subheading={heroData.subheading}
       ></SubHero>
       <ProblemStatsSection />
+      <OutdoorGymDescriptionSection />
       <BenefitCarousel />
       <EncouragementSection />
     </div>
