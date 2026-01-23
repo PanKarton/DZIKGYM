@@ -302,7 +302,7 @@ export default function ContactForm() {
           )}
 
           <div className="w-50 ml-auto">
-            <CTA variant="redDarkGradient">
+            <CTA variant="redWide">
               Wyślij
               <FaArrowRightLong className="relative -translate-y-[1px] scale-[1.2]" />
             </CTA>

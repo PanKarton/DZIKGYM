@@ -6,8 +6,8 @@ type NavItem = {
 export const NAV_ITEMS: NavItem[] = [
   { label: "Strona główna", href: "/" },
   { label: "O projekcie", href: "/o-projekcie" },
-  { label: "Budżety Obywatelskie", href: "/budżety-obywatelskie" },
-  { label: "Dla Samożądów", href: "/dla-samożądów" },
+  { label: "Budżety Obywatelskie", href: "/budzety-obywatelskie" },
+  { label: "Dla Samożądów", href: "/dla-samorzadow" },
   { label: "Blog", href: "/blog" },
   { label: "Kontakt", href: "/kontakt" },
 ];
