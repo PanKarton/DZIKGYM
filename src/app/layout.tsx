@@ -62,20 +62,6 @@ export default function RootLayout({
     <html lang="pl">
       <body className={` ${myFontConfig.variable} antialiased`}>
         <SvgDefs />
-        <style jsx global>{`
-          .clip-hero {
-            -webkit-clip-path: url(#customHeroClipPath);
-            clip-path: url(#customHeroClipPath);
-          }
-          .clip-footer {
-            -webkit-clip-path: url(#customFooterClipPath);
-            clip-path: url(#customFooterClipPath);
-          }
-          .clip-sub-hero {
-            -webkit-clip-path: url(#customSubHeroClipPath);
-            clip-path: url(#customSubHeroClipPath);
-          }
-        `}</style>
         <Navbar />
         {children}
         <Footer />
