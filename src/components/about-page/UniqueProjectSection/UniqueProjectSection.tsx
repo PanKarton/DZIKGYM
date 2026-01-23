@@ -7,7 +7,7 @@ const styles = {
 
 export default function UniqueProjectSection() {
   return (
-    <section className="py-24  relative">
+    <section className="pb-24  relative">
       <GradientBlueRed />
       <div className="content-max-width">
         <div className="flex gap-10 items-center">

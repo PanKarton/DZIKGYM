@@ -77,4 +77,9 @@ body {
   .founders-gradient {
     background: linear-gradient(180deg, rgba(0, 17, 57, 0) 0%, #001139 100%);
   }
+  .for-gov-gradient {
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #001139 100%),
+      linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  }
 }

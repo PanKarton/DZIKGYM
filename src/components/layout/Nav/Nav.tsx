@@ -6,7 +6,6 @@ import React, { useEffect } from "react";
 import { cn } from "@/lib/utils/cn";
 import { NAV_ITEMS } from "@/data/nav-items";
 import BasicLogo from "@/components/ui/BasicLogo";
-import path from "path";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -32,7 +31,7 @@ export default function Navbar() {
     <header
       className={cn(
         "w-full fixed top-0 left-0 z-50  nav-transition",
-        scrolled ? "bg-(--primary) shadow-md backdrop-blur" : "bg-transparent"
+        scrolled ? "bg-(--primary) shadow-md backdrop-blur" : "bg-transparent",
       )}
     >
       <nav className="mx-auto flex items-center justify-between pl-[7rem] pr-32 py-2.5 h-17.5">
