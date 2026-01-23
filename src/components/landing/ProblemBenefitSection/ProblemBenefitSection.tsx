@@ -1,4 +1,4 @@
-import CTA from "@/components/ui/cta";
+import CTA from "@/components/ui/Cta";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import PercentageIncreasing from "@/components/ui/PercentageIncreasing";
 import Image from "next/image";

@@ -1,4 +1,4 @@
-import CTA from "@/components/ui/cta";
+import CTA from "@/components/ui/Cta";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import Image from "next/image";
 

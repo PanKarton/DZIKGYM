@@ -1,4 +1,4 @@
-import CTA from "../ui/cta";
+import CTA from "../ui/Cta";
 import ColorLogo from "../ui/ColorLogo";
 
 export default function Hero() {

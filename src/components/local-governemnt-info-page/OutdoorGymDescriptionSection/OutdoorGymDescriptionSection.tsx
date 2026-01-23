@@ -1,4 +1,4 @@
-import CTA from "@/components/ui/cta";
+import CTA from "@/components/ui/Cta";
 import Image from "next/image";
 import { FaArrowRightLong } from "react-icons/fa6";
 
