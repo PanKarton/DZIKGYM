@@ -22,7 +22,7 @@ const stats = [
 
 export default function ProblemStatsSection() {
   return (
-    <section className="py-16">
+    <section className="pb-24">
       <div className="content-max-width">
         <SectionHeading className="mb-16">
           Z jakim problemem się mierzymy?

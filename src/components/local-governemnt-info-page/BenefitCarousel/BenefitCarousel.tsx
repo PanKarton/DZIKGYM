@@ -59,7 +59,7 @@ export default function BenefitCarousel() {
   };
 
   return (
-    <section className="py-16 text-center  ">
+    <section className="pb-24 text-center  ">
       <div className="content-max-width">
         <SectionHeading className="mb-24">
           Co zyskuje samorząd <br /> budując nowoczesną siłownię plenerową?

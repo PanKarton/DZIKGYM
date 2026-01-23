@@ -2,7 +2,7 @@ import CTA from "@/components/ui/Cta";
 
 export default function EncouragementSection() {
   return (
-    <section className="py-16">
+    <section className="pb-24">
       <div className="content-max-width">
         <div className="flex gap-16 items-start">
           <div>
