@@ -7,19 +7,19 @@ const team = [
     name: "Damian",
     lastName: "Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/",
+    image: "/placeholder.jpg",
   },
   {
     name: "Damian",
     lastName: " Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/",
+    image: "/placeholder.jpg",
   },
   {
     name: "Damian",
     lastName: "Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/",
+    image: "/placeholder.jpg",
   },
 ];
 
