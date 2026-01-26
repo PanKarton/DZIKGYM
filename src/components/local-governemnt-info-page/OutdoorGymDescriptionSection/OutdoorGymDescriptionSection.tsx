@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function OutdoorGymDescriptionSection() {
   return (
-    <section className="relative w-full  py-24 for-gov-gradient">
+    <section className="relative w-full  py-24 mb-18 for-gov-gradient">
       <div className="absolute inset-0 isolate z-[-1]">
         <Image
           src="/crowd-outdoor.png"
@@ -16,7 +16,7 @@ export default function OutdoorGymDescriptionSection() {
           priority
         />
       </div>
-      <div className="content-max-width border-2 h-full flex items-center">
+      <div className="content-max-width  h-full flex items-center">
         <div className="bg-white rounded-xl px-7 py-16 text-left shadow-xl ml-auto max-w-[33rem] ">
           <h2 className="text-[2.5rem] font-black italic leading-tight text-(--secondary) mb-4">
             <span className="text-(--blue)">DZIK GYM</span> to więcej <br />

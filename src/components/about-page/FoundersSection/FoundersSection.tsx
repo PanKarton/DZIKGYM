@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function FoundersSection() {
   return (
-    <section className="px-6">
+    <section className="px-6 pb-24">
       <div className="content-max-width">
         <div className="text-center mb-12">
           <SectionHeading>Kto stworzył DZIK GYM?</SectionHeading>

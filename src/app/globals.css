@@ -67,12 +67,13 @@ body {
     aspect-ratio: 1920/800;
   }
   .sub-hero-gradient {
-    background: linear-gradient(
+    /* background: linear-gradient(
       180deg,
       #000000 13.71%,
       rgba(0, 0, 0, 0) 56.86%,
       #000000 100%
-    );
+    ); */
+    background: #303030;
   }
   .founders-gradient {
     background: linear-gradient(180deg, rgba(0, 17, 57, 0) 0%, #001139 100%);
