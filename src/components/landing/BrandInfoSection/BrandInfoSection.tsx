@@ -1,4 +1,4 @@
-import CTA from "@/components/ui/Cta";
+import CTA from "@/components/ui/cta";
 import Image from "next/image";
 import Link from "next/link";
 

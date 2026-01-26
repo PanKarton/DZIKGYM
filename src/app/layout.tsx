@@ -24,7 +24,7 @@ const myFontConfig = localFont({
       style: "normal",
     },
     {
-      path: "../fonts/Obviously/Obviously-SemiBold.otf",
+      path: "../fonts/Obviously/Obviously-Semibold.otf",
       weight: "600",
       style: "normal",
     },
