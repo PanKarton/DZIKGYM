@@ -1,6 +1,6 @@
-import ContactFormSection from "@/components/contact-page/ContactFormSection/ContactFormSection";
-import TeamSection from "@/components/contact-page/TeamSection/TeamSection";
-import SubHero from "@/components/layout/SubHero/SubHero";
+import ContactFormSection from "@/components/pages/contact-page/ContactFormSection";
+import TeamSection from "@/components/pages/contact-page/TeamSection";
+import SubHero from "@/components/layouts/SubHero";
 import CTA from "@/components/ui/cta";
 
 const heroData = {

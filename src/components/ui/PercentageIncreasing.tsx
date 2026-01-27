@@ -32,7 +32,7 @@ export default function PercentageIncreasing({ target }: { target: number }) {
   }, [target]);
 
   return (
-    <p className="text-[5.375rem] leading-none font-black italic text-(--red) mb-2">
+    <p className="text-[5.375rem] leading-none font-black italic text-(--color-brand-red) mb-2">
       {percentage}%
     </p>
   );
