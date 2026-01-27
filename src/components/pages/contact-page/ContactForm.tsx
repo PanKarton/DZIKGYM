@@ -1,10 +1,10 @@
 "use client";
 
 import CTA from "@/components/ui/cta";
-import { buildPayload } from "@/lib/utils/buildPayload";
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { buildPayload } from "./buildPayload";
 
 export type FormValues = {
   fullName: string;
