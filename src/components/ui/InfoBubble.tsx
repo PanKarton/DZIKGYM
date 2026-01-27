@@ -17,7 +17,7 @@ export default function InfoBubble({
   isLeft,
 }: Readonly<{ textSmall?: string; textBold?: string; isLeft?: boolean }>) {
   return (
-    <div className="relative bg-(--primary) text-(--blue) text-5xl flex-center aspect-square rounded-full group z-[2]">
+    <div className="relative bg-(--color-primary) text-(--color-content-emphasis) text-5xl flex-center aspect-square rounded-full group z-[2]">
       <IoIosInformationCircleOutline />
       {/* Hover bubble */}
       <div
@@ -26,12 +26,16 @@ export default function InfoBubble({
         } ${isLeft ? styles.leftTranslate : styles.rightTranslate}`}
       >
         <div
-          className={`bg-(--primary) py-6 rounded-full shadow-xl flex-col flex-left text-left ${
+          className={`bg-(--color-primary) py-6 rounded-full shadow-xl flex-col flex-left text-left ${
             isLeft ? styles.rightPadding : styles.leftPadding
           }`}
         >
-          <div className="text-(--offWhiteDarker) text-sm ">{textSmall}</div>
-          <div className="font-bold text-(--blue) text-2xl">{textBold}</div>
+          <div className="text-(--color-off-primaryDarker) text-sm ">
+            {textSmall}
+          </div>
+          <div className="font-bold text-(--color-content-emphasis) text-2xl">
+            {textBold}
+          </div>
         </div>
       </div>
     </div>

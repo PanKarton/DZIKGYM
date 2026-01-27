@@ -1,9 +1,8 @@
-import Hero from "@/components/landing/Hero";
-import GymComparison from "@/components/landing/GymComparison/GymComparison";
-import GymFeatures from "@/components/landing/GymFeatures/GymFeatures";
-import ProblemBenefitSection from "@/components/landing/ProblemBenefitSection/ProblemBenefitSection";
-import SponsorsSection from "@/components/landing/SponsorsSection/SponsorsSection";
-import MapSection from "@/components/landing/MapSection/MapSection";
+import GymComparison from "@/components/pages/landing/GymComparison";
+import GymFeatures from "@/components/pages/landing/GymFeatures";
+import Hero from "@/components/pages/landing/Hero";
+import ProblemBenefitSection from "@/components/pages/landing/ProblemBenefitSection";
+import SponsorsSection from "@/components/pages/landing/SponsorsSection";
 
 export default function Home() {
   return (

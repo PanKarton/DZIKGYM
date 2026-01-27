@@ -11,7 +11,7 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <h2
-      className={`text-2xl md:text-[2.5rem] font-extrabold italic text-(--secondary) text-center ${className}`}
+      className={`text-2xl md:text-[2.5rem] font-extrabold italic   text-center ${className}`}
     >
       {children}
     </h2>

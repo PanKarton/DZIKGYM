@@ -1,52 +1,10 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
-import Navbar from "@/components/layout/Nav/Nav";
+import Navbar from "@/components/layouts/Nav";
 import SvgDefs from "@/components/SvgDefs/SvgDefs";
-import Copyrights from "@/components/layout/Copyrights/Copyrights";
-import Footer from "@/components/layout/Footer/Footer";
-
-const myFontConfig = localFont({
-  src: [
-    {
-      path: "../fonts/Obviously/Obviously-Light.otf",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Obviously/Obviously-Regular.otf",
-      weight: "400",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Obviously/Obviously-Medium.otf",
-      weight: "500",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Obviously/Obviously-Semibold.otf",
-      weight: "600",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Obviously/Obviously-Bold.otf",
-      weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Obviously/Obviously-Extrabold.otf",
-      weight: "800",
-      style: "normal",
-    },
-    {
-      path: "../fonts/Obviously/Obviously-Black.otf",
-      weight: "900",
-      style: "normal",
-    },
-  ],
-  variable: "--font-obviously",
-  display: "swap",
-});
+import Copyrights from "@/components/layouts/Copyrights";
+import Footer from "@/components/layouts/Footer";
+import { myFontConfig } from "@/fonts/Obviously/obviously";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -60,10 +18,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pl">
-      <body className={` ${myFontConfig.variable} antialiased`}>
+      <body className={`${myFontConfig.variable} antialiased`}>
         <SvgDefs />
         <Navbar />
-        {children}
+        <main>{children}</main>
         <Footer />
         <Copyrights />
       </body>
