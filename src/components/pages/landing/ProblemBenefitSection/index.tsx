@@ -1,7 +1,4 @@
-import CTA from "@/components/ui/cta";
-
 import Image from "next/image";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { ProblemCard } from "./ProblemCard";
 import BenefitContent from "./BenefitContent";
 
