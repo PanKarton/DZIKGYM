@@ -1,4 +1,3 @@
-import PolandMapScene from "@/components/map3d/PolandMap";
 import React from "react";
 
 export default function MapSection() {
@@ -21,9 +20,7 @@ export default function MapSection() {
         <div className="mt-12">
           <div className="relative w-full aspect-map  ">
             {/* Placeholder for the map of Poland */}
-            <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-2xl font-semibold">
-              <PolandMapScene />
-            </div>
+            <div className="absolute inset-0 flex items-center justify-center text-gray-500 text-2xl font-semibold"></div>
           </div>
         </div>
       </div>
