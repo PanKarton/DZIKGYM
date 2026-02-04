@@ -8,13 +8,15 @@ import {
   MarkerPopup,
   MarkerTooltip,
 } from "@/components/ui/map";
-import { gymLocations } from "../Map/gymLocations";
+import { gymLocations } from "./gymLocations";
 import Image from "next/image";
+import MapScrollHandler from "./MapScrollHandler";
 
-export function MyMap() {
+export function GymMap() {
   return (
-    <div className="h-[800px] w-full p-0 overflow-hidden">
-      <Map center={[19.5, 52]} zoom={5.75}>
+    <div className="h-[90vh] w-full p-0 overflow-hidden">
+      <Map center={[19.5, 52]} zoom={5.75} theme="light">
+        <MapScrollHandler />
         <MapControls position="bottom-right" showZoom showFullscreen />
         {gymLocations.map((location) => (
           <MapMarker
@@ -31,8 +33,8 @@ export function MyMap() {
             <MarkerPopup
               closeButton
               focusAfterOpen={false}
-              closeOnClick={false}
-              className="w-62 cursor-pointer"
+              closeOnClick={true}
+              className="w-62"
             >
               <div className="space-y-1">
                 <p className="font-medium text-foreground">{location.name}</p>
