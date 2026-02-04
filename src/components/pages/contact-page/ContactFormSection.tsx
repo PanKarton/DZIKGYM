@@ -1,7 +1,7 @@
 "use client";
 
 import { MdOutlineMail, MdOutlinePhoneEnabled } from "react-icons/md";
-import ContactForm from "./ContactForm";
+import ContactForm from "./contact-page/ContactForm/ContactForm";
 
 export default function ContactFormSection() {
   return (

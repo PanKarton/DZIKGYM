@@ -4,7 +4,7 @@ import CTA from "@/components/ui/cta";
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
-import { buildPayload } from "./buildPayload";
+import { useSubmit } from "./useSubmit";
 
 export type FormValues = {
   fullName: string;
@@ -39,11 +39,7 @@ export default function ContactForm() {
     },
   });
 
-  const onSubmit = (data: FormValues) => {
-    const payload = buildPayload(data);
-    // handle your submit
-    console.log(payload);
-  };
+  const { onSubmit } = useSubmit();
 
   const isBusiness = watch("isBusiness");
   const MESSAGE_MAX = 10;
