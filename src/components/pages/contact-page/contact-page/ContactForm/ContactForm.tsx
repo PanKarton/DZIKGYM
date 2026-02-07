@@ -13,6 +13,7 @@ export type FormValues = {
   isBusiness: boolean;
   businessName?: string;
   consent: boolean;
+  website?: string;
 };
 
 function cn(...classes: Array<string | false | null | undefined>) {
@@ -39,10 +40,10 @@ export default function ContactForm() {
     },
   });
 
-  const { onSubmit } = useSubmit();
+  const { onSubmit, isLoading, error, success } = useSubmit();
 
   const isBusiness = watch("isBusiness");
-  const MESSAGE_MAX = 10;
+  const MESSAGE_MAX = 400;
   const message = watch("message") ?? "";
   const messageLen = message.length;
   const progress = Math.min(1, messageLen / MESSAGE_MAX);
@@ -60,15 +61,19 @@ export default function ContactForm() {
   const helperErrorCls = "mt-2 text-xs font-medium text-(--color-danger)";
 
   const baseField =
-    "w-full  border bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none transition";
+    "w-full  border bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 border-2 focus:outline-none transition";
   const defaultBorder = "border-(--color-off-primary)";
-  const focusBorder = "focus:border-(--color-brand-blue) border-2";
+  const focusBorder = "focus:border-(--color-brand-blue) ";
   const errorBorder = "border-(--color-danger)";
   const commonCheckbox =
     "h-5 w-5 rounded border-(--color-off-primary) text-(--color-content-emphasis) focus:outline-none focus:ring-(--color-brand-blue) cursor-pointer";
 
   const fieldClass = (hasError?: boolean) =>
-    cn(baseField, defaultBorder, focusBorder, hasError && errorBorder);
+    cn(
+      baseField,
+      hasError ? errorBorder : defaultBorder,
+      !hasError && focusBorder,
+    );
 
   const messageFieldClass = (hasError?: boolean) =>
     cn(
@@ -89,6 +94,16 @@ export default function ContactForm() {
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="w-full">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-12">
+        <div className="hidden">
+          <label htmlFor="website">Website</label>
+          <input
+            id="website"
+            type="text"
+            tabIndex={-1}
+            autoComplete="off"
+            {...register("website")}
+          />
+        </div>
         {/* Left: inputs */}
         <div className="space-y-8">
           <div className="flex flex-wrap items-center gap-6">
@@ -296,10 +311,27 @@ export default function ContactForm() {
 
           <div className="w-50 ml-auto">
             <CTA variant="redWide">
-              Wyślij
-              <FaArrowRightLong className="relative -translate-y-[1px] scale-[1.2]" />
+              {isLoading ? (
+                "Wysyłanie..."
+              ) : (
+                <>
+                  Wyślij
+                  <FaArrowRightLong className="relative -translate-y-[1px] scale-[1.2]" />
+                </>
+              )}
             </CTA>
           </div>
+          {error && (
+            <div className="mt-4 rounded-md bg-red-50 p-4 text-sm text-red-700">
+              {error}
+            </div>
+          )}
+
+          {success && (
+            <div className="mt-4 rounded-md bg-green-50 p-4 text-sm text-green-700">
+              Dziękujemy! Odezwiemy się wkrótce.
+            </div>
+          )}
         </div>
       </div>
     </form>
