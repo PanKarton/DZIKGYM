@@ -27,7 +27,7 @@
 
   /* UI semantics (na przyszłość) */
   --color-danger: var(--color-brand-red);
-  --color-success: var(--color-brand-green);
+  --color-success: oklch(52.7% 0.154 150.069);
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
