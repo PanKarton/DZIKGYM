@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { buildPayload } from "./buildPayload";
 import { FormValues } from "./ContactForm";
-import { NextResponse } from "next/server";
 
 export const useSubmit = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -16,14 +15,6 @@ export const useSubmit = () => {
 
       const payload = buildPayload(data);
 
-      // Honeypot check
-      const { website } = data;
-      if (website && website.trim().length > 0) {
-        setIsLoading(false);
-        setSuccess(true);
-        console.warn("Bot detected, submission ignored.");
-        return NextResponse.json({ ok: true });
-      }
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: {
