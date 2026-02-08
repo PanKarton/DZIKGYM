@@ -1,3 +1,4 @@
+import { assertOrigin } from "@/lib/assert-origin";
 import { ipRatelimit, emailRatelimit } from "@/lib/ratelimit";
 import { requireEnv } from "@/lib/utils/requireEnv";
 import { NextResponse } from "next/server";
@@ -19,6 +20,14 @@ export async function POST(req: Request) {
 
     const { fullName, email, message, isBusiness, businessName, website } =
       data;
+
+    // Origin check
+    if (!assertOrigin(req)) {
+      return NextResponse.json(
+        { error: "Nieautoryzowany dostęp" },
+        { status: 403 },
+      );
+    }
 
     // Honeypot check
     if (website && website.trim().length > 0) {
