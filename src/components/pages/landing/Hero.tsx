@@ -10,7 +10,7 @@ export default function Hero() {
           <div className="absolute z-[-1] inset-0">
             <Image
               src="/images/poster.jpg"
-              alt=""
+              alt="Siłownia DZIK GYM"
               fill
               priority
               className="object-cover"

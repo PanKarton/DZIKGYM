@@ -25,22 +25,26 @@ export function GymMap() {
             latitude={location.lat}
           >
             <MarkerContent>
-              <div className="relative size-[4rem]">
+              <div className="relative size-16">
                 <Image src={"/leaflet/pin.svg"} alt="pinezka" fill />
               </div>
             </MarkerContent>
-            <MarkerTooltip>{location.name}</MarkerTooltip>
+            <MarkerTooltip>{`DZIK GYM ${location.city}`}</MarkerTooltip>
             <MarkerPopup
               closeButton
               focusAfterOpen={false}
               closeOnClick={true}
-              className="w-62"
+              className="w-62  border-2 border-(--color-brand-blue) rounded-none translate-y-[-20%] bubble relative"
             >
-              <div className="space-y-1">
-                <p className="font-medium text-foreground">{location.name}</p>
-                <p className="font-medium text-foreground">
-                  {location.address}
-                </p>
+              <span className="font-black text-base italic mb-0 leading-0.5">
+                DZIK GYM
+              </span>
+              <span className="block font-medium text-base mb-3 leading-3">{`${location.city}, ${location.address}`}</span>
+              <span className="block text-xs text-(--color-text-muted) mb-1">
+                We współpracy z:
+              </span>
+              <div className="relative">
+                <div className="border-2 aspect-4/1 w-[40%]"></div>
               </div>
             </MarkerPopup>
           </MapMarker>

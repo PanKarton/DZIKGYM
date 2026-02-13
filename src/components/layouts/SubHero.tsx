@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { MeshBackground } from "../ui/MeshBackground";
 
 export default function SubHero({
   heading,
@@ -13,12 +13,7 @@ export default function SubHero({
     <section className="px-4 py-2 border  text-(--color-primary) relative h-106">
       <div className="relative ">
         <div className="   h-full clip-sub-hero ">
-          <Image
-            src="/images/sub-hero-pattern.png"
-            alt="Tło sekcji sub-hero"
-            fill
-            className="object-cover z-1"
-          />
+          <MeshBackground z={"1"} />
           <div className="absolute inset-0 sub-hero-gradient z-2"></div>
           <div className="absolute inset-0 bg-black z-0"></div>
           <div className="relative z-3 flex flex-col items-center justify-center gap-8 text-center pt-35 pb-20">

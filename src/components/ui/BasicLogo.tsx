@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function BasicLogo({ isInverted }: { isInverted?: boolean }) {
   return (
-    <div className="flex-center relative aspect-[146/24] ">
+    <div className="flex-center relative aspect-146/24">
       <Image
         src="/images/logo.svg"
         alt="Logo"
