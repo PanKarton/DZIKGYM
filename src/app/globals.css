@@ -115,13 +115,12 @@ body {
     aspect-ratio: 1920/800;
   }
   .sub-hero-gradient {
-    /* background: linear-gradient(
+    background: linear-gradient(
       180deg,
-      #000000 13.71%,
-      rgba(0, 0, 0, 0) 56.86%,
-      #000000 100%
-    ); */
-    background: #303030;
+      rgba(0, 0, 0, 1) 5%,
+      transparent 50%,
+      rgba(0, 0, 0, 1) 95%
+    );
   }
   .founders-gradient {
     background: linear-gradient(180deg, rgba(0, 17, 57, 0) 0%, #001139 100%);
@@ -130,6 +129,18 @@ body {
     background:
       linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #001139 100%),
       linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+  }
+  .bubble::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 100%; /* przyklejony do dołu */
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 15px solid var(--color-brand-blue); /* kolor trójkąta */
   }
 }
 

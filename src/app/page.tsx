@@ -1,15 +1,15 @@
 import GymComparison from "@/components/pages/landing/GymComparison";
 import GymFeatures from "@/components/pages/landing/GymFeatures";
 import Hero from "@/components/pages/landing/Hero";
-import { GymMap } from "@/components/pages/landing/GymMap/GymMap";
 import ProblemBenefitSection from "@/components/pages/landing/ProblemBenefitSection";
 import SponsorsSection from "@/components/pages/landing/SponsorsSection";
+import GymMapSection from "@/components/pages/landing/GymMap/GymMapSection";
 
 export default function Home() {
   return (
     <div>
       <Hero />
-      <GymMap />
+      <GymMapSection />
       <SponsorsSection />
       <ProblemBenefitSection />
       <GymFeatures />

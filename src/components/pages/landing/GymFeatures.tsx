@@ -1,5 +1,6 @@
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import InfoBubble from "@/components/ui/InfoBubble";
+import { MeshBackground } from "@/components/ui/MeshBackground";
 import Image from "next/image";
 
 const gymFeaturesData = [
@@ -50,7 +51,7 @@ export default function GymFeatures() {
     <section className="relative flex items-center justify-center py-24">
       <div className="content-max-width">
         <GradientBlueRed />
-        <h2 className="text-(--color-content-emphasis) font-black text-[3.5rem] leading-[1] italic mb-16">
+        <h2 className="text-(--color-content-emphasis) font-black text-[3.5rem] leading-none italic mb-16">
           Głowne cechy <br /> siłowni DZIK GYM
         </h2>
         <div className="grid grid-cols-2 gap-8">
@@ -58,7 +59,7 @@ export default function GymFeatures() {
             {gymFeaturesData.map(({ feature, description }, index) => (
               <div
                 key={index}
-                className="rounded-2xl border-[2px] border-(--color-brand-blue) bg-(--color-brand-blue)/20  text-(--color-primary) flex-col flex-center aspect-[314/245]  p-8"
+                className="rounded-2xl border-2 border-(--color-brand-blue) bg-(--color-brand-blue)/20  text-(--color-primary) flex-col flex-center aspect-[314/245]  p-8"
               >
                 <h3 className="text-3xl font-black italic mb-4">{feature}</h3>
                 <p className="font-thin text-sm leading-relaxed">
@@ -67,7 +68,7 @@ export default function GymFeatures() {
               </div>
             ))}
           </div>
-          <div className=" relative aspect-[796/606]">
+          <div className=" relative aspect-796/606">
             <Image
               src="/images/gym-machine.png"
               alt="Gym Machine"

@@ -37,12 +37,18 @@ export default function GymComparison() {
         {/* Image Section */}
         <div className="relative flex flex-col md:flex-row justify-center items-center gap-4 ">
           {/* Background Image Comparison */}
-          <div className="w-full relative aspect-[1230/670] rounded-[20px] overflow-hidden">
-            <Image
-              src="/images/gym-comp-placeholder.jpg"
-              alt="Gym comparison"
-              fill
-            />
+          <div className="w-full relative aspect-1230/670 rounded-4xl overflow-hidden">
+            <video
+              className="absolute z-[-1] inset-0 h-full w-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="none"
+            >
+              <source src="/video/gym-comparison.webm" type="video/webm" />
+              <source src="/video/gym-comparison.mp4" type="video/mp4" />
+            </video>
           </div>
 
           {/* Info Cards */}

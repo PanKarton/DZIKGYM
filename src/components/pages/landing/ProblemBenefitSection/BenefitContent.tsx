@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const BenefitContent = () => (
@@ -26,11 +27,14 @@ const BenefitContent = () => (
       , które dbają o swoje zdrowie w ramach potrzebnej nam wszystkim aktywności
       fizycznej.
     </p>
+
     <div className="w-50">
-      <CTA variant="blueTaller">
-        <span className="font-sm font-semibold">O projekcie </span>
-        <FaArrowRightLong className="relative -translate-y-[1px] scale-[1.2]" />
-      </CTA>
+      <Link href="/o-projekcie">
+        <CTA variant="blueTaller">
+          <span className="font-sm font-semibold">O projekcie </span>
+          <FaArrowRightLong className="relative -translate-y-px scale-[1.2]" />
+        </CTA>
+      </Link>
     </div>
   </div>
 );

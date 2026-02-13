@@ -21,6 +21,10 @@ export async function POST(req: Request) {
     const { fullName, email, message, isBusiness, businessName, website } =
       data;
 
+    console.log("origin:", req.headers.get("origin"));
+    console.log("host:", req.headers.get("host"));
+    console.log("referer:", req.headers.get("referer"));
+
     // Origin check
     if (!assertOrigin(req)) {
       return NextResponse.json(

@@ -2,30 +2,24 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect } from "react";
+import React, { useLayoutEffect, useState } from "react";
 import { cn } from "@/lib/utils/cn";
 import { NAV_ITEMS } from "@/data/nav-items";
 import BasicLogo from "@/components/ui/BasicLogo";
 
 export default function Navbar() {
   const pathname = usePathname();
-  const [scrolled, setScrolled] = React.useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const handleScroll = () => {
-      const onScroll = () => {
-        if (window.scrollY > 5) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
-        }
-      };
-
-      window.addEventListener("scroll", onScroll);
-      return () => window.removeEventListener("scroll", onScroll);
+      setScrolled(window.scrollY > 5);
     };
+
     handleScroll();
-  }, []);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
 
   return (
     <header
@@ -36,7 +30,7 @@ export default function Navbar() {
           : "bg-transparent",
       )}
     >
-      <nav className="mx-auto flex items-center justify-between pl-[7rem] pr-32 py-2.5 h-17.5">
+      <nav className="mx-auto flex items-center justify-between pl-28 pr-32 py-2.5 h-17.5">
         {/* Logo / Brand */}
         <Link
           href="/"

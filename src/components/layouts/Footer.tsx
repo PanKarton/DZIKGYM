@@ -5,32 +5,35 @@ import { NAV_ITEMS } from "@/data/nav-items";
 import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import CircleLink from "@/components/ui/CircleLink";
 import BrandInfoSection from "../pages/landing/BrandInfoSection";
+import { MeshBackground } from "../ui/MeshBackground";
+import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 
 export default function Footer() {
   return (
-    <footer className="w-full p-4 flex flex-col items-center gap-4  text-(--color-primary) pt-20">
+    <footer className="relative w-full p-4 flex flex-col items-center gap-4  text-(--color-primary) pt-20 ">
       <BrandInfoSection />
-      <div className="w-full rounded-[10px] mx-auto grid grid-cols-4 gap-8 bg-gray-900 py-24 px-28 ">
-        <div className="flex flex-col items-start gap-16">
+      <div className="relative w-full rounded-[10px]  mx-auto grid grid-cols-4 gap-8 bg-black py-24 px-28 overflow-hidden">
+        <MeshBackground z={"2"} />
+        <div className="flex flex-col items-start gap-16 relative z-2 ">
           <div className="w-49">
             <ColorLogo />
           </div>
           <div className="flex gap-4 text-white text-xl">
-            <CircleLink href="#">
+            <CircleLink href={EXTERNAL_HREFS.tiktok}>
               <FaTiktok />
             </CircleLink>
-            <CircleLink href="#">
+            <CircleLink href={EXTERNAL_HREFS.facebook}>
               <FaFacebookF />
             </CircleLink>
-            <CircleLink href="#">
+            <CircleLink href={EXTERNAL_HREFS.instagram}>
               <FaInstagram />
             </CircleLink>
-            <CircleLink href="#">
+            <CircleLink href={EXTERNAL_HREFS.youtube}>
               <FaYoutube />
             </CircleLink>
           </div>
         </div>
-        <nav>
+        <nav className="relative z-2">
           <h3 className="font-bold italic mb-5 text-sm">DZIK GYM</h3>
           <ul className="space-y-2 text-sm text-(--color-off-primary) font-thin">
             {NAV_ITEMS.map((item) => (
@@ -45,14 +48,26 @@ export default function Footer() {
             ))}
           </ul>
         </nav>
-        <div>
+        <div className="relative z-2">
           <h3 className="font-bold italic text-sm mb-5">WARTO ZAJRZEĆ</h3>
           <ul className="space-y-2 text-sm font-thin text-(--color-off-primary)">
             <li>
-              <Link href="/blog">Sklep WKDZIK.pl</Link>
+              <Link
+                href={EXTERNAL_HREFS.shop}
+                target="_blank"
+                className="hover:text-(--color-primary-darker)"
+              >
+                Sklep WKDZIK.pl
+              </Link>
             </li>
             <li>
-              <Link href="/kontakt">Instagram DZIK GYM</Link>
+              <Link
+                href={EXTERNAL_HREFS.instagram}
+                target="_blank"
+                className="hover:text-(--color-primary-darker)"
+              >
+                Instagram DZIK GYM
+              </Link>
             </li>
           </ul>
         </div>
