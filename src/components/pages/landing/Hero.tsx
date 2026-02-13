@@ -17,7 +17,7 @@ export default function Hero() {
             />
             <div className="absolute inset-0 bg-[#000000]/60" />
           </div>
-          {/* <video
+          <video
             className="absolute z-[-1] inset-0 h-full w-full object-cover"
             autoPlay
             muted
@@ -27,7 +27,7 @@ export default function Hero() {
           >
             <source src="/video/hero.webm" type="video/webm" />
             <source src="/video/hero.mp4" type="video/mp4" />
-          </video> */}
+          </video>
           <div className="absolute inset-0 bg-[#000000]/60" />
           <div className="relative   py-35 flex flex-col items-center justify-center h-full gap-12 text-center z-10">
             <div className="w-66">
