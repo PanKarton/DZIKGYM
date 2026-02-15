@@ -12,6 +12,7 @@ export default function Hero() {
               src="/images/poster.jpg"
               alt="Siłownia DZIK GYM"
               fill
+              sizes="100vh"
               priority
               className="object-cover"
             />
