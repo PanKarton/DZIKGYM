@@ -5,10 +5,19 @@ import Link from "next/link";
 export default function BrandInfoSection() {
   return (
     <div className="w-full  relative pt-33 pb-21 clip-footer flex items-center justify-center">
-      <div className="content-max-width">
+      <div className="content-max-width ">
+        <div className="absolute inset-0 z-[-2] ">
+          <Image
+            src="/images/footer-top-background.jpg"
+            alt="tło stopki siłownia plenerowa"
+            fill
+            className="object-cover  "
+            sizes="100vw"
+          />
+        </div>
         <div className="absolute inset-0 bg-black/80 z-[-1]" />
         <h2 className="h2-footer font-black italic mb-3">Marka DZIK</h2>
-        <p className="text-sm/[1.5] font-light max-w-[33rem] mb-12 ">
+        <p className="text-sm/normal font-light max-w-132 mb-12 ">
           DZIK® to marka sportowa założona w piwnicy przez czterech młodych
           przyjaciół, obecnie dająca zatrudnienie około 200 osobom. Wszystko
           zaczęło się od twórczości internetowej, <br />
@@ -28,13 +37,6 @@ export default function BrandInfoSection() {
             </span>
           </CTA>
         </Link>
-        <Image
-          src="/images/footer-top-background.jpg"
-          alt="tło stopki siłownia plenerowa"
-          fill
-          className="object-cover z-[-2] "
-          sizes="100vw"
-        />
       </div>
     </div>
   );
