@@ -1,28 +1,11 @@
-const sponsors = [
-  {
-    src: "/sponsors/sponsor1.svg",
-    alt: "Sponsor 1",
-  },
-  {
-    src: "/sponsors/sponsor2.svg",
-    alt: "Sponsor 2",
-  },
-  {
-    src: "/sponsors/sponsor3.svg",
-    alt: "Sponsor 3",
-  },
-  {
-    src: "/sponsors/sponsor4.svg",
-    alt: "Sponsor 4",
-  },
+import { GymPartner } from "@/types/gym-partners";
+import Image from "next/image";
 
-  {
-    src: "/sponsors/sponsor4.svg",
-    alt: "Sponsor 4",
-  },
-];
-
-export default function SponsorsSection() {
+export default function SponsorsSection({
+  parnersLogos,
+}: {
+  parnersLogos: GymPartner[];
+}) {
   return (
     <section className="bg-(--color-primary-darker) py-24 flex-center">
       <div className="content-max-width">
@@ -30,11 +13,16 @@ export default function SponsorsSection() {
           Oni wsparli swoje społeczności:
         </h2>
         <div className="flex flex-row flex-wrap justify-center items-center  gap-x-16 gap-y-8 ">
-          {sponsors.map((sponsor, index) => (
-            <div
-              key={index}
-              className="aspect-[4] basis-1/5 relative border-2"
-            ></div>
+          {parnersLogos.map((partner, index) => (
+            // <div key={index} className="aspect-[4] basis-1/5 relative">
+            <div key={index} className="aspect-[1] basis-1/5 relative border-2">
+              <Image
+                src={partner.content.png.filename}
+                alt={partner.content.png.alt}
+                fill
+                className="object-contain"
+              />
+            </div>
           ))}
         </div>
       </div>
