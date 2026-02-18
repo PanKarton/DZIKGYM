@@ -3,7 +3,6 @@ import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import GreenPlus from "@/components/ui/GreenPlus";
 import RedMinus from "@/components/ui/RedMinus";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
-import Image from "next/image";
 
 const styles = {
   card: "text-white comp-card-width gap-6 py-14 px-8 rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
