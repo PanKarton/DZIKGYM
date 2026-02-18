@@ -1,6 +1,11 @@
+import { GymLocation } from "@/types/gym-location";
 import { GymMap } from "./GymMap";
 
-export default function GymMapSection() {
+export default function GymMapSection({
+  gymLocations,
+}: {
+  gymLocations: GymLocation[];
+}) {
   return (
     <section className="">
       <div className="text-center pt-24 pb-18">
@@ -18,7 +23,7 @@ export default function GymMapSection() {
           mieszkańców.
         </p>
       </div>
-      <GymMap />
+      <GymMap gymLocations={gymLocations} />
     </section>
   );
 }
