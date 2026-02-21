@@ -14,8 +14,7 @@ export default function SponsorsSection({
         </h2>
         <div className="flex flex-row flex-wrap justify-center items-center  gap-x-16 gap-y-8 ">
           {parnersLogos.map((partner, index) => (
-            // <div key={index} className="aspect-[4] basis-1/5 relative">
-            <div key={index} className="aspect-[1] basis-1/5 relative border-2">
+            <div key={index} className="aspect-[4] basis-1/5 relative">
               <Image
                 src={partner.content.png.filename}
                 alt={partner.content.png.alt}

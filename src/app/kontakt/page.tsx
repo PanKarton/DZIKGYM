@@ -5,13 +5,13 @@ import CTA from "@/components/ui/cta";
 
 const heroData = {
   heading: "Kontakt",
-  subheading: "Potrzebujesz więcej informacji? Napisz - odpowiadamy sprawnie.",
+  subHeading: "Potrzebujesz więcej informacji? Napisz - odpowiadamy sprawnie.",
 };
 
 export default function Home() {
   return (
     <div>
-      <SubHero heading={heroData.heading} subheading={heroData.subheading}>
+      <SubHero heading={heroData.heading} subHeading={heroData.subHeading}>
         <div className="w-50">
           <CTA variant="red">
             <span className="font text-sm">Napisz do nas</span>
