@@ -316,7 +316,7 @@ export default function ContactForm() {
               ) : (
                 <>
                   Wyślij
-                  <FaArrowRightLong className="relative -translate-y-[1px] scale-[1.2]" />
+                  <FaArrowRightLong className="relative -translate-y-px scale-[1.2]" />
                 </>
               )}
             </CTA>

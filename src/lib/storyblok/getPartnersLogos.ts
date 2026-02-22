@@ -12,7 +12,6 @@ export async function getPartnersLogos(): Promise<GymPartner[]> {
   }
 
   const data = (await res.json()) as GymPartnersResponse;
-  console.log("Fetched partners logos:", data.stories[0].content);
 
   return data.stories;
 }

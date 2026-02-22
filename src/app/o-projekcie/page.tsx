@@ -9,7 +9,7 @@ export default function About() {
     <div>
       <SubHero
         heading="O projekcie"
-        subheading="Nowoczesna siłownia plenerowa DZIK GYM dla Twojej Gminy."
+        subHeading="Nowoczesna siłownia plenerowa DZIK GYM dla Twojej Gminy."
       />
       <FoundersSection />
       <ProblemStatsSection />

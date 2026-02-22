@@ -7,7 +7,7 @@ import OutdoorGymDescriptionSection from "@/components/pages/local-governmnt-inf
 
 const heroData = {
   heading: "Dla samorządów",
-  subheading: "Nowoczesna siłownia plenerowa DZIK GYM dla Twojej Gminy.",
+  subHeading: "Nowoczesna siłownia plenerowa DZIK GYM dla Twojej Gminy.",
 };
 
 export default function Home() {
@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <SubHero
         heading={heroData.heading}
-        subheading={heroData.subheading}
+        subHeading={heroData.subHeading}
       ></SubHero>
       <ProblemStatsSection />
       <NearestOnesSection />

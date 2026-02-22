@@ -1,13 +1,20 @@
-type CTAVariant = "red" | "redWide" | "blue" | "blueTaller" | "blueGradient";
+type CTAVariant =
+  | "red"
+  | "redWide"
+  | "blue"
+  | "blueTaller"
+  | "blueGradient"
+  | "redTransparent";
 
 const base =
   "w-full flex items-center justify-center gap-2 cta-path transition-all cursor-pointer";
 
 const variants: Record<CTAVariant, string> = {
-  red: "bg-(--color-brand-red) text-white py-3 aspect-[230/64] hover:bg-(--color-brand-red-hover)",
+  red: "bg-gradient-to-r from-(--color-brand-red) to-(--color-brand-red-hover) text-white py-3 aspect-[230/64] hover:brightness-80",
   redWide:
-    "bg-(--color-brand-red) text-white py-3 aspect-[252/56] hover:bg-(--color-brand-red-hover)",
-
+    "bg-gradient-to-r from-(--color-brand-red) to-(--color-brand-red-hover) text-white py-3 aspect-[252/56] hover:brightness-80",
+  redTransparent:
+    "bg-transparent border-2 border-(--color-brand-red) text-(--color-brand-red) py-1 aspect-[252/56] hover:bg-(--color-brand-red) hover:text-white",
   blue: "bg-transparent border-2 border-(--color-brand-blue) text-(--color-content-emphasis) py-1 aspect-[252/56] hover:bg-(--color-brand-blue) hover:text-white",
 
   blueTaller:

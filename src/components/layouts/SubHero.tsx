@@ -1,12 +1,13 @@
+import React from "react";
 import { MeshBackground } from "../ui/MeshBackground";
 
 export default function SubHero({
   heading,
-  subheading,
+  subHeading,
   children,
 }: {
   heading: string;
-  subheading: string;
+  subHeading: string | React.ReactNode;
   children?: React.ReactNode;
 }) {
   return (
@@ -20,7 +21,7 @@ export default function SubHero({
             <h1 className="font-black text-[3.875rem] italic leading-none">
               {heading}
             </h1>
-            <p className="font-thin text-xl">{subheading}</p>
+            <p className="font-thin text-xl">{subHeading}</p>
             {children}
           </div>
         </div>
