@@ -3,7 +3,7 @@ import React from "react";
 interface SectionHeadingProps {
   children: React.ReactNode;
   className?: string;
-  isBig: boolean;
+  isBig?: boolean;
 }
 
 export default function SectionHeading({

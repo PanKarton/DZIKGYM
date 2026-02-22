@@ -1,4 +1,5 @@
 import SubHero from "@/components/layouts/SubHero";
+import CBSectionDivider from "@/components/pages/citizens-budget/CBSectionDivider";
 import CitizenBudgetSection from "@/components/pages/citizens-budget/CitizenBudgetSection";
 import CTA from "@/components/ui/cta";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -37,6 +38,7 @@ export default async function Home() {
         </div>
       </SubHero>
       <CitizenBudgetSection />
+      <CBSectionDivider />
     </div>
   );
 }
