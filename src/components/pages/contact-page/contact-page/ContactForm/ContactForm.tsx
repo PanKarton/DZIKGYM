@@ -190,7 +190,7 @@ export default function ContactForm() {
           {isBusiness && (
             <div>
               <label htmlFor="businessName" className={labelCls}>
-                Nazwa działalności
+                Nazwa działalności*
               </label>
               <input
                 id="businessName"
