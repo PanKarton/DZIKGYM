@@ -21,23 +21,23 @@ export default function CitizenBudgetSection() {
     },
     {
       title: "Razem znaczy więcej",
-      description: "Integrujesz społeczność – przyjaciół, rodziny, sąsiadów.",
+      description: "Integrujesz społeczność - przyjaciół, rodziny, sąsiadów.",
     },
     {
       title: "Realne zmiany",
-      description: "Widzisz efekt – w swojej dzielnicy, na własnym osiedlu.",
+      description: "Widzisz efekt - w swojej dzielnicy, na własnym osiedlu.",
     },
   ];
 
   return (
-    <section className="py-20 px-6">
+    <section className="py-30 lg:py-20 px-6">
       <div className="content-max-width text-center">
         {/* Header */}
         <SectionHeading isBig className="text-(--color-brand-blue)">
           Budżet Obywatelski
         </SectionHeading>
 
-        <p className="text-xl md:text-[2.5rem] font-black italic mt-2 leading-2">
+        <p className="text-xl md:text-[2.5rem] font-black italic mt-2 leading-9">
           to Twoje pieniądze i Twoja decyzja
         </p>
 
@@ -49,21 +49,35 @@ export default function CitizenBudgetSection() {
         </p>
 
         {/* Cards */}
-        <div className="flex flex-wrap gap-8 mt-14 justify-center ">
+        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 justify-items-center  mt-14">
           {items.map((item, index) => (
             <div
               key={index}
-              className="basis-1/3 grow rounded-2xl aspect-418/478 max-w-105 bg-(--color-brand-blue-light) p-16 flex flex-col items-center text-center border-2 transition hover:-translate-y-1 duration-300"
-              style={{
-                borderColor: "var(--color-brand-blue)",
-              }}
+              className="w-full max-w-104.5 lg:odd:justify-self-end
+        lg:even:justify-self-start
+
+        2xl:justify-self-center"
             >
-              {/* Placeholder Image */}
-              <div className="w-48 aspect-square bg-white mb-6 " />
+              {/* Aspect wrapper */}
+              <div
+                className="relative w-full aspect-418/478 rounded-2xl border-2 overflow-hidden transition duration-300 hover:-translate-y-1 bg-(--color-brand-blue-light)"
+                style={{
+                  borderColor: "var(--color-brand-blue)",
+                }}
+              >
+                {/* Content */}
+                <div className="absolute inset-0 p-16 flex flex-col items-center text-center">
+                  <div className="w-48 aspect-square bg-white mb-6" />
 
-              <h3 className="text-[2rem] font-black italic ">{item.title}</h3>
+                  <h3 className="text-[2rem] font-black italic leading-9">
+                    {item.title}
+                  </h3>
 
-              <p className="text-sm  mt-3 max-w-xs">{item.description}</p>
+                  <p className="text-sm mt-3 max-w-xs line-clamp-3">
+                    {item.description}
+                  </p>
+                </div>
+              </div>
             </div>
           ))}
         </div>
