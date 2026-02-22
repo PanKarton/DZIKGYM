@@ -21,7 +21,7 @@ export default function SubHero({
             <h1 className="font-black text-[3.875rem] italic leading-none">
               {heading}
             </h1>
-            <p className="font-thin text-xl">{subHeading}</p>
+            <div className="font-thin text-xl">{subHeading}</div>
             {children}
           </div>
         </div>
