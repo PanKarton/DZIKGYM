@@ -6,6 +6,9 @@ import SponsorsSection from "@/components/pages/landing/SponsorsSection";
 import GymMapSection from "@/components/pages/landing/GymMap/GymMapSection";
 import { getGymsLocations } from "@/lib/storyblok/getGymsLocations";
 import { getPartnersLogos } from "@/lib/storyblok/getPartnersLogos";
+import { LatestOpeningVideoBanner } from "@/components/pages/landing/LatestOpeningVideoBanner/LatestOpeningVideoBanner";
+import FirstGymSection from "@/components/pages/landing/FirstGymSection";
+import SocialProofSection from "@/components/pages/landing/SocialProofSection";
 
 export default async function Home() {
   const gymLocations = await getGymsLocations();
@@ -19,6 +22,9 @@ export default async function Home() {
       <ProblemBenefitSection />
       <GymFeatures />
       <GymComparison />
+      <LatestOpeningVideoBanner />
+      <FirstGymSection />
+      <SocialProofSection />
     </div>
   );
 }

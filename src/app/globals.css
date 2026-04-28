@@ -131,6 +131,16 @@ body {
       linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, #001139 100%),
       linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
   }
+
+  .blue-red-gradient {
+    background:
+      linear-gradient(
+        48.63deg,
+        rgba(224, 0, 0, 0) 26.56%,
+        rgba(224, 0, 0, 0.2) 99.97%
+      ),
+      linear-gradient(2.8deg, #001139 -0.06%, #000000 97.17%);
+  }
   .bubble::after {
     content: "";
     position: absolute;
