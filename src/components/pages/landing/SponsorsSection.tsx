@@ -12,9 +12,9 @@ export default function SponsorsSection({
         <h2 className="text-center text-lg md:text-xl font-medium italic text-(--gray) leading-tight mb-12">
           Oni wsparli swoje społeczności:
         </h2>
-        <div className="flex flex-row flex-wrap justify-center items-center  gap-x-16 gap-y-8 ">
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(120px,180px))] justify-center gap-x-16 gap-y-8">
           {parnersLogos.map((partner, index) => (
-            <div key={index} className="aspect-[4] basis-1/5 relative">
+            <div key={index} className="relative aspect-4/1 w-full border-4">
               <Image
                 src={partner.content.png.filename}
                 alt={partner.content.png.alt}

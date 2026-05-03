@@ -1,36 +1,54 @@
-import { IoIosInformationCircleOutline } from "react-icons/io";
+"use client";
 
-const styles = {
-  bubble: {
-    animationStyles:
-      "opacity-0 scale-y-50 group-hover:scale-100 group-hover:opacity-100 transition-all duration-100 ease-out pointer-events-none group-hover:pointer-events-auto",
-  },
-  leftTranslate: "left-full -translate-x-full",
-  rightTranslate: "left-0",
-  leftPadding: "pl-[4.25rem] pr-12",
-  rightPadding: "pl-12 pr-[4.25rem]",
-};
+import { useEffect, useState } from "react";
+import { IoIosInformationCircleOutline } from "react-icons/io";
+import { cn } from "@/lib/utils/cn";
 
 export default function InfoBubble({
   textSmall,
   textBold,
   isLeft,
-}: Readonly<{ textSmall?: string; textBold?: string; isLeft?: boolean }>) {
+}: {
+  textSmall?: string;
+  textBold?: string;
+  isLeft?: boolean;
+}) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const handleClick = () => setIsOpen(false);
+    if (isOpen) document.addEventListener("click", handleClick);
+    return () => document.removeEventListener("click", handleClick);
+  }, [isOpen]);
+
   return (
-    <div className="relative bg-(--color-primary) text-(--color-content-emphasis) text-5xl flex-center aspect-square rounded-full group z-[2]">
+    <div
+      className="relative bg-(--color-primary) text-(--color-content-emphasis) text-5xl flex-center aspect-square rounded-full group z-[2]"
+      onClick={(e) => {
+        e.stopPropagation();
+        setIsOpen((prev) => !prev);
+      }}
+    >
       <IoIosInformationCircleOutline />
-      {/* Hover bubble */}
+
       <div
-        className={`absolute top-1/2 -translate-y-1/2  z-[-1] min-w-max  ${
-          styles.bubble.animationStyles
-        } ${isLeft ? styles.leftTranslate : styles.rightTranslate}`}
+        className={cn(
+          "absolute top-1/2 -translate-y-1/2 z-[-1] min-w-max transition-all duration-200 ease-out",
+          "opacity-0 scale-50 pointer-events-none",
+          // desktop hover
+          "group-hover:opacity-100 group-hover:scale-100 group-hover:pointer-events-auto",
+          // mobile click
+          isOpen && "opacity-100 scale-100 pointer-events-auto",
+          isLeft ? "left-full -translate-x-full" : "left-0",
+        )}
       >
         <div
-          className={`bg-(--color-primary) py-6 rounded-full shadow-xl flex-col flex-left text-left ${
-            isLeft ? styles.rightPadding : styles.leftPadding
-          }`}
+          className={cn(
+            "bg-(--color-primary) py-6 rounded-full shadow-xl flex-col flex-left text-left",
+            isLeft ? "pl-12 pr-17" : "pl-17 pr-12",
+          )}
         >
-          <div className="text-(--color-off-primaryDarker) text-sm ">
+          <div className="text-(--color-off-primaryDarker) text-sm">
             {textSmall}
           </div>
           <div className="font-bold text-(--color-content-emphasis) text-2xl">

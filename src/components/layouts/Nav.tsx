@@ -43,7 +43,7 @@ export default function Navbar() {
           : "bg-transparent",
       )}
     >
-      <nav className=" mx-auto flex items-center justify-between pl-28 pr-32 py-2.5 h-17.5">
+      <nav className=" mx-auto flex items-center justify-between pl-[6vw] pr-32 py-2.5 h-17.5 2xl:pl-28">
         {/* Logo / Brand */}
         <Link
           href="/"
@@ -62,7 +62,7 @@ export default function Navbar() {
           type="button"
           onClick={() => setIsOpen((prev) => !prev)}
           className={cn(
-            "fixed top-3 right-10 z-10000 flex h-10 w-10 items-center justify-center  cursor-pointer 2xl:hidden",
+            "fixed top-3 right-5 z-10000 flex h-10 w-10 items-center justify-center  cursor-pointer 2xl:hidden",
             isOpen ? "-translate-x-4 translate-y-4" : "",
             " transition-translate duration-300 ease-in-out",
           )}

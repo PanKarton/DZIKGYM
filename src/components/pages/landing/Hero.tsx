@@ -1,6 +1,12 @@
 import ColorLogo from "@/components/ui/ColorLogo";
 import CTA from "@/components/ui/cta";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
+
+const h1Styles = cn(
+  "text-[2rem] font-bold italic h1-hero max-w-[17ch]",
+  "md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem]  2xl:text-[5.375rem]",
+);
 
 export default function Hero() {
   return (
@@ -26,21 +32,21 @@ export default function Hero() {
             playsInline
             preload="none"
           >
-            <source src="/video/hero.webm" type="video/webm" />
-            <source src="/video/hero.mp4" type="video/mp4" />
+            {/* <source src="/video/hero.webm" type="video/webm" /> */}
+            {/* <source src="/video/hero.mp4" type="video/mp4" /> */}
           </video>
           <div className="absolute inset-0 bg-[#000000]/60" />
           <div className="relative   py-35 flex flex-col items-center justify-center h-full gap-12 text-center z-10">
             <div className="w-66">
               <ColorLogo />
             </div>
-            <div className="flex flex-col gap-6">
-              <h1 className="text-7xl font-bold italic h1-hero max-w-[17ch]">
-                SIŁOWNIE UZNANE PRZEZ SPOŁECZNOŚĆ
-              </h1>
-              <h2 className="h2-hero font-regular">
-                Tworzymy miejsca, które integrują i wspierają zdrowie i formę
-                Polaków.
+            <div className="flex flex-col items-center gap-6">
+              <h1 className={h1Styles}>SIŁOWNIE UZNANE PRZEZ SPOŁECZNOŚĆ</h1>
+              <h2 className="text-[1rem] lg:text-[1.125rem]  h2-hero font-light mx-8 sm:mx-16">
+                Tworzymy nowoczesne siłownie plenerowe, które integrują i
+                wspierają zdrowie i formę Polaków. <br /> DZIK GYM to projekt
+                sprawdzony w praktyce, gotowy do wdrożenia w przestrzeni
+                publicznej i półpublicznej.
               </h2>
             </div>
             <div className="w-57">

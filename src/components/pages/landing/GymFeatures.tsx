@@ -54,21 +54,8 @@ export default function GymFeatures() {
         <h2 className="text-(--color-content-emphasis) font-black text-[3.5rem] leading-none italic mb-16">
           Głowne cechy <br /> siłowni DZIK GYM
         </h2>
-        <div className="grid grid-cols-2 gap-8">
-          <div className="grid grid-cols-2 grid-rows-2 gap-4">
-            {gymFeaturesData.map(({ feature, description }, index) => (
-              <div
-                key={index}
-                className="rounded-2xl border-2 border-(--color-brand-blue) bg-(--color-brand-blue)/20  text-(--color-primary) flex-col flex-center aspect-[314/245]  p-8"
-              >
-                <h3 className="text-3xl font-black italic mb-4">{feature}</h3>
-                <p className="font-thin text-sm leading-relaxed">
-                  {description}
-                </p>
-              </div>
-            ))}
-          </div>
-          <div className=" relative aspect-796/606">
+        <div className="grid grid-rows-2 xl:grid-cols-2 xl:grid-rows-1 xl:content-end gap-24 lg:gap-8">
+          <div className=" relative aspect-376/315 mt-24 max-w-200">
             <Image
               src="/images/gym-machine.png"
               alt="Gym Machine"
@@ -91,6 +78,31 @@ export default function GymFeatures() {
                 </div>
               ),
             )}
+          </div>
+          <div
+            className="
+    flex gap-4 overflow-x-auto snap-x snap-mandatory px-4
+    lg:grid lg:grid-cols-2 lg:grid-rows-2 lg:overflow-visible
+  "
+          >
+            {gymFeaturesData.map(({ feature, description }, index) => (
+              <div
+                key={index}
+                className="
+        min-w-30 shrink-0 snap-start
+        rounded-2xl border-2 border-(--color-brand-blue)
+        bg-(--color-brand-blue)/20 text-(--color-primary)
+        flex flex-col items-center justify-center
+        aspect-314/245 p-8
+        lg:min-w-0
+      "
+              >
+                <h3 className="text-3xl font-black italic mb-4">{feature}</h3>
+                <p className="font-thin text-sm leading-relaxed text-center">
+                  {description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>

@@ -5,8 +5,9 @@ import RedMinus from "@/components/ui/RedMinus";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 
 const styles = {
-  card: "text-white comp-card-width gap-6 py-14 px-8 rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
-  cardTitle: "uppercase italic text-left text-4xl font-black",
+  card: "text-white comp-card-width gap-6 py-14 px-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
+  cardTitle:
+    "uppercase italic text-left text-xl md:text-3xl lg:text-4xl font-black",
 };
 
 const normalGrymFeatures = [
@@ -25,7 +26,7 @@ const gymDzikFeatures = [
 
 export default function GymComparison() {
   return (
-    <section className="mx-auto px-4 pt-16 pb-60 text-center flex-center">
+    <section className="mx-auto pt-16 min-[1100px]:pb-60 text-center flex-center">
       <div className="content-max-width">
         {/* Title */}
 
@@ -34,9 +35,9 @@ export default function GymComparison() {
         </SectionHeading>
 
         {/* Image Section */}
-        <div className="relative flex flex-col md:flex-row justify-center items-center gap-4 ">
+        <div className="relative flex flex-col min-[1100px]:flex-row justify-center items-center min-[1100px]:gap-4 ">
           {/* Background Image Comparison */}
-          <div className="w-full relative aspect-1230/670 rounded-4xl overflow-hidden">
+          <div className="w-full relative aspect-1230/670 rounded-t-4xl min-[900px]:rounded-4xl overflow-hidden">
             <video
               className="absolute z-[-1] inset-0 h-full w-full object-cover"
               autoPlay
@@ -51,21 +52,24 @@ export default function GymComparison() {
           </div>
 
           {/* Info Cards */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 flex flex-row gap-8 w-full max-w-[51rem]">
+          <div className=" flex  min-[1100px]:absolute min-[1100px]:bottom-0 min-[1100px]:left-1/2 min-[1100px]:-translate-x-1/2 min-[1100px]:translate-y-1/2  min-[1100px]:flex-row min-[1100px]:gap-8 min-[1100px]:w-full min-[1100px]:max-w-204 ">
             {/* Standard Gym */}
-            <div className={` relative  ${styles.card}`}>
+            <div className={` relative  ${styles.card} rounded-es-4xl `}>
               <GradientBlueRed />
-              <h3 className="text-left text-2xl  text-(--color-primary) font-medium">
+              <h3 className="text-left text-lg lg:text-2xl  text-(--color-primary) font-light">
                 Standardowa
               </h3>
               <h2 className={`text-(--color-brand-red) ${styles.cardTitle}`}>
-                Siłownia plenerowa
+                Siłownia <br /> plenerowa
               </h2>
 
-              <ul className="mt-4 space-y-2 text-sm leading-[1.5] font-thin text-(--color-off-primary) text-left">
+              <ul className="mt-4 space-y-2 text-sm leading-normal font-thin text-(--color-off-primary) text-left">
                 {normalGrymFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-10  mb-8">
-                    <div className="w-[21px] shrink-0">
+                  <li
+                    key={index}
+                    className="flex items-center gap-2 lg:gap-6  mb-8"
+                  >
+                    <div>
                       <RedMinus />
                     </div>
                     <p>{feature}</p>
@@ -75,19 +79,22 @@ export default function GymComparison() {
             </div>
 
             {/* Dzik Gym */}
-            <div className={`relative ${styles.card}`}>
+            <div className={`relative ${styles.card} rounded-ee-4xl`}>
               <GradientBlueGreen />
-              <h3 className="text-left text-2xl  text-(--color-primary) font-medium">
+              <h3 className="text-left  text-lg lg:text-2xl  text-(--color-primary) font-light">
                 Profesjonalna
               </h3>
               <h2 className={` text-(--color-brand-green) ${styles.cardTitle}`}>
                 Siłownia <br /> DZIK GYM
               </h2>
 
-              <ul className="mt-4 space-y-2 text-sm leading-[1.5] font-thin text-(--color-off-primary) text-left">
+              <ul className="mt-4 space-y-2 text-sm leading-normal font-thin text-(--color-off-primary) text-left">
                 {gymDzikFeatures.map((feature, index) => (
-                  <li key={index} className="flex items-center gap-10  mb-8">
-                    <div className="w-[26px] shrink-0">
+                  <li
+                    key={index}
+                    className="flex items-center gap-2 lg:gap-6  mb-8"
+                  >
+                    <div>
                       <GreenPlus />
                     </div>
                     <p>{feature}</p>
