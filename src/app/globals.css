@@ -107,7 +107,7 @@ body {
   }
   .content-max-width {
     width: min(100%, 90rem);
-    padding-inline: clamp(0.5rem, 3vw, 3.75rem);
+    padding-inline: clamp(1rem, 3vw, 3.75rem);
     margin-inline: auto;
   }
   .aspect-map {
@@ -270,4 +270,16 @@ body {
   .maplibregl-popup-tip {
     @apply hidden!;
   }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.border-t {
+  border: 2px solid red;
 }

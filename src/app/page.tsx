@@ -21,9 +21,9 @@ export default async function Home() {
       {/* <SponsorsSection parnersLogos={parnersLogos} /> */}
       {/* <ProblemBenefitSection /> */}
       {/* <GymFeatures /> */}
-      <GymComparison />
+      {/* <GymComparison /> */}
       {/* <LatestOpeningVideoBanner /> */}
-      {/* <FirstGymSection /> */}
+      <FirstGymSection />
       {/* <SocialProofSection /> */}
     </div>
   );

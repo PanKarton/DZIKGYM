@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="pl">
       <body className={`${myFontConfig.variable} antialiased`}>
         <SvgDefs />
-        <Navbar />
+        {/* <Navbar /> */}
         <main>{children}</main>
         <Footer />
         <Copyrights />

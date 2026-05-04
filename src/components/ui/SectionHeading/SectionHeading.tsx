@@ -12,7 +12,7 @@ export default function SectionHeading({
   isBig,
 }: SectionHeadingProps) {
   const fontSize = isBig
-    ? "text-2xl md:text-[3.5rem]"
+    ? "text-4xl md:text-[3.5rem]"
     : "text-2xl md:text-[2.5rem]";
 
   return (

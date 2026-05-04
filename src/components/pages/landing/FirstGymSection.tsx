@@ -5,6 +5,7 @@ import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import { IoIosInformationCircleOutline } from "react-icons/io";
+import { cn } from "@/lib/utils";
 
 const caruselImages = [
   {
@@ -49,11 +50,26 @@ export default function FirstGymSection() {
   return (
     <section className="pb-24 text-center  ">
       <div className="content-max-width">
-        <SectionHeading className="mb-10">
-          Pierwszy DZIK GYM - Ochota
-        </SectionHeading>
+        <SectionHeading isBig className="mb-6 sm:mb-10">
+          {/* Desktop */}
+          <span className="hidden sm:inline">Pierwszy DZIK GYM - Ochota</span>
 
-        <div className="flex flex-row justify-between mb-26">
+          {/* Mobile */}
+          <span className="block sm:hidden text-left max-w-92 mx-auto ">
+            <span className="block">Pierwszy </span>
+            <span className="block">DZIK GYM</span>
+            <span className="block text-(--color-brand-blue) mx-auto">
+              Ochota
+            </span>
+          </span>
+        </SectionHeading>
+        {/* Detale */}
+        <div
+          className={cn(
+            "flex flex-col max-w-92 mx-auto text-left gap-4  mb-12 ",
+            "md:flex-row md:max-w-full md:justify-between md:px-4 sm:mb-26",
+          )}
+        >
           {gymDetails.map((detail, i) => (
             <div className=" flex items-center" key={i}>
               <div className="text-(--color-brand-blue) text-4xl mr-4">
@@ -63,8 +79,8 @@ export default function FirstGymSection() {
             </div>
           ))}
         </div>
-
-        <div className="relative w-full aspect-4/1 flex items-center justify-center">
+        {/* Karuzela Desktop */}
+        <div className="hidden sm:flex relative w-full aspect-4/1  items-center justify-center">
           {caruselImages.map((item, i) => (
             <div
               key={i}
@@ -74,8 +90,8 @@ export default function FirstGymSection() {
             </div>
           ))}
         </div>
-
-        <div className="flex items-center justify-center gap-24 mt-24">
+        {/* Przyciski */}
+        <div className="hidden sm:flex items-center justify-center gap-24 mt-24">
           <button onClick={prev} className={circleButtonStyle}>
             <ChevronLeft size={60} style={{ translate: "-2px" }} />
           </button>
@@ -87,6 +103,19 @@ export default function FirstGymSection() {
           <button onClick={next} className={circleButtonStyle}>
             <ChevronRight size={60} style={{ translate: "2px" }} />
           </button>
+        </div>
+      </div>
+      {/* Karuzela Mobile */}
+      <div className="block sm:hidden overflow-x-auto no-scrollbar">
+        <div className="flex gap-2 w-max ">
+          {caruselImages.map((item, i) => (
+            <div
+              key={i}
+              className={`relative  rounded-3xl w-81 aspect-270/152 `}
+            >
+              <Image src={item.image} alt={item.alt} fill />
+            </div>
+          ))}
         </div>
       </div>
     </section>

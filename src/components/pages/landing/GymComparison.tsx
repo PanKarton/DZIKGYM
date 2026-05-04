@@ -27,7 +27,7 @@ const gymDzikFeatures = [
 export default function GymComparison() {
   return (
     <section className="mx-auto pt-16 min-[1100px]:pb-60 text-center flex-center">
-      <div className="content-max-width">
+      <div className="w-full max-w-360 mx-auto px-[clamp(0.5rem,3vw,3.75rem)]">
         {/* Title */}
 
         <SectionHeading className="mb-12">
