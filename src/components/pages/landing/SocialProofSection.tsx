@@ -5,10 +5,10 @@ export default function SocialProofSection() {
   return (
     <section className="">
       <div className="content-max-width flex flex-col items-center">
-        <SectionHeading>
+        <h2 className="text-left lg:text-center text-4xl font-black italic ">
           Siłownia sprawdzona <br />w codziennym użytkowaniu
-        </SectionHeading>
-        <div className="text-center max-w-218  flex flex-col gap-6 mt-6">
+        </h2>
+        <div className="text-left lg:text-center max-w-150 lg:max-w-218  flex flex-col gap-6 mt-6">
           <p>
             Pierwszy DZIK GYM powstał dokładnie tam, gdzie narodziła się EKIPA
             WK, i od ponad 2,5 roku nieprzerwanie działa na najwyższym poziomie,
@@ -29,7 +29,7 @@ export default function SocialProofSection() {
         </div>
 
         <div>
-          <h3 className="font-black italic text-[3rem] leading-tight mt-24">
+          <h3 className="font-black italic text-[3rem] leading-tight mt-6 md:mt-24 max-w-150 lg:max-w-218">
             Sprawdź, jak może wyglądać <br />{" "}
             <span className="text-(--color-brand-blue) ">
               DZIK GYM w Twoim mieście.

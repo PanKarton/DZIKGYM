@@ -23,8 +23,8 @@ export default async function Home() {
       {/* <GymFeatures /> */}
       {/* <GymComparison /> */}
       {/* <LatestOpeningVideoBanner /> */}
-      <FirstGymSection />
-      {/* <SocialProofSection /> */}
+      {/* <FirstGymSection /> */}
+      <SocialProofSection />
     </div>
   );
 }
