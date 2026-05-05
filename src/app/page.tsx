@@ -19,8 +19,8 @@ export default async function Home() {
       {/* <Hero /> */}
       {/* <GymMapSection gymLocations={gymLocations} /> */}
       {/* <SponsorsSection parnersLogos={parnersLogos} /> */}
-      {/* <ProblemBenefitSection /> */}
-      <GymFeatures />
+      <ProblemBenefitSection />
+      {/* <GymFeatures /> */}
       {/* <GymComparison /> */}
       {/* <LatestOpeningVideoBanner /> */}
       {/* <FirstGymSection /> */}
