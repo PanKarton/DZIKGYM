@@ -9,15 +9,15 @@ import { cn } from "@/lib/utils";
 
 const caruselImages = [
   {
-    image: "/images/first-gym-1.png",
+    image: "/images/first-gym-1.webp",
     alt: "Zdrowsi mieszkańcy",
   },
   {
-    image: "/images/first-gym-2.png",
+    image: "/images/first-gym-2.webp",
     alt: "Aktywna społeczność",
   },
   {
-    image: "/images/first-gym-3.png",
+    image: "/images/first-gym-3.webp",
     alt: "Nowoczesny wizerunek",
   },
 ];
@@ -84,7 +84,7 @@ export default function FirstGymSection() {
           {caruselImages.map((item, i) => (
             <div
               key={i}
-              className={`absolute transition-all duration-500 ease-in-out rounded-3xl  border-(--color-off-primary)  w-[65%] aspect-870/490 transform ${getPositionClass(i)}`}
+              className={`absolute transition-all duration-500 ease-in-out rounded-3xl overflow-hidden  border-(--color-off-primary)  w-[65%] aspect-870/490 transform ${getPositionClass(i)}`}
             >
               <Image src={item.image} alt={item.alt} fill />
             </div>
