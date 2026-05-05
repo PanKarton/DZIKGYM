@@ -9,6 +9,7 @@ import { getPartnersLogos } from "@/lib/storyblok/getPartnersLogos";
 import { LatestOpeningVideoBanner } from "@/components/pages/landing/LatestOpeningVideoBanner/LatestOpeningVideoBanner";
 import FirstGymSection from "@/components/pages/landing/FirstGymSection";
 import SocialProofSection from "@/components/pages/landing/SocialProofSection";
+import MobilizationSection from "@/components/pages/landing/MobilizationSection";
 
 export default async function Home() {
   const gymLocations = await getGymsLocations();
@@ -17,14 +18,15 @@ export default async function Home() {
   return (
     <div>
       <Hero />
+      <MobilizationSection />
       <GymMapSection gymLocations={gymLocations} />
       <SponsorsSection parnersLogos={parnersLogos} />
       <ProblemBenefitSection />
-      <GymFeatures />
-      <GymComparison />
-      <LatestOpeningVideoBanner />
-      <FirstGymSection />
-      <SocialProofSection />
+      {/* <GymFeatures /> */}
+      {/* <GymComparison /> */}
+      {/* <LatestOpeningVideoBanner /> */}
+      {/* <FirstGymSection /> */}
+      {/* <SocialProofSection /> */}
     </div>
   );
 }

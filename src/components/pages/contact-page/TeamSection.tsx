@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
-import Image from "next/image";
 import { MdOutlineMail } from "react-icons/md";
 
 const team = [
@@ -7,19 +6,16 @@ const team = [
     name: "Damian",
     lastName: "Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/images/placeholder.jpg",
   },
   {
     name: "Damian",
     lastName: " Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/images/placeholder.jpg",
   },
   {
     name: "Damian",
     lastName: "Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/images/placeholder.jpg",
   },
 ];
 
