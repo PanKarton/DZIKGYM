@@ -16,15 +16,15 @@ export default async function Home() {
 
   return (
     <div>
-      {/* <Hero /> */}
-      {/* <GymMapSection gymLocations={gymLocations} /> */}
-      {/* <SponsorsSection parnersLogos={parnersLogos} /> */}
+      <Hero />
+      <GymMapSection gymLocations={gymLocations} />
+      <SponsorsSection parnersLogos={parnersLogos} />
       <ProblemBenefitSection />
-      {/* <GymFeatures /> */}
-      {/* <GymComparison /> */}
-      {/* <LatestOpeningVideoBanner /> */}
-      {/* <FirstGymSection /> */}
-      {/* <SocialProofSection /> */}
+      <GymFeatures />
+      <GymComparison />
+      <LatestOpeningVideoBanner />
+      <FirstGymSection />
+      <SocialProofSection />
     </div>
   );
 }

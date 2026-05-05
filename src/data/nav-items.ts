@@ -9,6 +9,6 @@ export const NAV_ITEMS: NavItem[] = [
   { label: "Budżety Obywatelskie", href: "/budzety-obywatelskie" },
   { label: "Dla Samorządów", href: "/dla-samorzadow" },
   { label: "Oferta", href: "/oferta" },
-  { label: "Blog", href: "/blog" },
+  // { label: "Blog", href: "/blog" },
   { label: "Kontakt", href: "/kontakt" },
 ];
