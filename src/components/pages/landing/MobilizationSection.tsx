@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function MobilizationSection() {
   return (
-    <section className=" md:pt-24">
+    <section className=" pt-12 md:pt-24">
       <div className="content-max-width">
         <SectionHeading isBig>
           Mobilizujemy <br className="md:hidden" />
