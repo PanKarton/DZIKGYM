@@ -22,11 +22,11 @@ export default async function Home() {
       <GymMapSection gymLocations={gymLocations} />
       <SponsorsSection parnersLogos={parnersLogos} />
       <ProblemBenefitSection />
-      {/* <GymFeatures /> */}
-      {/* <GymComparison /> */}
-      {/* <LatestOpeningVideoBanner /> */}
-      {/* <FirstGymSection /> */}
-      {/* <SocialProofSection /> */}
+      <GymFeatures />
+      <GymComparison />
+      <LatestOpeningVideoBanner />
+      <FirstGymSection />
+      <SocialProofSection />
     </div>
   );
 }
