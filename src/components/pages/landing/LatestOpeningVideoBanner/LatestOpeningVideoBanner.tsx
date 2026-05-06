@@ -27,7 +27,9 @@ const videos = [
 export function LatestOpeningVideoBanner() {
   const [activeVideo, setActiveVideo] = useState(videos[0]);
 
-  const previousVideos = videos.filter((video) => video !== activeVideo);
+  const previousVideos = videos.filter(
+    (video) => video.url !== activeVideo.url,
+  );
 
   return (
     <section className="relative my-24 overflow-hidden py-24">
@@ -40,13 +42,13 @@ export function LatestOpeningVideoBanner() {
         className="z-1 object-cover"
       />
 
-      <div className="content-max-width relative z-10">
+      <div className="w-full max-w-360 mx-auto px-[clamp(2rem,3vw,3.75rem)] relative z-10">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-5xl font-black italic leading-none text-(--color-brand-blue)">
             Otwarcia siłowni
           </h2>
 
-          <p className="mx-auto mt-5 max-w-4xl text-lg font-light leading-snug text-white">
+          <p className="mx-auto mt-5 max-w-4xl text-base md:text-lg font-light leading-snug text-left md:text-center text-white">
             Otwarcie siłowni DZIK GYM to zawsze duże wydarzenie - dla Nas, dla
             samorządów, dla społeczności. Staramy się, aby miały one zawsze
             odpowiedni start.
@@ -63,24 +65,26 @@ export function LatestOpeningVideoBanner() {
             />
           </div>
 
-          <div className="mx-auto mt-8 flex justify-center gap-8">
-            {previousVideos.map((video) => (
-              <button
-                key={video.title}
-                type="button"
-                onClick={() => setActiveVideo(video)}
-                className="group aspect-video w-64 overflow-hidden rounded-lg ring-1 ring-white/10 transition hover:scale-[1.03] hover:ring-white/40"
-                aria-label={`Pokaż film: ${video.title}`}
-              >
-                <iframe
-                  src={getYoutubeEmbedUrl(video.url) ?? undefined}
-                  title={video.title}
-                  className="pointer-events-none h-full w-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </button>
-            ))}
+          <div className="-mx-4 mt-8 overflow-x-auto no-scrollbar px-4 md:mx-auto md:overflow-visible md:px-0">
+            <div className="flex w-max gap-4 md:w-auto md:justify-center md:gap-8">
+              {previousVideos.map((video) => (
+                <button
+                  key={video.url}
+                  type="button"
+                  onClick={() => setActiveVideo(video)}
+                  className="group aspect-video w-64 shrink-0 overflow-hidden rounded-lg transition hover:scale-[1.03] border-2 border-(--color-brand-navy) hover:border-(--color-brand-blue) cursor-pointer"
+                  aria-label={`Pokaż film: ${video.title}`}
+                >
+                  <iframe
+                    src={getYoutubeEmbedUrl(video.url) ?? undefined}
+                    title={video.title}
+                    className="pointer-events-none h-full w-full border-0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>

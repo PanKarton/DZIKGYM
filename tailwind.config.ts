@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         sans: ["var(--font-obviously)", "system-ui", "sans-serif"],
       },
+      screens: {
+        nav: "1300px",
+      },
     },
   },
   content: ["./src/**/*.{js,ts,jsx,tsx}"],

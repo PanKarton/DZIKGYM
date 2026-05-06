@@ -1,5 +1,4 @@
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
-import Image from "next/image";
 import { MdOutlineMail } from "react-icons/md";
 
 const team = [
@@ -7,19 +6,16 @@ const team = [
     name: "Damian",
     lastName: "Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/images/placeholder.jpg",
   },
   {
     name: "Damian",
     lastName: " Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/images/placeholder.jpg",
   },
   {
     name: "Damian",
     lastName: "Dąbrowski",
     email: "gym@wkdzik.pl",
-    image: "/images/placeholder.jpg",
   },
 ];
 
@@ -35,17 +31,8 @@ export default function TeamSection() {
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-white aspect-420/590 rounded-3xl py-16 px-12 shadow-2xl flex flex-col items-center gap-12 transition-transform duration-100 ease-out hover:scale-102"
+              className="bg-white aspect-420/278 rounded-3xl py-16 px-12 shadow-2xl flex flex-col items-center gap-12 transition-transform duration-100 ease-out hover:scale-102"
             >
-              <div className="relative w-full aspect-320/240 bg-gray-200 rounded-md overflow-hidden">
-                <Image
-                  src={member.image}
-                  alt={member.name + " " + member.lastName}
-                  fill
-                  sizes="212px"
-                  className="object-cover"
-                />
-              </div>
               <h3 className="mt-4 font-bold italic   text-4xl">
                 {member.name}
                 <br />
