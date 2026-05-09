@@ -20,6 +20,7 @@
   --color-brand-red-hover: #990000;
   --color-brand-blue: #00b4de;
   --color-brand-blue-light: #00b4de30;
+  --color-brand-blue-hover: #004f62;
   --color-brand-green: #2def00;
   --color-brand-navy: #005b70;
 
@@ -76,9 +77,27 @@ body {
     justify-content: center;
   }
   .clip-hero {
-    -webkit-clip-path: url(#customHeroClipPath);
-    clip-path: url(#customHeroClipPath);
+    clip-path: none;
   }
+
+  @media (min-width: 1280px) {
+    .clip-hero {
+      -webkit-clip-path: url(#customHeroClipPath);
+      clip-path: url(#customHeroClipPath);
+    }
+  }
+
+  .clip-hamburger-bg {
+    -webkit-clip-path: url(#customHamburgerBackgroundClipPath);
+    clip-path: url(#customHamburgerBackgroundClipPath);
+  }
+
+  @media (min-width: 1280px) {
+    .clip-hamburger-bg {
+      clip-path: none;
+    }
+  }
+
   .clip-footer {
     -webkit-clip-path: url(#customFooterClipPath);
     clip-path: url(#customFooterClipPath);
@@ -113,6 +132,13 @@ body {
   .aspect-map {
     aspect-ratio: 1920/800;
   }
+
+  .maplibregl-map,
+  .mapboxgl-map {
+    position: relative;
+    z-index: 0;
+  }
+
   .sub-hero-gradient {
     background: linear-gradient(
       180deg,

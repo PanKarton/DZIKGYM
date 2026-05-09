@@ -4,7 +4,7 @@ import BenefitContent from "./BenefitContent";
 
 export default function ProblemBenefitSection() {
   return (
-    <section className="bg-(--color-primary-darker) py-24 mb-24 flex-center ">
+    <section className="bg-(--color-primary-darker)  mb-24 flex-center ">
       <div className="content-max-width">
         <div className=" flex flex-col lg:flex-row items-center justify-between gap-12 ">
           <ProblemCard />

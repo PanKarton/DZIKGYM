@@ -14,6 +14,12 @@ export function getYoutubeEmbedUrl(url: string): string | null {
       return `https://www.youtube-nocookie.com/embed/${id}`;
     }
 
+    // youtube.com/live/abc123
+    if (parsedUrl.pathname.startsWith("/live/")) {
+      const id = parsedUrl.pathname.split("/live/")[1];
+      return `https://www.youtube-nocookie.com/embed/${id}`;
+    }
+
     // youtube.com/embed/abc123
     if (parsedUrl.pathname.includes("/embed/")) {
       return url.replace("youtube.com", "youtube-nocookie.com");

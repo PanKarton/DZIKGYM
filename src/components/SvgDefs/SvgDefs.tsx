@@ -50,6 +50,19 @@ export default function SvgDefs() {
           </clipPath>
         </defs>
       </svg>
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <clipPath
+            id="customHamburgerBackgroundClipPath"
+            clipPathUnits="userSpaceOnUse"
+          >
+            <path
+              d="
+               M0,0v8c2.87988,0,5.61987,1.23999,7.51978,3.39996l44.05273,50.19617c1.89868,2.16345,4.6377,3.40387,7.51611,3.40387h45.4812c5.52002,0,10,4.47998,10,10h4V0H0Z"
+            ></path>
+          </clipPath>
+        </defs>
+      </svg>
     </>
   );
 }

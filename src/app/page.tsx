@@ -10,10 +10,12 @@ import { LatestOpeningVideoBanner } from "@/components/pages/landing/LatestOpeni
 import FirstGymSection from "@/components/pages/landing/FirstGymSection";
 import SocialProofSection from "@/components/pages/landing/SocialProofSection";
 import MobilizationSection from "@/components/pages/landing/MobilizationSection";
+import { getLatestOpeningsVideos } from "@/lib/storyblok/getLatestOpeningsVideos";
 
 export default async function Home() {
   const gymLocations = await getGymsLocations();
   const parnersLogos = await getPartnersLogos();
+  const videos = await getLatestOpeningsVideos();
 
   return (
     <div>
@@ -24,7 +26,7 @@ export default async function Home() {
       <ProblemBenefitSection />
       <GymFeatures />
       <GymComparison />
-      <LatestOpeningVideoBanner />
+      <LatestOpeningVideoBanner videos={videos} />
       <FirstGymSection />
       <SocialProofSection />
     </div>
