@@ -1,3 +1,5 @@
+"use client";
+
 type CTAVariant =
   | "red"
   | "redWide"
@@ -25,12 +27,31 @@ const variants: Record<CTAVariant, string> = {
 };
 
 const DEFAULT_VARIANT: CTAVariant = "blue";
-
 type CTAProps = {
   children: React.ReactNode;
   variant?: CTAVariant;
+  scrollToId?: string;
 };
 
-export default function CTA({ children, variant = DEFAULT_VARIANT }: CTAProps) {
-  return <button className={`${base} ${variants[variant]}`}>{children}</button>;
+export default function CTA({
+  children,
+  variant = DEFAULT_VARIANT,
+  scrollToId,
+}: CTAProps) {
+  const handleClick = () => {
+    if (!scrollToId) return;
+
+    document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" });
+    console.log(document.getElementById(scrollToId));
+  };
+
+  return (
+    <button
+      type="button"
+      onClick={scrollToId ? handleClick : undefined}
+      className={`${base} ${variants[variant]}`}
+    >
+      {children}
+    </button>
+  );
 }

@@ -309,7 +309,7 @@ export default function ContactForm() {
             <div className={helperErrorCls}>{errors.consent.message}</div>
           )}
 
-          <div className="w-50 ml-auto">
+          <div className="w-50 lg:ml-auto">
             <CTA variant="redWide">
               {isLoading ? (
                 "Wysyłanie..."

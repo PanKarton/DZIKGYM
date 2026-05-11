@@ -4,5 +4,6 @@ const EXTERNAL_HREFS = {
   tiktok: "https://www.tiktok.com/tag/dzikgym",
   facebook: "https://www.facebook.com/wkdzikpl",
   youtube: "https://www.youtube.com/user/WarszawskiKoks",
+  openingVideosPlaylist: "https://www.youtube.com/user/WarszawskiKoks",
 };
 export default EXTERNAL_HREFS;

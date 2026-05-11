@@ -7,7 +7,7 @@ export default function GymMapSection({
   gymLocations: GymLocation[];
 }) {
   return (
-    <section className="">
+    <section id="map">
       <div className="text-center pt-24 pb-18">
         <h2 className="text-[2rem] 2xl:text-[3.5rem] font-extrabold italic leading-[1.2] mb-6 px-8">
           DZIK GYM jest tam,

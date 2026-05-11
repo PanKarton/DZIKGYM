@@ -3,9 +3,10 @@ import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import GreenPlus from "@/components/ui/GreenPlus";
 import RedMinus from "@/components/ui/RedMinus";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import Image from "next/image";
 
 const styles = {
-  card: "text-white comp-card-width gap-6 py-14 px-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
+  card: "text-white comp-card-width gap-6 py-14 pl-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
   cardTitle:
     "uppercase italic text-left text-xl md:text-3xl lg:text-4xl font-black",
 };
@@ -27,7 +28,7 @@ const gymDzikFeatures = [
 export default function GymComparison() {
   return (
     <section className="mx-auto pt-16 min-[1100px]:pb-60 text-center flex-center">
-      <div className="w-full max-w-360 mx-auto px-[clamp(0.5rem,3vw,3.75rem)]">
+      <div className="w-full max-w-360 mx-auto px-[clamp(0.375rem,3vw,3.75rem)]">
         {/* Title */}
 
         <SectionHeading className="mb-12">
@@ -56,6 +57,7 @@ export default function GymComparison() {
             {/* Standard Gym */}
             <div className={` relative  ${styles.card} rounded-es-4xl `}>
               <GradientBlueRed />
+
               <h3 className="text-left text-lg lg:text-2xl  text-(--color-primary) font-light">
                 Standardowa
               </h3>
@@ -76,6 +78,12 @@ export default function GymComparison() {
                   </li>
                 ))}
               </ul>
+              <Image
+                src="/mesh/Pattern_800x800.webp"
+                alt=""
+                fill
+                className="object-cover z-[-1]"
+              />
             </div>
 
             {/* Dzik Gym */}
@@ -101,6 +109,12 @@ export default function GymComparison() {
                   </li>
                 ))}
               </ul>
+              <Image
+                src="/mesh/Pattern_800x800.webp"
+                alt=""
+                fill
+                className="object-cover z-[-1]"
+              />
             </div>
           </div>
         </div>

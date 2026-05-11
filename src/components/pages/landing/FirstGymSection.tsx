@@ -67,7 +67,7 @@ export default function FirstGymSection() {
         <div
           className={cn(
             "flex flex-col max-w-92 mx-auto text-left gap-4  mb-12 ",
-            "md:flex-row md:max-w-full md:justify-between md:px-4 sm:mb-26",
+            "md:flex-row md:max-w-full md:justify-between md:px-4 sm:mb-24 lg:mb-32",
           )}
         >
           {gymDetails.map((detail, i) => (

@@ -43,9 +43,52 @@ export default function SvgDefs() {
             clipPathUnits="objectBoundingBox"
           >
             <path
+              d="M 1, 0.9821 
+           C 1, 0.992 0.9974, 1 0.9941, 1 
+           H 0.0059 
+           C 0.0049, 1 0, 0.992 0, 0.9821 
+           V 0.0179 
+           C 0, 0.008 0.0026, 0 0.0059, 0 
+           H 0.1908 
+           C 0.1924, 0 0.194, 0.0022 0.1952, 0.0059 
+           L 0.2285, 0.1207 
+           C 0.2296, 0.1246 0.2312, 0.1266 0.2331, 0.1266 
+           H 0.9941 
+           C 0.9974, 0.1266 1, 0.1348 1, 0.1447 
+           V 0.9821 Z"
+            ></path>
+          </clipPath>
+        </defs>
+      </svg>
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <clipPath
+            id="customHamburgerBackgroundClipPath"
+            clipPathUnits="userSpaceOnUse"
+          >
+            <path
               d="
-               M 1 0.9895 C 1 0.9953 0.9974 1 0.9941 1 H 0.0059 C 0.0049 1 0 0.9953 0 0.9895 V 0.0105 C 0 0.0047 0.0026 0 0.0059 0 H 0.1408 C 0.1424 0 0.144 0.0013 0.1452 0.0035 L 0.1785 0.129 C 0.1805 0.139 0.1812 0.144 0.191 0.144 H 0.9941 C 0.9974 0.144 1 0.145 1 0.15 V 0.9895 Z
-               "
+               M0,0v8c2.87988,0,5.61987,1.23999,7.51978,3.39996l44.05273,50.19617c1.89868,2.16345,4.6377,3.40387,7.51611,3.40387h45.4812c5.52002,0,10,4.47998,10,10h4V0H0Z"
+            ></path>
+          </clipPath>
+        </defs>
+      </svg>
+      <svg width="0" height="0" style={{ position: "absolute" }}>
+        <defs>
+          <clipPath
+            id="customFooterTopThingClipPath"
+            clipPathUnits="objectBoundingBox"
+          >
+            <path
+              d="M 1, 1 
+           H 0 
+           V 0.193 
+           C 0, 0.0865 0.0197, 0 0.044, 0 
+           H 0.7584 
+           C 0.771, 0 0.783, 0.0237 0.7913, 0.0651 
+           L 0.9671, 0.9351 
+           C 0.9754, 0.9765 0.9874, 1 1, 1 
+           Z"
             ></path>
           </clipPath>
         </defs>

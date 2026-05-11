@@ -18,20 +18,24 @@ type MachineFeature = {
 
 const GYM_FEATURES: GymFeature[] = [
   {
-    feature: "Nowoczesny sprzęt",
-    description: "Dostęp do najnowszych maszyn i urządzeń fitness.",
+    feature: "Niski próg wejścia",
+    description:
+      "Maszyny sa intuicyjne i zawierają instrukcje ćwiczeń, co pomaga na początku sportowej drogi.",
   },
   {
-    feature: "Profesjonalni trenerzy",
-    description: "Wykwalifikowany personel gotowy do pomocy.",
+    feature: "Kontrola treningu",
+    description:
+      "Stopniowe zwiększanie obciążenia zmniejsza ryzyko kontuzji i pozwala dopasować trening do każdego poziomu.",
   },
   {
-    feature: "Godziny otwarcia",
-    description: "Siłownia dostępna 24/7 dla Twojej wygody.",
+    feature: "Sportowa aura",
+    description:
+      "Siłownie DZIK GYM cieszą się sporą popularnością, co wzmacnia integracje lokalnych społeczności.HG",
   },
   {
-    feature: "Zajęcia grupowe",
-    description: "Yoga, pilates, spinning i wiele innych.",
+    feature: "Design",
+    description:
+      "Bezpieczna i wyjątkowo wytrzymała konstrukcja o nowoczesnym, sportowym charakterze.",
   },
 ];
 
@@ -44,22 +48,20 @@ const MACHINE_FEATURES: MachineFeature[] = [
     isLeft: false,
   },
   {
-    textSmall: "Regulowane",
-    textBold: "Obciążenie",
-    top: "35%",
+    textSmall: "Zabezpieczenie przed",
+    textBold: "kradzieżą",
+    top: "40%",
     left: "70%",
     isLeft: true,
   },
   {
-    textSmall: "Ergonomiczny",
-    textBold: "Design",
+    textSmall: "Gruba, odporna na warunki atmosferyczne",
+    textBold: "stal",
     top: "70%",
     left: "10%",
     isLeft: false,
   },
 ];
-
-const SECTION_PADDING_X = "clamp(1rem,3vw,3.75rem)";
 
 export default function GymFeatures() {
   return (
@@ -100,7 +102,6 @@ function SectionHeading() {
     </h2>
   );
 }
-
 function GymFeaturesList() {
   return (
     <div
@@ -112,7 +113,7 @@ function GymFeaturesList() {
           - trzeci wiersz grida, pod obrazkiem
         */
         "row-start-3 flex gap-4 overflow-x-auto snap-x snap-mandatory no-scrollbar",
-        `-mx-[${SECTION_PADDING_X}] px-[${SECTION_PADDING_X}] scroll-px-[${SECTION_PADDING_X}]`,
+        `-mx-[clamp(1rem,3vw,3.75rem)] px-[clamp(1rem,3vw,3.75rem)] scroll-px-[clamp(1rem,3vw,3.75rem)]`,
 
         /*
           XL:
@@ -139,7 +140,7 @@ function GymFeatureCard({ feature, description }: GymFeature) {
           - stała szerokość
           - shrink-0, żeby nie kompresowało kafelków
         */
-        "w-70 shrink-0 snap-start",
+        "w-70 shrink-0 snap-start ",
 
         /*
           Visual style
@@ -150,14 +151,14 @@ function GymFeatureCard({ feature, description }: GymFeature) {
         /*
           Content layout
         */
-        "flex flex-col items-start justify-center p-6",
+        "flex flex-col items-start justify-start p-6",
 
         /*
           XL grid card:
           - szerokość przejmuje grid
           - aspect ratio dopiero na desktopie
         */
-        "xl:w-auto xl:min-w-0 xl:aspect-314/245 xl:p-8",
+        "xl:w-auto xl:min-w-0 xl:aspect-314/245 xl:p-8 xl:shrink",
       )}
     >
       <h3 className="mb-4 text-2xl font-black italic xl:text-3xl">{feature}</h3>

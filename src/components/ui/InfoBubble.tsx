@@ -45,17 +45,17 @@ export default function InfoBubble({
         <div
           className={cn(
             "bg-(--color-primary) py-3 sm:py-4 rounded-full shadow-xl",
-            "flex flex-col gap-1 text-left max-w-75 leading-none",
-            isLeft ? "pl-12 pr-17" : "pl-17 pr-12",
+            "text-left max-w-75 ",
+            isLeft ? "pl-10 pr-20" : "pl-12 sm:pl-17 pr-12",
           )}
         >
-          <span className="text-(--color-off-primaryDarker) text-sm leading-none">
+          <p className=" text-(--color-off-primary-dark) text-[0.75rem] ">
             {textSmall}
-          </span>
+          </p>
 
-          <span className="font-bold text-(--color-content-emphasis) text-base sm:text-2xl leading-none">
+          <p className=" font-bold text-(--color-content-emphasis) text-[1.25rem] sm:text-[1.75rem] italic leading-none mt-1">
             {textBold}
-          </span>
+          </p>
         </div>
       </div>
     </div>

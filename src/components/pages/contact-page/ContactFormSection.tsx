@@ -1,12 +1,13 @@
 "use client";
 
-import { MdOutlineMail, MdOutlinePhoneEnabled } from "react-icons/md";
+import { MdOutlineMail } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa";
 import ContactForm from "./contact-page/ContactForm/ContactForm";
 
 export default function ContactFormSection() {
   return (
     <section className="w-full bg-(--color-primary)  ">
-      <div className="content-max-width mx-auto py-24 ">
+      <div className="content-max-width mx-auto pt-24 ">
         <div className="flex flex-col xl:flex-row gap-16">
           {/* Left column */}
           <div className="sm:min-w-116">
@@ -26,24 +27,28 @@ export default function ContactFormSection() {
             </p>
 
             <div className="mt-10 space-y-4 text-sm font-medium">
-              <div className="flex items-center gap-3 ">
-                <MdOutlinePhoneEnabled
-                  style={{
-                    color: "var(--color-brand-blue)",
-                    fontSize: "1.5rem",
-                  }}
-                />
-                <span>+48 123 456 789</span>
-              </div>
-
-              <div className="flex items-center gap-3 ">
+              <a
+                href="mailto:gym@wkdzik.pl"
+                className="flex items-center gap-3"
+              >
                 <MdOutlineMail
                   style={{
                     color: "var(--color-brand-blue)",
                     fontSize: "1.5rem",
                   }}
                 />
+
                 <span>gym@wkdzik.pl</span>
+              </a>
+
+              <div className="flex items-center gap-3 ">
+                <FaInstagram
+                  style={{
+                    color: "var(--color-brand-blue)",
+                    fontSize: "1.5rem",
+                  }}
+                />
+                <span>@dzikgym</span>
               </div>
             </div>
           </div>
