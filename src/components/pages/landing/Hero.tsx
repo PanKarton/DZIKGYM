@@ -32,8 +32,8 @@ export default function Hero() {
             playsInline
             preload="none"
           >
-            {/* <source src="/video/hero.webm" type="video/webm" /> */}
-            {/* <source src="/video/hero.mp4" type="video/mp4" /> */}
+            <source src="/video/hero.webm" type="video/webm" />
+            <source src="/video/hero.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-[#000000]/60" />
           <div className="relative   py-35 flex flex-col items-center justify-center h-full gap-12 text-center z-10">
@@ -50,8 +50,10 @@ export default function Hero() {
               </h2>
             </div>
             <div className="w-57">
-              <CTA variant="red">
-                <span className="font-bold text-lg italic">CTA</span>
+              <CTA variant="red" scrollToId="map">
+                <span className="font-bold text-lg italic">
+                  Znajdź DZIK GYM
+                </span>
               </CTA>
             </div>
           </div>

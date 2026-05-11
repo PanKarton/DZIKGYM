@@ -102,10 +102,24 @@ body {
     -webkit-clip-path: url(#customFooterClipPath);
     clip-path: url(#customFooterClipPath);
   }
-  .clip-sub-hero {
-    -webkit-clip-path: url(#customSubHeroClipPath);
-    clip-path: url(#customSubHeroClipPath);
+
+  .clip-footer-top-thing {
+    background-color: black;
+    -webkit-clip-path: url(#customFooterTopThingClipPath);
+    clip-path: url(#customFooterTopThingClipPath);
   }
+
+  .clip-sub-hero {
+    clip-path: none;
+  }
+
+  @media (min-width: 1280px) {
+    .clip-sub-hero {
+      -webkit-clip-path: url(#customSubHeroClipPath);
+      clip-path: url(#customSubHeroClipPath);
+    }
+  }
+
   .cta-path {
     transform: skewX(-15deg);
   }
@@ -126,7 +140,7 @@ body {
   }
   .content-max-width {
     width: min(100%, 90rem);
-    padding-inline: clamp(1rem, 3vw, 3.75rem);
+    padding-inline: clamp(1.25rem, 3vw, 3.75rem);
     margin-inline: auto;
   }
   .aspect-map {

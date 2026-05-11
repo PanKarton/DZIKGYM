@@ -1,5 +1,5 @@
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
-import PercentageIncreasing from "@/components/ui/PercentageIncreasing";
+import NumberIncreasing from "@/components/ui/NumberIncreasing";
 import Image from "next/image";
 
 export const ProblemCard = () => (
@@ -20,7 +20,7 @@ export const ProblemCard = () => (
         className="object-contain"
       />
     </div>
-    <PercentageIncreasing target={70} />
+    <NumberIncreasing target={70} isPercentage />
     <p className="text-(--color-off-primary) font-thin text-sm leading-normal">
       Taki procent Polaków{" "}
       <span className="text-(--color-brand-red) font-medium">

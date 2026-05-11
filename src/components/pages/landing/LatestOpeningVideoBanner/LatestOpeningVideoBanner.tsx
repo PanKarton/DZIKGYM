@@ -42,7 +42,7 @@ export function LatestOpeningVideoBanner({
   console.log(getYoutubeEmbedUrl(videosData[2].ytLink));
 
   return (
-    <section className="relative my-24 overflow-hidden py-24">
+    <section className="relative my-24 overflow-hidden py-24 content-max-width">
       <GradientBlueRed />
 
       <Image
@@ -60,11 +60,11 @@ export function LatestOpeningVideoBanner({
 
           <p className="mx-auto mt-5 max-w-4xl text-base md:text-lg font-light leading-snug text-left md:text-center text-white">
             Otwarcie siłowni DZIK GYM to zawsze duże wydarzenie - dla Nas, dla
-            samorządów, dla społeczności. Staramy się, aby miały one zawsze
-            odpowiedni start.
+            samorządów i dla lokalnej społeczności. Dbamy o to, aby każda nowa
+            lokalizacja miała odpowiedni start.
           </p>
 
-          <div className="mx-[clamp(2rem,3vw,3.75rem)] mt-8 aspect-video max-w-274 overflow-hidden rounded-2xl">
+          <div className=" mt-8 aspect-video max-w-274 overflow-hidden rounded-2xl">
             <iframe
               key={activeVideo.ytLink}
               src={getYoutubeEmbedUrl(activeVideo.ytLink) ?? undefined}

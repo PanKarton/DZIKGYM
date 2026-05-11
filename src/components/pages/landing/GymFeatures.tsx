@@ -50,7 +50,7 @@ const MACHINE_FEATURES: MachineFeature[] = [
   {
     textSmall: "Zabezpieczenie przed",
     textBold: "kradzieżą",
-    top: "35%",
+    top: "40%",
     left: "70%",
     isLeft: true,
   },
@@ -140,7 +140,7 @@ function GymFeatureCard({ feature, description }: GymFeature) {
           - stała szerokość
           - shrink-0, żeby nie kompresowało kafelków
         */
-        "w-70 shrink-0 snap-start",
+        "w-70 shrink-0 snap-start ",
 
         /*
           Visual style

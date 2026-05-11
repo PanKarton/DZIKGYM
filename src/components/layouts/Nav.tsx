@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils/cn";
 import { NAV_ITEMS } from "@/data/nav-items";
 import BasicLogo from "@/components/ui/BasicLogo";
@@ -25,6 +25,10 @@ export default function Navbar() {
   }, [isOpen]);
 
   useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY >= 1);
     };
@@ -43,7 +47,7 @@ export default function Navbar() {
           : "bg-transparent",
       )}
     >
-      <nav className=" mx-auto flex items-center justify-between pl-[10vw] md:pl-[6vw] pr-32 py-2.5 h-17.5 xl:pl-28">
+      <nav className=" mx-auto flex items-center justify-between pl-[10vw] md:pl-[6vw] pr-8 py-2.5 h-17.5 xl:pl-28">
         {/* Logo / Brand */}
         <Link
           href="/"
@@ -58,11 +62,9 @@ export default function Navbar() {
 
         {/* Hamburger */}
 
-        {/* pl-30 pr-4 py-3 */}
-
         <div
           className={cn(
-            "fixed top-0 right-3 z-10000  xl:hidden aspect-119/75 w-30 clip-hamburger-bg pr-4 pt-2",
+            "fixed top-0 right-3 z-10000  xl:hidden aspect-119/75 w-30 clip-hamburger-bg pr-6 pt-2",
             "transition-transform duration-300 ease-in-out",
             isOpen && "translate-x-2 translate-y-2",
             scrolled ? "bg-transparent" : "bg-white",
@@ -114,6 +116,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
+                  onClick={() => setIsOpen(false)}
                   className={[
                     "flex-center text-xl xl:text-sm font-medium transition-colors px-4 py-2  rounded-[43px]",
                     isActive ? "bg-(--color-primary-darker)" : "",

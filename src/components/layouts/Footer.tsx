@@ -11,7 +11,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full p-4 flex flex-col items-center gap-4  text-(--color-primary) pt-20 ">
+    <footer className="relative w-full p-4 flex flex-col items-center gap-4  text-(--color-primary) pt-32 ">
       <BrandInfoSection />
       <div className="relative w-full rounded-[10px] overflow-hidden py-24 px-28 max-[500px]:px-4 bg-black ">
         <MeshBackground z={"2"} />
