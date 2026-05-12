@@ -69,7 +69,7 @@ export default function BenefitCarousel() {
           {benefits.map((item, i) => (
             <div
               key={i}
-              className={`absolute transition-all duration-500 ease-in-out bg-white rounded-3xl shadow-2xl py-16 px-8 border-(--color-off-primary) border-2 flex-center gap-8 w-[65%] aspect-[870/400] transform ${getPositionClass(i)}`}
+              className={`absolute transition-all duration-500 ease-in-out bg-(--color-primary)rounded-3xl shadow-2xl py-16 px-8 border-(--color-off-primary) border-2 flex-center gap-8 w-[65%] aspect-[870/400] transform ${getPositionClass(i)}`}
             >
               <div className="w-full max-w-68 aspect-square bg-gray-200  relative overflow-hidden">
                 <Image src={item.image} alt={item.title} fill />

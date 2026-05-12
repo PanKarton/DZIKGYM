@@ -1,20 +1,28 @@
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
+import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import Image from "next/image";
 
 const styles = {
-  paragraph: "mt-4 text-sm text-(--color-off-primary) leading-relaxed ",
+  paragraph: "mt-4 text-sm text-(--color-primary) font-light leading-relaxed ",
 };
 
 export default function UniqueProjectSection() {
   return (
-    <section className="py-24  relative">
+    <section className="py-24 mt-24  relative">
       <GradientBlueRed />
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-[-1] bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/mesh/mesh-full-hd.svg')",
+        }}
+      />
       <div className="content-max-width">
-        <div className="flex gap-10 items-center">
-          <div className="flex-col flex-center">
-            <h2 className="text-(--color-content-emphasis) text-[2.5rem] font-black italic leading-none mb-2">
-              DZIK GYM to jedyny taki projekt w Europie
-            </h2>
+        <div className="flex flex-col min-[1100px]:flex-row max-w-132 min-[1100px]:max-w-full mx-auto gap-10 items-center">
+          <div className="flex-col ">
+            <SectionHeading className="text-(--color-brand-blue) text-4xl md:text-[2.5rem]">
+              DZIK GYM to jedyny taki <br /> projekt w Europie
+            </SectionHeading>
 
             <p className={styles.paragraph}>
               To miejsce otwarte dla wszystkich – dla młodzieży, dorosłych i
@@ -44,7 +52,7 @@ export default function UniqueProjectSection() {
             </p>
           </div>
 
-          <div className="w-full max-w-132 aspect-square bg-neutral-200 rounded-2xl relative overflow-hidden shrink-0">
+          <div className="w-full max-w-132 aspect-square rounded-4xl relative overflow-hidden shrink-0">
             <Image
               src="/images/crowd.jpg"
               alt="tłum na siłowni DZIK GYM"

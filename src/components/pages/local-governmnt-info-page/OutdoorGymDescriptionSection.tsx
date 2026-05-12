@@ -17,7 +17,7 @@ export default function OutdoorGymDescriptionSection() {
         />
       </div>
       <div className="content-max-width  h-full flex items-center">
-        <div className="bg-white rounded-xl px-7 py-16 text-left shadow-xl ml-auto max-w-[33rem] ">
+        <div className="bg-(--color-primary)rounded-xl px-7 py-16 text-left shadow-xl ml-auto max-w-[33rem] ">
           <h2 className="text-[2.5rem] font-black italic leading-tight   mb-4">
             <span className="text-(--color-content-emphasis)">DZIK GYM</span> to
             więcej <br />

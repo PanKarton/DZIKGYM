@@ -1,11 +1,9 @@
 import ColorLogo from "@/components/ui/ColorLogo";
 import Link from "next/link";
 import { NAV_ITEMS } from "@/data/nav-items";
-
 import { FaFacebookF, FaInstagram, FaTiktok, FaYoutube } from "react-icons/fa";
 import CircleLink from "@/components/ui/CircleLink";
 import BrandInfoSection from "../pages/landing/BrandInfoSection";
-import { MeshBackground } from "../ui/MeshBackground";
 import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 import Image from "next/image";
 
@@ -13,9 +11,8 @@ export default function Footer() {
   return (
     <footer className="relative w-full p-4 flex flex-col items-center gap-4  text-(--color-primary) pt-32 ">
       <BrandInfoSection />
-      <div className="relative w-full rounded-[10px] overflow-hidden py-24 px-28 max-[500px]:px-4 bg-black ">
-        <MeshBackground z={"2"} />
-        <div className="w-fit mx-auto flex flex-wrap justify-start gap-x-32 gap-y-10 min-[720px]:gap-y-16 max-[720px]:justify-center">
+      <div className="relative w-full rounded-[10px] overflow-hidden py-24 px-28 max-[500px]:px-4 bg-black isolate">
+        <div className="w-fit mx-auto flex flex-wrap justify-start gap-x-32 gap-y-10 min-[720px]:gap-y-16 max-[720px]:justify-center z-2">
           <div className="w-49 order-1">
             <ColorLogo />
           </div>
@@ -52,7 +49,7 @@ export default function Footer() {
             <ul className="space-y-2 text-sm font-thin text-(--color-off-primary)">
               <li>
                 <Link
-                  href={EXTERNAL_HREFS.shop}
+                  href={EXTERNAL_HREFS.SHOP}
                   target="_blank"
                   className="hover:text-(--color-primary-darker)"
                 >
@@ -61,7 +58,7 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href={EXTERNAL_HREFS.instagram}
+                  href={EXTERNAL_HREFS.INSTAGRAM}
                   target="_blank"
                   className="hover:text-(--color-primary-darker)"
                 >
@@ -80,20 +77,27 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex gap-4 text-white text-xl z-2 mt-8 max-w-395.25 mx-auto max-[719px]:justify-center max-[719px]:mt-12 ">
-          <CircleLink href={EXTERNAL_HREFS.tiktok}>
+        <div className="flex gap-4 text-(--color-primary)text-xl  mt-8 max-w-395.25 mx-auto max-[719px]:justify-center max-[719px]:mt-12 z-10">
+          <CircleLink href={EXTERNAL_HREFS.TIKTOK}>
             <FaTiktok />
           </CircleLink>
-          <CircleLink href={EXTERNAL_HREFS.facebook}>
+          <CircleLink href={EXTERNAL_HREFS.FACEBOOK}>
             <FaFacebookF />
           </CircleLink>
-          <CircleLink href={EXTERNAL_HREFS.instagram}>
+          <CircleLink href={EXTERNAL_HREFS.INSTAGRAM}>
             <FaInstagram />
           </CircleLink>
-          <CircleLink href={EXTERNAL_HREFS.youtube}>
+          <CircleLink href={EXTERNAL_HREFS.YOUTUBE}>
             <FaYoutube />
           </CircleLink>
         </div>
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 -z-10 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/mesh/mesh-banner.png')",
+          }}
+        />
       </div>
     </footer>
   );

@@ -1,11 +1,9 @@
 import GradientBlueGreen from "@/components/ui/GradientBlueGreen";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
-import GreenPlus from "@/components/ui/GreenPlus";
-import RedMinus from "@/components/ui/RedMinus";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 
 const styles = {
-  card: "text-white comp-card-width gap-6 py-14 pl-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
+  card: "text-(--color-primary)comp-card-width gap-6 py-14 pl-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
   cardTitle:
     "uppercase italic text-left text-xl md:text-3xl lg:text-4xl font-black",
 };
@@ -76,8 +74,8 @@ export default function GymComparison() {
                     key={index}
                     className="flex items-center gap-2 lg:gap-6  mb-8"
                   >
-                    <div>
-                      <RedMinus />
+                    <div className="text-4xl font-black text-(--color-brand-red)">
+                      -
                     </div>
                     <p>{feature}</p>
                   </li>
@@ -101,8 +99,8 @@ export default function GymComparison() {
                     key={index}
                     className="flex items-center gap-2 lg:gap-6  mb-8"
                   >
-                    <div>
-                      <GreenPlus />
+                    <div className="text-4xl font-black text-(--color-brand-green)">
+                      +
                     </div>
                     <p>{feature}</p>
                   </li>

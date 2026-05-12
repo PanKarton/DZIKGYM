@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from "react";
 
-export default function NumberIncreasing({
+export default function AnimateCounterOnView({
   target,
-  isPercentage,
+  children,
 }: {
   target: number;
-  isPercentage?: boolean;
+  children?: React.ReactNode;
 }) {
   const [number, setNumber] = useState(0);
   const elementRef = useRef<HTMLParagraphElement | null>(null);
@@ -63,11 +63,12 @@ export default function NumberIncreasing({
   }, [target]);
 
   return (
-    <p
+    <span
       ref={elementRef}
-      className="text-[5.375rem] leading-none font-black italic text-(--color-brand-red) mb-2"
+      className="text-[4rem] xl:text-[5.375rem] leading-none font-black italic text-(--color-brand-red) mb-2"
     >
-      {isPercentage ? `${number}%` : number}
-    </p>
+      {number}
+      {children}
+    </span>
   );
 }

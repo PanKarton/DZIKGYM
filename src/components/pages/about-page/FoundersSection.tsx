@@ -1,12 +1,13 @@
 import CTA from "@/components/ui/cta";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 import Image from "next/image";
 
 export default function FoundersSection() {
   return (
-    <section className="px-6 pb-24">
-      <div className="content-max-width">
-        <div className="text-center mb-12">
+    <section className="pt-16">
+      <div className="content-max-width ">
+        <div className=" mb-12 text-left sm:text-center">
           <SectionHeading>Kto stworzył DZIK GYM?</SectionHeading>
           <p className="mt-4  mx-auto text-sm md:text-lg  /80">
             Jesteśmy grupą przyjaciół z Warszawy, która od lat inspiruje i
@@ -17,17 +18,18 @@ export default function FoundersSection() {
         </div>
 
         {/* YouTube Story Section */}
-        <div className="w-full founders-gradient flex justify-center text-white aspect-[2] rounded-2xl overflow-hidden p-6 md:p-16 mb-16 relative">
-          <div className="absolute inset-0 z-[-1]">
+        <div className="w-full isolate  flex justify-center text-(--color-primary)bg-(--color-secondary)  rounded-2xl overflow-hidden p-12 md:p-16 mb-16 relative min-h-165">
+          <div className="absolute  top-0 left-0 w-full aspect-144/67 z-[1] ">
             <Image
               src="/images/wk-team.jpg"
               alt="Założyciele WK"
               fill
               priority
             />
+            <div className="absolute inset-0 founders-gradient z-10"></div>
           </div>
-          <div className="flex-col flex-center gap-8  mt-auto">
-            <h3 className="text-xl md:text-[2.5rem] font-bold leading-[0.5] italic text-(--color-brand-blue)">
+          <div className="flex-col flex-center gap-8  mt-auto z-2">
+            <h3 className="text-[2.5rem] font-black leading-[1.15] italic text-center text-(--color-brand-blue)">
               Początki Ekipy WK
             </h3>
             <p className="text-sm  text-center font-thin leading-relaxed  max-w-4xl">
@@ -36,17 +38,23 @@ export default function FoundersSection() {
               nasze codzienne treningi. Udostępniliśmy tam porady dotyczące
               ćwiczeń oraz motywowaliśmy innych do aktywnego trybu życia.
             </p>
-            <div className="w-50 mb">
-              <CTA variant="blueTaller">
-                <span className="font-medium">Kanał YouTube →</span>
-              </CTA>
-            </div>
+            <a
+              href={EXTERNAL_HREFS.YOUTUBE}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-50 mb">
+                <CTA variant="blueTaller">
+                  <span className="font-medium">Kanał YouTube →</span>
+                </CTA>
+              </div>
+            </a>
           </div>
         </div>
 
         {/* Ebook Section */}
-        <div className="grid lg:flex gap-8 items-center">
-          <div className="relative mx-auto shrink-0 aspect-square w-full max-w-100 lg:w-[32.75rem] rounded-md overflow-hidden">
+        <div className="flex flex-col min-[1150px]:flex-row gap-8 justify-between items-center ">
+          <div className="relative mx-auto shrink-0 aspect-531/491 w-full max-w-133 rounded-md overflow-hidden ">
             <Image
               src="/images/ebooki.png"
               alt="ebooki"
@@ -55,11 +63,19 @@ export default function FoundersSection() {
               priority
             />
           </div>
-          <div>
-            <h3 className="text-xl md:text-3xl font-extrabold italic mb-4">
-              Lorem ipsum
+          <div className="hidden min-[1150px]:block">
+            <div className="w-12 aspect-square flex items-center justify-center relative">
+              <Image src="/images/right-arrow.svg" alt="arrow" fill />
+            </div>
+          </div>
+          <div className="max-w-133 min-[1150px]:max-w-160">
+            <h3 className="text-[2rem] leading-10 md:text-3xl md:leading-[1.2] font-extrabold italic mb-4">
+              <span className="text-(--color-brand-blue)">
+                Zależy nam, abyście działali skutecznie.
+              </span>{" "}
+              Stworzyliśmy bazę darmowej wiedzy
             </h3>
-            <p className="text-sm mb-6">
+            <p className="text-sm mb-6 leading-loose">
               Od początku naszej kariery w internecie stawiamy na dostarczanie
               darmowej wiedzy treningowej poprzez nasze treści. Dzięki naszemu
               zaangażowaniu,{" "}
@@ -67,20 +83,25 @@ export default function FoundersSection() {
                 każdy z Was może pobrać darmowe ebooki
               </span>
               , które są doskonałym punktem startowym do rozpoczęcia przygody z
-              treningiem, a także sposobem na udoskonalenie aktualnych programów
-              ćwiczeń. <br />
-              <br />
-              Przygotowaliśmy także ebooki, które pozwalają nasze podejście do
-              diety, pomagają w zrozumieniu i wdrożeniu zdrowych nawyków
-              żywieniowych. Chcemy, aby mieliście łatwy dostęp do rzetelnych
-              informacji bez ponoszenia kosztów. Mamy nadzieję, że dzięki się
-              naszej wiedzy, poznacie Wam silniejszą wersję siebie.
+              treningiem, a także pozwalają na udoskonalenie aktualnych
+              programów ćwiczeń. Przygotowaliśmy także ebook, który przedstawia
+              nasze podejście do diety, pomagając w zrozumieniu i wprowadzeniu
+              zdrowych nawyków żywieniowych. Chcemy, aby każdy miał dostęp do
+              rzetelnych informacji bez konieczności ponoszenia kosztów. Mamy
+              nadzieję, że dzieląc się naszą wiedzą, pomagamy Wam osiągać lepsze
+              rezultaty i czerpać większą radość z treningów.
             </p>
-            <div className="w-50 mb">
-              <CTA variant="blueTaller">
-                <span className="font-medium">Nasze ebooki →</span>
-              </CTA>
-            </div>
+            <a
+              href={EXTERNAL_HREFS.EBOOK_DOWNLOAD}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <div className="w-50 mb">
+                <CTA variant="blueTaller">
+                  <span className="font-medium">Nasze ebooki →</span>
+                </CTA>
+              </div>
+            </a>
           </div>
         </div>
       </div>

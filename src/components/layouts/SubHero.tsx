@@ -1,5 +1,4 @@
 import React from "react";
-import { MeshBackground } from "../ui/MeshBackground";
 
 type SubHeroProps = {
   heading: string;
@@ -14,14 +13,20 @@ export default function SubHero({
 }: SubHeroProps) {
   return (
     <section className="relative w-full py-2 px-4.25 text-(--color-primary)">
-      <div className="relative min-h-[360px] sm:min-h-[420px] lg:min-h-[500px] rounded-[10px] overflow-hidden  lg:overflow-auto clip-sub-hero">
+      <div className="relative min-h-90 sm:min-h-105 lg:min-h-125 rounded-[10px] overflow-hidden  lg:overflow-auto clip-sub-hero">
         <div className="absolute inset-0 bg-black z-0" />
 
-        <MeshBackground z="10" />
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 z-10 bg-cover bg-center"
+          style={{
+            backgroundImage: "url('/mesh/mesh-banner.png')",
+          }}
+        />
 
         <div className="absolute inset-0 sub-hero-gradient z-20" />
 
-        <div className="relative z-30 flex min-h-[360px] sm:min-h-[420px] lg:min-h-[500px] flex-col items-center justify-center gap-5 sm:gap-7 lg:gap-8 px-4 pt-16  sm:px-8 sm:pt-24 sm:pb-16 lg:py-32 text-center">
+        <div className="relative z-30 flex min-h-90 sm:min-h-105 lg:min-h-125 flex-col items-center justify-center gap-5 sm:gap-7 lg:gap-8 px-4 pt-16 sm:pt-0   sm:px-8  xl:pt-16 text-center">
           <h1 className="max-w-5xl font-black italic leading-[0.9] text-[clamp(2.5rem,8vw,6rem)]">
             {heading}
           </h1>
