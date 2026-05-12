@@ -15,7 +15,7 @@ export default function Footer() {
       <BrandInfoSection />
       <div className="relative w-full rounded-[10px] overflow-hidden py-24 px-28 max-[500px]:px-4 bg-black ">
         <MeshBackground z={"2"} />
-        <div className=" w-full flex flex-wrap justify-start gap-x-32 gap-y-10 min-[720px]:gap-y-16 max-[720px]:justify-center">
+        <div className="w-fit mx-auto flex flex-wrap justify-start gap-x-32 gap-y-10 min-[720px]:gap-y-16 max-[720px]:justify-center">
           <div className="w-49 order-1">
             <ColorLogo />
           </div>
@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex gap-4 text-white text-xl z-2 mt-8 max-[719px]:justify-center max-[719px]:mt-12 ">
+        <div className="flex gap-4 text-white text-xl z-2 mt-8 max-w-395.25 mx-auto max-[719px]:justify-center max-[719px]:mt-12 ">
           <CircleLink href={EXTERNAL_HREFS.tiktok}>
             <FaTiktok />
           </CircleLink>
