@@ -23,6 +23,11 @@ export function getCookieConsent(): CookieConsent | null {
   }
 }
 
+export function removeCookieConsent() {
+  document.cookie = `${COOKIE_CONSENT_KEY}=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; SameSite=Lax`;
+  window.location.reload();
+}
+
 export function setCookieConsent(consent: CookieConsent) {
   const expires = new Date();
   expires.setDate(expires.getDate() + CONSENT_EXPIRY_DAYS);

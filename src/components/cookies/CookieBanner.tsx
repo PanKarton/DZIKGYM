@@ -11,14 +11,16 @@ export function CookieBanner() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    const consent = getCookieConsent();
+    const handleUpdate = () => {
+      const consent = getCookieConsent();
+      setIsVisible(!consent);
+    };
 
-    if (!consent) {
-      setIsVisible(true);
-    }
+    handleUpdate();
+    window.addEventListener("cookie-consent-updated", handleUpdate);
+    return () =>
+      window.removeEventListener("cookie-consent-updated", handleUpdate);
   }, []);
-
-  if (!isVisible) return null;
 
   const acceptAll = () => {
     const consent: CookieConsent = {
@@ -41,6 +43,8 @@ export function CookieBanner() {
     setCookieConsent(consent);
     setIsVisible(false);
   };
+
+  if (!isVisible) return null;
 
   return (
     <div className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-3xl rounded-2xl border border-white/10 bg-black p-5 text-white shadow-2xl">

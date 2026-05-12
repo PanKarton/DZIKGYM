@@ -310,7 +310,7 @@ export default function ContactForm() {
           )}
 
           <div className="w-50 lg:ml-auto">
-            <CTA variant="redWide">
+            <CTA variant="redWide" isSubmit>
               {isLoading ? (
                 "Wysyłanie..."
               ) : (
