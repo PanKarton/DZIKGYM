@@ -6,7 +6,7 @@ export const siteConfig = {
 
   title: {
     default: "DZIK GYM",
-    template: "%s | Brand",
+    template: "%s | DZIK GYM",
   },
 
   ogImage: "",

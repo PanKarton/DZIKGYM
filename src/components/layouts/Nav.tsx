@@ -7,10 +7,14 @@ import { cn } from "@/lib/utils/cn";
 import { NAV_ITEMS } from "@/data/nav-items";
 import BasicLogo from "@/components/ui/BasicLogo";
 
+const validPaths = NAV_ITEMS.map((item) => item.href);
+
 export default function Navbar() {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+
+  const isPageNotFound = pathname !== "/" && !validPaths.includes(pathname);
 
   useEffect(() => {
     if (isOpen) {
@@ -56,7 +60,7 @@ export default function Navbar() {
           }`}
         >
           <div className="w-36">
-            <BasicLogo isInverted={scrolled} />
+            <BasicLogo isInverted={scrolled || isPageNotFound} />
           </div>
         </Link>
 
