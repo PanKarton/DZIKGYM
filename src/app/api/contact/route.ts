@@ -21,10 +21,6 @@ export async function POST(req: Request) {
     const { fullName, email, message, isBusiness, businessName, website } =
       data;
 
-    console.log("origin:", req.headers.get("origin"));
-    console.log("host:", req.headers.get("host"));
-    console.log("referer:", req.headers.get("referer"));
-
     // Origin check
     if (!assertOrigin(req)) {
       return NextResponse.json(
@@ -75,27 +71,30 @@ export async function POST(req: Request) {
       );
     }
 
-    const thing = await resend.emails.send({
-      from: "Formularz <onboarding@resend.dev>",
+    await resend.emails.send({
+      from: "Formularz <stronka@dzikgym.pl>",
       to: requireEnv("CONTACT_EMAIL"),
       replyTo: email,
       subject: `Nowa wiadomość – ${fullName}`,
       text: `
-Imię: ${fullName}
-Email: ${email}
-Typ: ${isBusiness ? "Firma" : "Osoba prywatna"}
-Firma: ${businessName || "-"}
+        Imię: ${fullName}
+        Email: ${email}
+        Typ: ${isBusiness ? "Firma" : "Osoba prywatna"}
+        Firma: ${businessName || "-"}
 
-Wiadomość:
-${message}
+        Wiadomość:
+        ${message}
       `,
     });
 
-    console.log("Resend response:", thing);
-
     return NextResponse.json({ ok: true });
   } catch (err) {
-    console.error(err);
-    return NextResponse.json({ error: "Błąd serwera" }, { status: 500 });
+    return NextResponse.json(
+      {
+        error: "Błąd serwera",
+        details: err instanceof Error ? err.message : String(err),
+      },
+      { status: 500 },
+    );
   }
 }

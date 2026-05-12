@@ -31,23 +31,24 @@ type CTAProps = {
   children: React.ReactNode;
   variant?: CTAVariant;
   scrollToId?: string;
+  isSubmit?: boolean;
 };
 
 export default function CTA({
   children,
   variant = DEFAULT_VARIANT,
   scrollToId,
+  isSubmit = false,
 }: CTAProps) {
   const handleClick = () => {
     if (!scrollToId) return;
 
     document.getElementById(scrollToId)?.scrollIntoView({ behavior: "smooth" });
-    console.log(document.getElementById(scrollToId));
   };
 
   return (
     <button
-      type="button"
+      type={isSubmit ? "submit" : "button"}
       onClick={scrollToId ? handleClick : undefined}
       className={`${base} ${variants[variant]}`}
     >
