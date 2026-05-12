@@ -86,7 +86,13 @@ export default function FirstGymSection() {
               key={i}
               className={`absolute transition-all duration-500 ease-in-out rounded-3xl overflow-hidden  border-(--color-off-primary)  w-[65%] aspect-870/490 transform ${getPositionClass(i)}`}
             >
-              <Image src={item.image} alt={item.alt} fill />
+              <Image
+                src={item.image}
+                alt={item.alt}
+                fill
+                sizes="65vw"
+                className="object-cover"
+              />
             </div>
           ))}
         </div>
@@ -113,7 +119,13 @@ export default function FirstGymSection() {
               key={i}
               className={`relative  rounded-3xl w-81 aspect-270/152 `}
             >
-              <Image src={item.image} alt={item.alt} fill />
+              <Image
+                src={item.image}
+                alt={item.alt}
+                fill
+                sizes="324px"
+                className="object-cover"
+              />
             </div>
           ))}
         </div>

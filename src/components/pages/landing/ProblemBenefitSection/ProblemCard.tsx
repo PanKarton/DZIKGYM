@@ -5,12 +5,12 @@ import Image from "next/image";
 export const ProblemCard = () => (
   <div className="relative isolate rounded-3xl w-full max-w-105 border py-16 px-8 overflow-hidden shadow-2xl">
     <GradientBlueRed />
-    <Image
-      src="/mesh/Pattern_800x800.webp"
-      alt=""
-      fill
+    <div
       aria-hidden="true"
-      className="object-cover -z-1"
+      className="absolute inset-0 z-[-1] bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/mesh/Pattern_800x800.webp')",
+      }}
     />
     <div className="aspect-320/241 max-w-80 mx-auto mb-16 relative z-10">
       <Image

@@ -3,7 +3,6 @@ import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import GreenPlus from "@/components/ui/GreenPlus";
 import RedMinus from "@/components/ui/RedMinus";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
-import Image from "next/image";
 
 const styles = {
   card: "text-white comp-card-width gap-6 py-14 pl-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
@@ -57,7 +56,13 @@ export default function GymComparison() {
             {/* Standard Gym */}
             <div className={` relative  ${styles.card} rounded-es-4xl `}>
               <GradientBlueRed />
-
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 z-[-1] bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/mesh/Pattern_800x800.webp')",
+                }}
+              />
               <h3 className="text-left text-lg lg:text-2xl  text-(--color-primary) font-light">
                 Standardowa
               </h3>
@@ -78,12 +83,6 @@ export default function GymComparison() {
                   </li>
                 ))}
               </ul>
-              <Image
-                src="/mesh/Pattern_800x800.webp"
-                alt=""
-                fill
-                className="object-cover z-[-1]"
-              />
             </div>
 
             {/* Dzik Gym */}
@@ -109,11 +108,12 @@ export default function GymComparison() {
                   </li>
                 ))}
               </ul>
-              <Image
-                src="/mesh/Pattern_800x800.webp"
-                alt=""
-                fill
-                className="object-cover z-[-1]"
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 z-[-1] bg-cover bg-center"
+                style={{
+                  backgroundImage: "url('/mesh/Pattern_800x800.webp')",
+                }}
               />
             </div>
           </div>
