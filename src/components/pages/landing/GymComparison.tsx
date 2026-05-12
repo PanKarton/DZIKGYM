@@ -3,7 +3,7 @@ import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 
 const styles = {
-  card: "text-(--color-primary)comp-card-width gap-6 py-14 pl-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
+  card: "text-(--color-primary)  comp-card-width gap-6 py-14 pl-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
   cardTitle:
     "uppercase italic text-left text-xl md:text-3xl lg:text-4xl font-black",
 };
@@ -61,7 +61,7 @@ export default function GymComparison() {
                   backgroundImage: "url('/mesh/Pattern_800x800.webp')",
                 }}
               />
-              <h3 className="text-left text-lg lg:text-2xl  text-(--color-primary) font-light">
+              <h3 className="text-left text-lg lg:text-2xl  text-(--color-primary)   font-light">
                 Standardowa
               </h3>
               <h2 className={`text-(--color-brand-red) ${styles.cardTitle}`}>
@@ -86,7 +86,7 @@ export default function GymComparison() {
             {/* Dzik Gym */}
             <div className={`relative ${styles.card} rounded-ee-4xl`}>
               <GradientBlueGreen />
-              <h3 className="text-left  text-lg lg:text-2xl  text-(--color-primary) font-light">
+              <h3 className="text-left  text-lg lg:text-2xl  text-(--color-primary)   font-light">
                 Profesjonalna
               </h3>
               <h2 className={` text-(--color-brand-green) ${styles.cardTitle}`}>

@@ -12,7 +12,7 @@ export default function SubHero({
   children,
 }: SubHeroProps) {
   return (
-    <section className="relative w-full py-2 px-4.25 text-(--color-primary)">
+    <section className="relative w-full py-2 px-4.25 text-(--color-primary)  ">
       <div className="relative min-h-90 sm:min-h-105 lg:min-h-125 rounded-[10px] overflow-hidden  lg:overflow-auto clip-sub-hero">
         <div className="absolute inset-0 bg-black z-0" />
 

@@ -146,7 +146,7 @@ function GymFeatureCard({ feature, description }: GymFeature) {
           Visual style
         */
         "rounded-2xl border-2 border-(--color-brand-blue)",
-        "bg-(--color-brand-blue)/20 text-(--color-primary)",
+        "bg-(--color-brand-blue)/20 text-(--color-primary)  ",
 
         /*
           Content layout

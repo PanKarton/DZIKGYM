@@ -3,7 +3,8 @@ import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import Image from "next/image";
 
 const styles = {
-  paragraph: "mt-4 text-sm text-(--color-primary) font-light leading-relaxed ",
+  paragraph:
+    "mt-4 text-sm text-(--color-primary)   font-light leading-relaxed ",
 };
 
 export default function UniqueProjectSection() {

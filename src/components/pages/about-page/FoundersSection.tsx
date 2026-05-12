@@ -18,7 +18,7 @@ export default function FoundersSection() {
         </div>
 
         {/* YouTube Story Section */}
-        <div className="w-full isolate  flex justify-center text-(--color-primary)bg-(--color-secondary)  rounded-2xl overflow-hidden p-12 md:p-16 mb-16 relative min-h-165">
+        <div className="w-full isolate  flex justify-center text-(--color-primary)  bg-(--color-secondary)  rounded-2xl overflow-hidden p-12 md:p-16 mb-16 relative min-h-165">
           <div className="absolute  top-0 left-0 w-full aspect-144/67 z-[1] ">
             <Image
               src="/images/wk-team.jpg"

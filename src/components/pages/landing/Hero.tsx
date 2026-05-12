@@ -13,7 +13,7 @@ const videoPriorityProps = {
 
 export default function Hero() {
   return (
-    <section className="px-4 py-2 border  text-(--color-primary) relative">
+    <section className="px-4 py-2 border  text-(--color-primary)   relative">
       <div className="relative rounded-[10px] overflow-hidden lg:rounded-none lg:overflow-auto">
         <div className={"clip-hero"}>
           <video

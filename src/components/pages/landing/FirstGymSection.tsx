@@ -29,7 +29,7 @@ const gymDetails = [
 ];
 
 const circleButtonStyle =
-  "w-20 aspect-square border-2 border-(--color-brand-blue) rounded-full flex-center text-(--color-brand-blue) hover:bg-(--color-brand-blue) hover:text-(--color-primary) transition cursor-pointer";
+  "w-20 aspect-square border-2 border-(--color-brand-blue) rounded-full flex-center text-(--color-brand-blue) hover:bg-(--color-brand-blue) hover:text-(--color-primary)   transition cursor-pointer";
 
 export default function FirstGymSection() {
   const [index, setIndex] = useState(0);

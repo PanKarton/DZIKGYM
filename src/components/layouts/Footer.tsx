@@ -9,7 +9,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full p-4 flex flex-col items-center gap-4  text-(--color-primary) pt-32 ">
+    <footer className="relative w-full p-4 flex flex-col items-center gap-4  text-(--color-primary)   pt-32 ">
       <BrandInfoSection />
       <div className="relative w-full rounded-[10px] overflow-hidden py-24 px-28 max-[500px]:px-4 bg-black isolate">
         <div className="w-fit mx-auto flex flex-wrap justify-start gap-x-32 gap-y-10 min-[720px]:gap-y-16 max-[720px]:justify-center z-2">
@@ -77,7 +77,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex gap-4 text-(--color-primary)text-xl  mt-8 max-w-395.25 mx-auto max-[719px]:justify-center max-[719px]:mt-12 z-10">
+        <div className="flex gap-4 text-(--color-primary)  text-xl  mt-8 max-w-395.25 mx-auto max-[719px]:justify-center max-[719px]:mt-12 z-10">
           <CircleLink href={EXTERNAL_HREFS.TIKTOK}>
             <FaTiktok />
           </CircleLink>

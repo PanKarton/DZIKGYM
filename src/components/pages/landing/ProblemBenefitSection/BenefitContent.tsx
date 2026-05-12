@@ -4,7 +4,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 
 const BenefitContent = () => (
   <div className="flex-1 text-left  ">
-    <span className="inline-flex items-center justify-center bg-(--color-brand-blue) px-4  text-(--color-primary) uppercase tracking-wide text-sm leading-8 mb-5">
+    <span className="inline-flex items-center justify-center bg-(--color-brand-blue) px-4  text-(--color-primary)   uppercase tracking-wide text-sm leading-8 mb-5">
       Nasze rozwiązanie
     </span>
     <h2 className="text-3xl md:text-[2.5rem] font-extrabold italic leading-tight mb-4">

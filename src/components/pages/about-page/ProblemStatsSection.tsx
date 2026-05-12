@@ -45,7 +45,7 @@ export default function ProblemStatsSection() {
               return (
                 <div
                   key={index}
-                  className="rounded-3xl max-w-82 lg:max-w-full relative px-8 py-16 text-(--color-primary)shadow-xl flex-col items-center overflow-hidden"
+                  className="rounded-3xl max-w-82 lg:max-w-full relative px-8 py-16 text-(--color-primary)  shadow-xl flex-col items-center overflow-hidden"
                 >
                   <GradientBlueRed />
 

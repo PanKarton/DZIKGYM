@@ -8,11 +8,11 @@ export default function CBSectionDivider() {
         <GradientBlueRed />
         <SectionHeading className="text-(--color-brand-blue)">
           Wystarczy{" "}
-          <span className="text-(--color-primary)">jeden impuls,</span>
+          <span className="text-(--color-primary)  ">jeden impuls,</span>
           <br />
           by ruszyć całą społeczność.
         </SectionHeading>
-        <p className="text-(--color-primary) py-6 text-lg">
+        <p className="text-(--color-primary)   py-6 text-lg">
           Zrób pierwszy krok - Twoja inicjatywa może wiele zmienić.
         </p>
       </div>
