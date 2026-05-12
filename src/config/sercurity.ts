@@ -1,1 +1,5 @@
-export const ALLOWED_ORIGINS = ["https://wkdzik.pl", "https://www.wkdzik.pl"];
+export const ALLOWED_ORIGINS = [
+  "http://localhost:3000",
+  "https://dzikgym.pl",
+  "https://www.dzikgym.pl",
+];

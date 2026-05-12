@@ -6,6 +6,7 @@ import Copyrights from "@/components/layouts/Copyrights";
 import Footer from "@/components/layouts/Footer";
 import { myFontConfig } from "@/fonts/Obviously/obviously";
 import { siteConfig } from "./config/site";
+import { Providers } from "@/components/providers/providers";
 
 export const metadata: Metadata = {
   // metadataBase: new URL(siteConfig.url),
@@ -73,7 +74,9 @@ export default function RootLayout({
       <body className={`${myFontConfig.variable} antialiased`}>
         <SvgDefs />
         <Navbar />
-        <main>{children}</main>
+        <main>
+          <Providers>{children}</Providers>
+        </main>
         <Footer />
         <Copyrights />
       </body>

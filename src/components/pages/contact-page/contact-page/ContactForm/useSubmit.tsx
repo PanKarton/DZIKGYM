@@ -31,8 +31,9 @@ export const useSubmit = () => {
           json.message ||
             "Nie udało się wysłać wiadomości. Spróbuj ponownie później.",
         );
+      } else {
+        setSuccess(true);
       }
-      setSuccess(true);
       return;
     } catch {
       setIsLoading(false);
