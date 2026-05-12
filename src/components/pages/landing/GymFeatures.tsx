@@ -30,7 +30,7 @@ const GYM_FEATURES: GymFeature[] = [
   {
     feature: "Sportowa aura",
     description:
-      "Siłownie DZIK GYM cieszą się sporą popularnością, co wzmacnia integracje lokalnych społeczności.HG",
+      "Siłownie DZIK GYM cieszą się sporą popularnością, co wzmacnia integracje lokalnych społeczności.",
   },
   {
     feature: "Design",

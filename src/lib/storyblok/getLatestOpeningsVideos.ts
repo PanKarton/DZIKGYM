@@ -1,16 +1,22 @@
-import { OpeningVideo, OpeningVideoResponse } from "@/types/opening-videos";
+import { OpeningVideoResponse } from "@/types/opening-videos";
 import { requireEnv } from "../utils/requireEnv";
+import { REVALIDATE } from "@/data/revalidate";
+import { gymYtVideosParam } from "./params";
 
 export async function getLatestOpeningsVideos(): Promise<
   [OpeningVideoResponse]
 > {
-  const res = await fetch(
-    `${requireEnv("STORYBLOK_API_URL")}?&starts_with=otwarcia-yt&token=${requireEnv("STORYBLOK_API_KEY")}`,
-    { next: { revalidate: 60 } },
-  );
+  const url = new URL(requireEnv("STORYBLOK_API_URL"));
+
+  url.searchParams.set("starts_with", gymYtVideosParam);
+  url.searchParams.set("token", requireEnv("STORYBLOK_API_KEY"));
+
+  const res = await fetch(url.toString(), {
+    next: { revalidate: REVALIDATE, tags: ["gyms-locations"] },
+  });
 
   if (!res.ok) {
-    throw new Error(`Failed to fetch video URLs: ${res.statusText}`);
+    throw new Error(`Failed to fetch gym locations: ${res.statusText}`);
   }
 
   const data = (await res.json()) as { stories: [OpeningVideoResponse] };

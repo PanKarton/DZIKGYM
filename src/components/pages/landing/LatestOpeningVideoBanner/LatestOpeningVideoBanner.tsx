@@ -1,45 +1,47 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
-import { getYoutubeEmbedUrl } from "@/lib/utils/getYoutubeEmbedUrl";
 import Image from "next/image";
 import { OpeningVideos } from "@/types/opening-videos";
 import EXTERNAL_HREFS from "@/data/texternal-hrefs";
-
-// const videos = [
-//   {
-//     url: "https://www.youtube.com/watch?v=LSaTQPiH_sw",
-//     title: "Najnowsze otwarcie siłowni",
-//   },
-//   {
-//     url: "https://www.youtube.com/watch?v=CXY3AuUvjhw",
-//     title: "Poprzednie otwarcie 1",
-//   },
-//   {
-//     url: "https://www.youtube.com/watch?v=tK-cKWSPBBs",
-//     title: "Poprzednie otwarcie 2",
-//   },
-//   {
-//     url: "https://www.youtube.com/watch?v=a04t2fIFLx8",
-//     title: "Poprzednie otwarcie 3",
-//   },
-// ];
+import { parseYoutubeUrl } from "@/lib/utils/parseYoutubeUrl";
+import { FaPlay } from "react-icons/fa";
 
 export function LatestOpeningVideoBanner({
   videos,
 }: {
   videos: OpeningVideos;
 }) {
-  const videosData = videos.map((video) => video.content);
+  const videosData = useMemo(
+    () =>
+      videos
+        .map((video) => {
+          const parsed = parseYoutubeUrl(video.content.ytLink);
+
+          if (!parsed) {
+            return null;
+          }
+
+          return {
+            ...video.content,
+            embedUrl: parsed.embedUrl,
+            thumbnail: parsed.thumbnail,
+          };
+        })
+        .filter((video): video is NonNullable<typeof video> => video !== null),
+    [videos],
+  );
 
   const [activeVideo, setActiveVideo] = useState(videosData[0]);
 
-  const previousVideos = videos.filter(
-    (video) => video.content.ytLink !== activeVideo.ytLink,
+  const previousVideos = videosData.filter(
+    (video) => video.ytLink !== activeVideo.ytLink,
   );
 
-  console.log(getYoutubeEmbedUrl(videosData[2].ytLink));
+  if (!activeVideo) {
+    return null;
+  }
 
   return (
     <section className="relative my-24 overflow-hidden py-24 content-max-width">
@@ -47,61 +49,74 @@ export function LatestOpeningVideoBanner({
 
       <Image
         src="/mesh/mesh-full-hd.svg"
-        alt="Tło sekcji sub-hero"
+        alt=""
         fill
         className="z-1 object-cover"
       />
 
-      <div className="w-full max-w-360 mx-auto  relative z-10">
+      <div className="relative z-10 mx-auto w-full max-w-360">
         <div className="mx-auto max-w-5xl text-center">
           <h2 className="text-5xl font-black italic leading-none text-(--color-brand-blue)">
             Otwarcia siłowni
           </h2>
 
-          <p className="mx-auto mt-5 max-w-4xl text-base md:text-lg font-light leading-snug text-left md:text-center text-white">
+          <p className="mx-auto mt-5 max-w-4xl text-left text-base font-light leading-snug text-white md:text-center md:text-lg">
             Otwarcie siłowni DZIK GYM to zawsze duże wydarzenie - dla Nas, dla
             samorządów i dla lokalnej społeczności. Dbamy o to, aby każda nowa
             lokalizacja miała odpowiedni start.
           </p>
 
-          <div className=" mt-8 aspect-video max-w-274 overflow-hidden rounded-2xl">
+          <div className="mt-8 aspect-video max-w-274 overflow-hidden rounded-2xl">
             <iframe
               key={activeVideo.ytLink}
-              src={getYoutubeEmbedUrl(activeVideo.ytLink) ?? undefined}
+              src={`${activeVideo.embedUrl}?autoplay=0&rel=0&modestbranding=1`}
               title={activeVideo.miastoNazwa}
               className="h-full w-full border-0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              loading="lazy"
+              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowFullScreen
             />
           </div>
 
-          <div className="-mx-4 mt-8 overflow-x-auto no-scrollbar px-4 lg:mx-auto lg:overflow-visible md:px-0 ">
+          <div className="-mx-4 mt-8 overflow-x-auto px-4 no-scrollbar md:px-0 lg:mx-auto lg:overflow-visible">
             <div className="flex w-max gap-4 md:w-auto md:justify-center md:gap-8">
               {previousVideos.map((video) => (
                 <button
-                  key={video.content.ytLink}
+                  key={video.ytLink}
                   type="button"
-                  onClick={() => setActiveVideo(video.content)}
-                  className="group aspect-video w-64 shrink-0 overflow-hidden rounded-lg transition hover:scale-[1.03] border-2 border-(--color-brand-navy) hover:border-(--color-brand-blue) cursor-pointer"
-                  aria-label={`Pokaż film: ${video.content.miastoNazwa}`}
+                  onClick={() => setActiveVideo(video)}
+                  className="group relative aspect-video w-64 shrink-0 overflow-hidden rounded-lg border-2 border-(--color-brand-navy) transition hover:scale-[1.03] hover:border-(--color-brand-blue) cursor-pointer"
+                  aria-label={`Pokaż film: ${video.miastoNazwa}`}
                 >
-                  <iframe
-                    src={getYoutubeEmbedUrl(video.content.ytLink) ?? undefined}
-                    title={video.content.miastoNazwa}
-                    className="pointer-events-none h-full w-full border-0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
+                  <Image
+                    src={video.thumbnail}
+                    alt=""
+                    fill
+                    sizes="256px"
+                    className="object-cover transition group-hover:scale-105"
                   />
+
+                  <div className="absolute inset-0 bg-black/35" />
+
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-black transition group-hover:scale-110">
+                      <FaPlay />
+                    </span>
+                  </div>
+
+                  <span className="absolute bottom-2 left-2 right-2 line-clamp-1 text-left text-sm font-bold italic text-white">
+                    {video.miastoNazwa}
+                  </span>
                 </button>
               ))}
+
               <a
                 href={EXTERNAL_HREFS.openingVideosPlaylist}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="group flex aspect-video w-64 shrink-0 items-center justify-center rounded-lg bg-(--color-brand-blue) text-sm font-bold italic transition hover:scale-[1.03] hover:bg-(--color-brand-blue-hover)"
               >
-                <button className="group aspect-video w-64 shrink-0 text-sm  rounded-lg transition hover:scale-[1.03] bg-(--color-brand-blue)  hover:bg-(--color-brand-blue-hover)  cursor-pointer  font-bold italic">
-                  Zobacz wszystkie →
-                </button>
+                Zobacz wszystkie →
               </a>
             </div>
           </div>

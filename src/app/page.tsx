@@ -13,16 +13,17 @@ import MobilizationSection from "@/components/pages/landing/MobilizationSection"
 import { getLatestOpeningsVideos } from "@/lib/storyblok/getLatestOpeningsVideos";
 
 export default async function Home() {
-  const gymLocations = await getGymsLocations();
-  const parnersLogos = await getPartnersLogos();
-  const videos = await getLatestOpeningsVideos();
-
+  const [gymLocations, partnersLogos, videos] = await Promise.all([
+    getGymsLocations(),
+    getPartnersLogos(),
+    getLatestOpeningsVideos(),
+  ]);
   return (
     <div>
       <Hero />
       <MobilizationSection />
       <GymMapSection gymLocations={gymLocations} />
-      <SponsorsSection parnersLogos={parnersLogos} />
+      <SponsorsSection partnersLogos={partnersLogos} />
       <ProblemBenefitSection />
       <GymFeatures />
       <GymComparison />

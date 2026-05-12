@@ -1,5 +1,8 @@
 import { GymLocation } from "@/types/gym-location";
 import { requireEnv } from "../utils/requireEnv";
+import { URL } from "node:url";
+import { REVALIDATE } from "@/data/revalidate";
+import { gymLocationsParam } from "./params";
 
 export interface StoryRoot {
   stories: Story[];
@@ -45,10 +48,14 @@ export interface Content {
 }
 
 export async function getGymsLocations(): Promise<GymLocation[]> {
-  const res = await fetch(
-    `${requireEnv("STORYBLOK_API_URL")}?&starts_with=lokalizacje&token=${requireEnv("STORYBLOK_API_KEY")}`,
-    { next: { revalidate: 60 } },
-  );
+  const url = new URL(requireEnv("STORYBLOK_API_URL"));
+
+  url.searchParams.set("starts_with", gymLocationsParam);
+  url.searchParams.set("token", requireEnv("STORYBLOK_API_KEY"));
+
+  const res = await fetch(url.toString(), {
+    next: { revalidate: REVALIDATE, tags: ["gyms-locations"] },
+  });
 
   if (!res.ok) {
     throw new Error(`Failed to fetch gym locations: ${res.statusText}`);

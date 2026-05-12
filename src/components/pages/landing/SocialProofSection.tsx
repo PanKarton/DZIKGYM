@@ -1,5 +1,4 @@
 import CTA from "@/components/ui/cta";
-import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 
 export default function SocialProofSection() {
   return (
