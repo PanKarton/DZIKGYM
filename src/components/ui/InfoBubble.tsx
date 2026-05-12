@@ -23,7 +23,7 @@ export default function InfoBubble({
 
   return (
     <div
-      className="relative bg-(--color-primary) text-(--color-content-emphasis) text-3xl sm:text-5xl flex-center aspect-square rounded-full group z-2"
+      className="relative bg-(--color-primary)  text-(--color-content-emphasis) text-3xl sm:text-5xl flex-center aspect-square rounded-full group z-2"
       onClick={(e) => {
         e.stopPropagation();
         setIsOpen((prev) => !prev);
@@ -44,7 +44,7 @@ export default function InfoBubble({
       >
         <div
           className={cn(
-            "bg-(--color-primary) py-3 sm:py-4 rounded-full shadow-xl",
+            "bg-(--color-primary)  py-3 sm:py-4 rounded-full shadow-xl",
             "text-left max-w-75 ",
             isLeft ? "pl-10 pr-20" : "pl-12 sm:pl-17 pr-12",
           )}

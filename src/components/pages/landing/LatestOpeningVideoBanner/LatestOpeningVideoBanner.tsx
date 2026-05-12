@@ -104,7 +104,7 @@ export function LatestOpeningVideoBanner({
                     </span>
                   </div>
 
-                  <span className="absolute bottom-2 left-2 right-2 line-clamp-1 text-left text-sm font-bold italic text-white">
+                  <span className="absolute bottom-2 left-2 right-2 line-clamp-1 text-left text-sm font-bold italic text-(--color-primary) ">
                     {video.miastoNazwa}
                   </span>
                 </button>

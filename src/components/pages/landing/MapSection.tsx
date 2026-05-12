@@ -2,7 +2,7 @@ import React from "react";
 
 export default function MapSection() {
   return (
-    <section className="w-full bg-(--color-primary) my-16 md:pt-24 ">
+    <section className="w-full bg-(--color-primary)  my-16 md:pt-24 ">
       <div className="px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-6xl font-black   italic leading-[1]">
           DZIK GYM jest tam,

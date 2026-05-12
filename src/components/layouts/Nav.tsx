@@ -47,7 +47,7 @@ export default function Navbar() {
       className={cn(
         "w-full fixed top-0 left-0 z-99999 isolate  nav-transition",
         scrolled
-          ? "bg-(--color-primary) shadow-md backdrop-blur"
+          ? "bg-(--color-primary)  shadow-md backdrop-blur"
           : "bg-transparent",
       )}
     >
@@ -105,7 +105,7 @@ export default function Navbar() {
         {/* Links */}
         <ul
           className={cn(
-            "fixed inset-0 h-dvh w-full bg-(--color-primary) flex flex-col items-start justify-center pl-[10vh] ",
+            "fixed inset-0 h-dvh w-full bg-(--color-primary)  flex flex-col items-start justify-center pl-[10vh] ",
             "transition-transform duration-300 ease-in-out",
             isOpen ? "translate-x-0" : "translate-x-full",
             "xl:static xl:h-auto xl:w-auto xl:bg-transparent xl:flex-row xl:flex-center gap-6 xl:pl-0 xl:translate-x-0",

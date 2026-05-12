@@ -6,7 +6,7 @@ import ContactForm from "./contact-page/ContactForm/ContactForm";
 
 export default function ContactFormSection() {
   return (
-    <section className="w-full bg-(--color-primary)  ">
+    <section className="w-full bg-(--color-primary)   ">
       <div className="content-max-width mx-auto pt-24 ">
         <div className="flex flex-col xl:flex-row gap-16">
           {/* Left column */}
