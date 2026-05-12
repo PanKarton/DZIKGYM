@@ -31,7 +31,7 @@ export default function TeamSection() {
           {team.map((member, index) => (
             <div
               key={index}
-              className="bg-white aspect-420/278 rounded-3xl py-16 px-12 shadow-2xl flex flex-col items-center gap-12 transition-transform duration-100 ease-out hover:scale-102"
+              className="bg-(--color-primary)aspect-420/278 rounded-3xl py-16 px-12 shadow-2xl flex flex-col items-center gap-12 transition-transform duration-100 ease-out hover:scale-102"
             >
               <h3 className="mt-4 font-bold italic   text-4xl">
                 {member.name}

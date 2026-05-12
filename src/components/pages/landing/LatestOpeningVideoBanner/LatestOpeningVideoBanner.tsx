@@ -60,7 +60,7 @@ export function LatestOpeningVideoBanner({
             Otwarcia siłowni
           </h2>
 
-          <p className="mx-auto mt-5 max-w-4xl text-left text-base font-light leading-snug text-white md:text-center md:text-lg">
+          <p className="mx-auto mt-5 max-w-4xl text-left text-base font-light leading-snug text-(--color-primary)md:text-center md:text-lg">
             Otwarcie siłowni DZIK GYM to zawsze duże wydarzenie - dla Nas, dla
             samorządów i dla lokalnej społeczności. Dbamy o to, aby każda nowa
             lokalizacja miała odpowiedni start.
@@ -111,7 +111,7 @@ export function LatestOpeningVideoBanner({
               ))}
 
               <a
-                href={EXTERNAL_HREFS.openingVideosPlaylist}
+                href={EXTERNAL_HREFS.OPENING_VIDEOS_PLAYLIST}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex aspect-video w-64 shrink-0 items-center justify-center rounded-lg bg-(--color-brand-blue) text-sm font-bold italic transition hover:scale-[1.03] hover:bg-(--color-brand-blue-hover)"

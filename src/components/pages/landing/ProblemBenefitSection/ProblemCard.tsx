@@ -1,5 +1,5 @@
+import AnimateCounterOnView from "@/components/ui/AnimateCounterOnView";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
-import NumberIncreasing from "@/components/ui/NumberIncreasing";
 import Image from "next/image";
 
 export const ProblemCard = () => (
@@ -20,7 +20,7 @@ export const ProblemCard = () => (
         className="object-contain"
       />
     </div>
-    <NumberIncreasing target={70} isPercentage />
+    <AnimateCounterOnView target={70}>{`%`}</AnimateCounterOnView>
     <p className="text-(--color-off-primary) font-thin text-sm leading-normal">
       Taki procent Polaków{" "}
       <span className="text-(--color-brand-red) font-medium">

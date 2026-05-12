@@ -67,7 +67,7 @@ export default function CitizenBudgetSection() {
               >
                 {/* Content */}
                 <div className="absolute inset-0 p-16 flex flex-col items-center text-center">
-                  <div className="w-48 aspect-square bg-white mb-6" />
+                  <div className="w-48 aspect-square bg-(--color-primary)mb-6" />
 
                   <h3 className="text-[2rem] font-black italic leading-9">
                     {item.title}

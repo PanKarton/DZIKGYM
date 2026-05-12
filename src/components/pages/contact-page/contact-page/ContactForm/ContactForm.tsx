@@ -61,7 +61,7 @@ export default function ContactForm() {
   const helperErrorCls = "mt-2 text-xs font-medium text-(--color-danger)";
 
   const baseField =
-    "w-full  border bg-white px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 border-2 focus:outline-none transition";
+    "w-full  border bg-(--color-primary)px-4 py-3 text-sm text-slate-900 placeholder:text-slate-400 border-2 focus:outline-none transition";
   const defaultBorder = "border-(--color-off-primary)";
   const focusBorder = "focus:border-(--color-brand-blue) ";
   const errorBorder = "border-(--color-danger)";

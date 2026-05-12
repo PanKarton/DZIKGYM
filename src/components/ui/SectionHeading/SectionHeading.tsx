@@ -16,7 +16,7 @@ export default function SectionHeading({
     : "text-2xl md:text-[2.5rem]";
 
   return (
-    <h2 className={` ${fontSize} font-black italic  text-center ${className}`}>
+    <h2 className={` ${fontSize} font-black italic  ${className}`}>
       {children}
     </h2>
   );
