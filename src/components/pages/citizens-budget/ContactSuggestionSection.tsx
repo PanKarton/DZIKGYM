@@ -35,7 +35,9 @@ export default function ContactSuggestionSection() {
               <div className="w-63 pt-8 lg:pt-12">
                 <CTA variant="blueGradient">
                   <span className="text-sm">Przejdź do fomularza </span>
-                  <span className="relative translate-y-px text-lg">→</span>
+                  <span className="relative translate-y-px text-lg font-medium">
+                    →
+                  </span>
                 </CTA>
               </div>
             </Link>

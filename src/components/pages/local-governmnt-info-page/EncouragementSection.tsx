@@ -1,20 +1,22 @@
 import CTA from "@/components/ui/cta";
+import Link from "next/link";
 
 export default function EncouragementSection() {
   return (
-    <section className="pb-24">
+    <section className="pt-12 lg:pt-24">
       <div className="content-max-width">
-        <div className="flex gap-16 items-start">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-16 items-start max-w-lg mx-auto lg:mx-0 lg:max-w-full">
           <div>
-            <h2 className="text-(--color-content-emphasis) font-extrabold italic text-[2.5rem]">
-              Nie musisz <br />
-              <span className="text-[5.375rem] font-extrabold italic   leading-none mt-1">
+            <h2 className=" font-extrabold italic text-[2rem] lg:text-[2.5rem]">
+              <span className="text-(--color-brand-blue)">Nie musisz</span>{" "}
+              <br />
+              <span className="text-[3rem] lg:text-[5.375rem]    leading-none mt-1">
                 zaczynać <br /> od zera{" "}
               </span>
             </h2>
           </div>
 
-          <div className="text-sm    leading-relaxed space-y-4">
+          <div className="text-sm    leading-relaxed space-y-8">
             <p>
               Projekt siłowni ze zmiennym obciążeniem DZIK GYM działa już w
               wybranych miastach. Zaufały nam uczelnie, samorządy, firmy
@@ -33,11 +35,13 @@ export default function EncouragementSection() {
               porozmawiajmy.
             </p>
 
-            <div className="w-63 pt-12">
-              <CTA variant="redWide">
-                <span>Napisz do nas</span>
-              </CTA>
-            </div>
+            <Link href="/kontakt">
+              <div className="w-63 pt-4">
+                <CTA variant="redWide">
+                  <span className="text-sm font-medium">Napisz do nas</span>
+                </CTA>
+              </div>
+            </Link>
           </div>
         </div>
       </div>
