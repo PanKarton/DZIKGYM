@@ -13,6 +13,7 @@ import MapScrollHandler from "./MapScrollHandler";
 import { GymLocation } from "@/types/gym-location";
 
 export function GymMap({ gymLocations }: { gymLocations: GymLocation[] }) {
+  console.log(gymLocations[0]);
   return (
     <div className="h-[90vh] w-full p-0 overflow-hidden">
       <Map center={[19.5, 52]} zoom={5.75} theme="light" cooperativeGestures>
@@ -36,16 +37,27 @@ export function GymMap({ gymLocations }: { gymLocations: GymLocation[] }) {
               closeOnClick={true}
               className="w-62  border-2 border-(--color-brand-blue) rounded-none translate-y-[-20%] bubble relative"
             >
-              <span className="font-black text-base italic mb-0 leading-0.5">
+              <span className="font-black text-base italic mb-1 leading-0.5">
                 DZIK GYM
               </span>
-              <span className="block font-medium text-base mb-3 leading-3">{`${location.city}, ${location.address}`}</span>
-              <span className="block text-xs text-(--color-text-muted) mb-1">
-                We współpracy z:
-              </span>
-              <div className="relative">
-                <div className="border-2 aspect-4/1 w-[40%]"></div>
-              </div>
+              <span className="block font-medium text-base leading-4.5">{`${location.city}`}</span>
+              <span className="block font-medium text-base leading-4.5">{`${location.address}`}</span>
+              {location.PNG?.filename && (
+                <>
+                  <span className="block text-xs text-(--color-text-muted) mt-1">
+                    We współpracy z:
+                  </span>
+                  <div className="relative aspect-4/1 w-[70%]">
+                    <Image
+                      src={location.PNG.filename}
+                      alt={`${location.city} logo`}
+                      width={200}
+                      height={50}
+                      className="object-contain"
+                    />
+                  </div>
+                </>
+              )}
             </MarkerPopup>
           </MapMarker>
         ))}

@@ -45,6 +45,9 @@ export interface Content {
   Miasto: string;
   Adres: string;
   component: string;
+  PNG?: {
+    filename: string;
+  };
 }
 
 export async function getGymsLocations(): Promise<GymLocation[]> {
@@ -54,7 +57,8 @@ export async function getGymsLocations(): Promise<GymLocation[]> {
   url.searchParams.set("token", requireEnv("STORYBLOK_API_KEY"));
 
   const res = await fetch(url.toString(), {
-    next: { revalidate: REVALIDATE, tags: ["gyms-locations"] },
+    // next: { revalidate: REVALIDATE, tags: ["gyms-locations"] },
+    next: { tags: ["gyms-locations"] },
   });
 
   if (!res.ok) {
@@ -63,11 +67,14 @@ export async function getGymsLocations(): Promise<GymLocation[]> {
 
   const data = await res.json();
 
+  console.log("Fetched gym locations from Storyblok:", data.stories[0].content);
+
   return data.stories.map((story: Story) => ({
     id: story.content._uid,
     city: story.content.Miasto,
     address: story.content.Adres,
     lat: parseFloat(story.content.LAT),
     lng: parseFloat(story.content.LNG),
+    PNG: story.content.PNG,
   }));
 }
