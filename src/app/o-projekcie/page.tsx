@@ -7,7 +7,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "O projekcie",
-  description: "",
+  description:
+    " DZIKGYM to projekt tworzący nowoczesne siłownie plenerowe, które mają poprawiać zdrowie i aktywność Polaków w całym kraju.",
 };
 
 export default function About() {

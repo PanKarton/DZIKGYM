@@ -5,6 +5,7 @@ import * as React from "react";
 import { useForm } from "react-hook-form";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useSubmit } from "./useSubmit";
+import Link from "next/link";
 
 export type FormValues = {
   fullName: string;
@@ -292,18 +293,20 @@ export default function ContactForm() {
               id="consent"
               type="checkbox"
               className={cn(
-                "mt-1 h-5 w-5 border-slate-300 text-cyan-600 focus:ring-2 focus:ring-cyan-100",
+                "mt-1 h-5 w-5 border-slate-300 text-cyan-600 focus:ring-2 focus:ring-cyan-100 cursor-pointer",
               )}
               aria-invalid={!!errors.consent}
               {...register("consent", {
                 validate: (v) => (v ? true : "Musisz zaakceptować zgodę"),
               })}
             />
-            <label htmlFor="consent" className="text-sm leading-5  ">
+            <div className="text-sm leading-5  ">
               Wyrażam zgodę na przetwarzanie danych w celach marketingowych.
               <br />
-              <span className="underline">(polityka prywatności)</span>
-            </label>
+              <Link href="/polityka-prywatnosci" className="underline">
+                (polityka prywatności)
+              </Link>
+            </div>
           </div>
           {errors.consent && (
             <div className={helperErrorCls}>{errors.consent.message}</div>

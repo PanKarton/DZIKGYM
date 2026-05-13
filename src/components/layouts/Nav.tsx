@@ -14,7 +14,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
 
-  const isPageNotFound = pathname !== "/" && !validPaths.includes(pathname);
+  const isPageNotFound =
+    pathname !== "/" &&
+    !validPaths.includes(pathname) &&
+    pathname !== "/polityka-prywatnosci";
 
   useEffect(() => {
     if (isOpen) {
