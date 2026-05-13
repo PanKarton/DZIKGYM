@@ -3,6 +3,8 @@
 import { MdOutlineMail } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa";
 import ContactForm from "./contact-page/ContactForm/ContactForm";
+import Link from "next/link";
+import CompanyDetailsBlock from "./CompanyDetailsBlock";
 
 export default function ContactFormSection() {
   return (
@@ -57,6 +59,19 @@ export default function ContactFormSection() {
             <ContactForm />
           </div>
         </div>
+        <div className="mt-12 text-xs leading-loose text-justify">
+          Administratorem danych osobowych jest WK spółka z ograniczoną
+          odpowiedzialnością z siedzibą w Jankach (KRS: 0000646549). Dane podane
+          w formularzu będą przetwarzane w przede wszystkim w celu obsługi
+          zapytania przesłanego przez formularz kontaktowy i udzielenia
+          odpowiedzi. Szczegółowe informacje o administratorze oraz celach i
+          zasadach przetwarzania danych, w tym o prawach osób, których dane
+          dotyczą, znajdują się w{" "}
+          <Link href="/polityka-prywatnosci" className="underline">
+            polityce prywatności.
+          </Link>
+        </div>
+        <CompanyDetailsBlock />
       </div>
     </section>
   );

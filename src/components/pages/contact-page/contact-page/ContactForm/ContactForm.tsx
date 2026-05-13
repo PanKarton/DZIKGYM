@@ -300,11 +300,11 @@ export default function ContactForm() {
                 validate: (v) => (v ? true : "Musisz zaakceptować zgodę"),
               })}
             />
-            <div className="text-sm leading-5  ">
-              Wyrażam zgodę na przetwarzanie danych w celach marketingowych.
+            <div className="text-xs leading-5  ">
+              Oświadczam, że zapoznałem/am się z
               <br />
               <Link href="/polityka-prywatnosci" className="underline">
-                (polityka prywatności)
+                Polityką prywatności.
               </Link>
             </div>
           </div>
@@ -319,7 +319,9 @@ export default function ContactForm() {
               ) : (
                 <>
                   Wyślij
-                  <FaArrowRightLong className="relative -translate-y-px scale-[1.2]" />
+                  <span className="relative translate-y-px text-lg font-medium">
+                    →
+                  </span>
                 </>
               )}
             </CTA>

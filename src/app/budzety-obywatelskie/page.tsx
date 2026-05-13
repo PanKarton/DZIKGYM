@@ -15,7 +15,8 @@ const subHeadingLineTwo =
 
 export const metadata: Metadata = {
   title: "Budżety Obywatelskie",
-  description: "",
+  description:
+    "Stwórz z nami DZIKGYM w twojej okolicy za pomocą budżetu obywatelskiego i wesprzyj swoją społeczność.",
 };
 
 export default async function Home() {
@@ -35,13 +36,17 @@ export default async function Home() {
           <div className="w-64">
             <CTA variant="redWide">
               <span className="font-semibold ">Co to jest BO? </span>
-              <FaArrowRightLong className="relative -translate-y-px scale-[1.2]" />
+              <span className="relative translate-y-px text-lg font-medium">
+                →
+              </span>
             </CTA>
           </div>
           <div className="w-64">
             <CTA variant="redTransparent">
               <span className="font-semibold ">Jestem z samorządu </span>
-              <FaArrowRightLong className="relative -translate-y-px scale-[1.2]" />
+              <span className="relative translate-y-px text-lg font-medium">
+                →
+              </span>
             </CTA>
           </div>
         </div>

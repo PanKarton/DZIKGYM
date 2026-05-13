@@ -33,7 +33,9 @@ const BenefitContent = () => (
         <Link href="/o-projekcie">
           <CTA variant="blueTaller">
             <span className="font-sm font-semibold">O projekcie </span>
-            <FaArrowRightLong className="relative -translate-y-px scale-[1.2]" />
+            <span className="relative translate-y-px text-lg font-medium">
+              →
+            </span>
           </CTA>
         </Link>
       </div>

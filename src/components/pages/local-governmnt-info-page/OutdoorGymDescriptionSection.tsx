@@ -1,23 +1,26 @@
 import CTA from "@/components/ui/cta";
+import { cn } from "@/lib/utils";
 import Image from "next/image";
-import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function OutdoorGymDescriptionSection() {
   return (
-    <section className="relative w-full  py-24 mb-18 for-gov-gradient">
-      <div className="absolute inset-0 isolate z-[-1]">
+    <section
+      className={cn(
+        "relative w-full mt-12 lg:mt-24  bg-(--color-secondary) isolate",
+        "pt-48 pb-24 lg:py-24 min-[1920px]:aspect-1920/805",
+      )}
+    >
+      <div className="absolute  top-0 left-0 w-full aspect-1920/805 z-1 ">
         <Image
           src="/images/crowd-outdoor.png"
           alt="tłum na siłowni DZIK GYM"
-          width={1800}
-          height={1200} // 3:2, zgodne z plikiem
-          sizes="100vw"
-          className="w-full h-full object-cover"
+          fill
           priority
         />
+        <div className="absolute inset-0 founders-gradient z-10"></div>
       </div>
-      <div className="content-max-width  h-full flex items-center">
-        <div className="bg-(--color-primary) rounded-xl px-7 py-16 text-left shadow-xl ml-auto max-w-[33rem] ">
+      <div className="content-max-width h-full flex justify-center items-center relative z-2">
+        <div className="bg-(--color-primary) rounded-xl px-7 py-16 text-left shadow-xl lg:ml-auto max-w-132 ">
           <h2 className="text-[2.5rem] font-black italic leading-tight   mb-4">
             <span className="text-(--color-content-emphasis)">DZIK GYM</span> to
             więcej <br />
@@ -25,7 +28,7 @@ export default function OutdoorGymDescriptionSection() {
           </h2>
 
           <p className="text-sm   leading-relaxed mb-4">
-            To ogólnopolska inicjatywa, która
+            To ogólnopolska inicjatywa, która{" "}
             <strong>zmienia martwe, zaniedbane przestrzenie</strong> w{" "}
             <strong>
               bezpieczne, darmowe i nowoczesne miejsca do aktywności fizycznej
@@ -36,7 +39,7 @@ export default function OutdoorGymDescriptionSection() {
           <p className="text-sm   leading-relaxed mb-6">
             Naszym celem jest stworzenie przestrzeni ze sportową infrastrukturą,
             gdzie aktywność fizyczna staje się przyjemnością, a nie obowiązkiem.{" "}
-            <strong>Bez karnetu, bez stresu, bez barier finansowych</strong> –
+            <strong>Bez karnetu, bez stresu, bez barier finansowych</strong> -
             ćwiczyć może każdy, niezależnie od wieku czy możliwości. DZIK GYM
             łączy pokolenia, buduje więzi społeczne i dodaje dumy każdej
             lokalnej społeczności.
@@ -44,8 +47,10 @@ export default function OutdoorGymDescriptionSection() {
 
           <div className="w-63">
             <CTA variant="blueGradient">
-              Zobacz prezentację
-              <FaArrowRightLong />
+              <span className="text-sm font-semibold">Zobacz prezentację</span>
+              <span className="relative translate-y-px text-lg font-medium">
+                →
+              </span>
             </CTA>
           </div>
         </div>

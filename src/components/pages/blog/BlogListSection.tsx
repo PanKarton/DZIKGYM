@@ -56,7 +56,9 @@ export default function BlogListSection() {
               <div className="w-45 ">
                 <CTA variant="blueTaller">
                   <span className="font-semibold text-sm">Czytaj więcej</span>
-                  <FaArrowRightLong className="relative -translate-y-px scale-[1.2]" />
+                  <span className="relative translate-y-px text-lg font-medium">
+                    →
+                  </span>
                 </CTA>
               </div>
             </Link>
