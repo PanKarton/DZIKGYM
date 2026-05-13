@@ -105,7 +105,7 @@ export default function CBSteps() {
             TIMELINE WRAPPER
             relative => potrzebne do absolute line i circles
         ========================================= */}
-        <div className="relative mx-auto max-w-6xl">
+        <div className="relative mx-auto ">
           {/* =========================================
               VERTICAL LINE
               Startuje od połowy pierwszego kroku
@@ -225,7 +225,7 @@ function StepText({
   return (
     <div
       className={`
-    max-w-md md:max-w-sm
+    max-w-md md:max-w-none
     ${isEven ? "md:ml-auto md:text-right" : ""}
   `}
     >
@@ -283,13 +283,13 @@ function StepText({
 function StepImage({ index, isEven }: { index: number; isEven: boolean }) {
   return (
     <div
-      className={`relative aspect-460/350 w-full max-w-77.5 mr-auto md:max-w-none ${isEven ? "md:ml-auto" : "md:mr-auto"}`}
+      className={`relative aspect-460/350 w-full max-w-77.5 mr-auto md:max-w-none ${isEven ? "md:mr-auto" : "md:ml-auto"}`}
     >
       <Image
         src={`/budget-icons/step-${index + 1}.svg`}
         alt={`Grafika kroku ${index + 1}`}
         fill
-        className={`object-contain ${isEven ? "object-right" : "object-left"}`}
+        className={`object-contain ${isEven ? "md:object-left" : "object-left md:object-right"}`}
       />
     </div>
   );

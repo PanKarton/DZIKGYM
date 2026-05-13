@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export default async function Home() {
   return (
     <div>
-      {/* <SubHero
+      <SubHero
         heading={heading}
         hasButtons
         subHeading={
@@ -47,9 +47,9 @@ export default async function Home() {
         </div>
       </SubHero>
       <CitizenBudgetSection />
-      <CBSectionDivider /> */}
+      <CBSectionDivider />
       <CBSteps />
-      {/* <ContactSuggestionSection /> */}
+      <ContactSuggestionSection />
     </div>
   );
 }
