@@ -4,7 +4,7 @@ export default function CitizenBudgetSection() {
   const items = [
     {
       title: "Decydujesz Ty",
-      description: "Sam(a) wybierasz, na co pójdą pieniądze gminy.",
+      description: "Sam(a) wybierasz, na co pójdą pieniądze samorządu.",
     },
     {
       title: "Realne potrzeby",
@@ -49,27 +49,22 @@ export default function CitizenBudgetSection() {
         </p>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 2xl:grid-cols-3 gap-6 justify-items-center  mt-14">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className="w-full max-w-104.5 lg:odd:justify-self-end
-        lg:even:justify-self-start
-
-        2xl:justify-self-center"
-            >
-              {/* Aspect wrapper */}
+        <div className="overflow-x-auto no-scrollbar -mx-[calc(3vw+1.5rem)] lg:mx-0 mt-16">
+          <div
+            className="
+      flex gap-8 w-max
+      lg:grid lg:w-full lg:grid-cols-3
+    "
+          >
+            {items.map((item, index) => (
               <div
-                className="relative w-full aspect-418/478 rounded-2xl border-2 overflow-hidden transition duration-300 hover:-translate-y-1 bg-(--color-brand-blue-light)"
-                style={{
-                  borderColor: "var(--color-brand-blue)",
-                }}
+                key={index}
+                className="rounded-3xl max-w-72.5 lg:min-w-72.5 min-h-119.5 lg:max-w-full relative shadow-xl overflow-hidden border-(--color-brand-blue) border-2 bg-(--color-brand-blue-light) aspect-290/478 lg:aspect-418/478 px-4"
               >
-                {/* Content */}
-                <div className="absolute inset-0 p-16 flex flex-col items-center text-center">
-                  <div className="w-48 aspect-square bg-(--color-primary) mb-6" />
+                <div className="flex flex-col items-center justify-start pt-16 text-center h-full">
+                  <div className="w-48 lg:w-[50%] aspect-square border-t mb-6" />
 
-                  <h3 className="text-[2rem] font-black italic leading-9">
+                  <h3 className="text-[1.5rem] lg:text-[2rem] font-black italic leading-9">
                     {item.title}
                   </h3>
 
@@ -78,10 +73,14 @@ export default function CitizenBudgetSection() {
                   </p>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
   );
+}
+
+{
+  /* Content */
 }

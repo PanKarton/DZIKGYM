@@ -3,9 +3,16 @@ import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 
 export default function CBSectionDivider() {
   return (
-    <div className="w-full text-center relative pt-24 pb-20">
-      <div className="content-max-width">
-        <GradientBlueRed />
+    <div className="w-full text-center relative pt-24 pb-20 isolate">
+      <div
+        aria-hidden="true"
+        className="absolute inset-0 z-1 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/mesh/mesh-full-hd.svg')",
+        }}
+      />
+      <GradientBlueRed />
+      <div className="content-max-width relative z-2">
         <SectionHeading className="text-(--color-brand-blue)">
           Wystarczy{" "}
           <span className="text-(--color-primary)  ">jeden impuls,</span>
