@@ -90,7 +90,7 @@ export default function CBSteps() {
             SECTION HEADER
         ========================================= */}
         <header className="mb-20 text-left sm:text-center">
-          <p className="text-3xl font-black italic  text-(--color-brand-blue) md:text-5xl">
+          <p className="text-3xl font-black italic  text-(--color-brand-blue) md:text-5xl mb-1 md:mb-2">
             {header.eyebrow}
           </p>
 
@@ -157,8 +157,8 @@ export default function CBSteps() {
                   {/* =========================================
                       STEP NUMBER CIRCLE
                   ========================================= */}
-                  <div className="absolute left-6 z-10 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-slate-300 bg-(--color-primary) text-[46px] font-light text-slate-400 md:left-1/2 ">
-                    <span className="translate-y-0.5">{step.number}</span>
+                  <div className="absolute left-6 z-10 flex size-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full border border-slate-300 bg-(--color-primary) text-[46px] font-medium text-(--color-off-primary) md:left-1/2 ">
+                    <span className="translate-y-1">{step.number}</span>
                   </div>
 
                   {/* =========================================
@@ -283,7 +283,7 @@ function StepText({
 function StepImage({ index, isEven }: { index: number; isEven: boolean }) {
   return (
     <div
-      className={`relative aspect-460/350 w-full max-w-77.5 mr-auto md:max-w-none ${isEven ? "md:mr-auto" : "md:ml-auto"}`}
+      className={`relative aspect-460/350 w-full max-w-77.5  mr-auto md:max-w-97.5 ${isEven ? "md:mr-auto" : "md:ml-auto"}`}
     >
       <Image
         src={`/budget-icons/step-${index + 1}.svg`}
