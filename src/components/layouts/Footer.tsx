@@ -20,7 +20,7 @@ export default function Footer() {
             <p className="font-semibold italic">Producentem atlastów jest:</p>
             <div>
               <Image
-                src="/images/activeline-logo.png"
+                src="/images/activeline-logo.svg"
                 alt="Activeline logo"
                 width={200}
                 height={50}

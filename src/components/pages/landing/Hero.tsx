@@ -29,7 +29,7 @@ export default function Hero() {
             <source src="/video/hero.webm" type="video/webm" />
             <source src="/video/hero.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-[#000000]/60" />
+          <div className="absolute inset-0 bg-[#000000]/60 z-1" />
           <div className="relative   py-35 flex flex-col items-center justify-center h-full gap-12 text-center z-10">
             <div className="w-66">
               <ColorLogo />
@@ -45,9 +45,7 @@ export default function Hero() {
             </div>
             <div className="w-57">
               <CTA variant="red" scrollToId="map">
-                <span className="font-bold text-lg italic">
-                  Znajdź DZIK GYM
-                </span>
+                <span className="font-medium text-lg ">Znajdź DZIK GYM</span>
               </CTA>
             </div>
           </div>

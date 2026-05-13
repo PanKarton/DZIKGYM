@@ -7,7 +7,7 @@ export default function SponsorsSection({
   partnersLogos: GymPartner[];
 }) {
   return (
-    <section className="bg-(--color-primary-darker) py-24 flex-center">
+    <section className=" py-24 flex-center">
       <div className="content-max-width">
         <h2 className="text-center text-lg md:text-xl font-medium italic text-(--gray) leading-tight mb-12">
           Oni wsparli swoje społeczności:

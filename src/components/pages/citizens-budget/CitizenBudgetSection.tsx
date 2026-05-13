@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import Image from "next/image";
 
 export default function CitizenBudgetSection() {
   const items = [
@@ -49,7 +50,7 @@ export default function CitizenBudgetSection() {
         </p>
 
         {/* Cards */}
-        <div className="overflow-x-auto no-scrollbar -mx-[calc(3vw+1.5rem)] lg:mx-0 mt-16">
+        <div className="overflow-x-auto no-scrollbar lg:mx-0 mt-16 -mx-[calc(1.5rem+clamp(1.25rem,3vw,3.75rem))]">
           <div
             className="
       flex gap-8 w-max
@@ -59,10 +60,17 @@ export default function CitizenBudgetSection() {
             {items.map((item, index) => (
               <div
                 key={index}
-                className="rounded-3xl max-w-72.5 lg:min-w-72.5 min-h-119.5 lg:max-w-full relative shadow-xl overflow-hidden border-(--color-brand-blue) border-2 bg-(--color-brand-blue-light) aspect-290/478 lg:aspect-418/478 px-4"
+                className="rounded-3xl max-w-72.5 lg:min-w-72.5 min-h-119.5 lg:max-w-full relative  overflow-hidden border-(--color-brand-blue) border-2 bg-(--color-brand-blue-light) aspect-290/478 lg:aspect-418/478 px-4"
               >
                 <div className="flex flex-col items-center justify-start pt-16 text-center h-full">
-                  <div className="w-48 lg:w-[50%] aspect-square border-t mb-6" />
+                  <div className="w-48 lg:w-[50%] aspect-square  mb-6">
+                    <Image
+                      src={`/budget-icons/feature-${index + 1}.svg`}
+                      alt="Cecha budżetu obywatelskiego"
+                      width={180}
+                      height={180}
+                    />
+                  </div>
 
                   <h3 className="text-[1.5rem] lg:text-[2rem] font-black italic leading-9">
                     {item.title}

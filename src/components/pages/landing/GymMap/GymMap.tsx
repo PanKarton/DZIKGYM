@@ -15,7 +15,7 @@ import { GymLocation } from "@/types/gym-location";
 export function GymMap({ gymLocations }: { gymLocations: GymLocation[] }) {
   console.log(gymLocations[0]);
   return (
-    <div className="h-[90vh] w-full p-0 overflow-hidden">
+    <div className="h-[75vh] w-full p-0 overflow-hidden">
       <Map center={[19.5, 52]} zoom={5.75} theme="light" cooperativeGestures>
         <MapScrollHandler />
         <MapControls position="bottom-right" showZoom showFullscreen />

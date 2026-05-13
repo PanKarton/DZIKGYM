@@ -9,7 +9,8 @@ const heroData = {
 
 export const metadata: Metadata = {
   title: "Kontakt",
-  description: "",
+  description:
+    " Skontaktuj się w sprawie DZIKGYM i zadbajmy razem o zdrowie Polaków tworząc nowoczesne siłownie plenerowe 24/7.",
 };
 
 export default function Home() {
