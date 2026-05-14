@@ -1,12 +1,12 @@
 export const siteConfig = {
-  name: "DZIK GYM",
+  name: "<TrademarkText>DZIK</TrademarkText> GYM",
   url: "https://wkdzik.pl",
   description:
-    "Darmowe i nowoczesne siłownie plenerowe dostępne 24/7 z regulowanym obciążeniem. DZIK GYM zachęca Polaków do aktywności fizycznej.",
+    "Darmowe i nowoczesne siłownie plenerowe dostępne 24/7 z regulowanym obciążeniem. <TrademarkText>DZIK</TrademarkText> GYM zachęca Polaków do aktywności fizycznej.",
 
   title: {
-    default: "DZIK GYM",
-    template: "%s | DZIK GYM",
+    default: "<TrademarkText>DZIK</TrademarkText> GYM",
+    template: "%s | <TrademarkText>DZIK</TrademarkText> GYM",
   },
 
   ogImage: "",

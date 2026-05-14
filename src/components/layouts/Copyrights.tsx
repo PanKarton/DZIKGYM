@@ -13,7 +13,7 @@ export default function Copyrights() {
         <BasicLogo isInverted={true} />
       </div>
       <p className={styles}>
-        {`©${new Date().getFullYear()} WKDZIK.pl. Wszelkie prawa zastrzeżone. `}
+        {`©${new Date().getFullYear()} WK<TrademarkText>DZIK</TrademarkText>.pl. Wszelkie prawa zastrzeżone. `}
       </p>
       <button
         className={`${styles} bg-transparent border-none cursor-pointer`}

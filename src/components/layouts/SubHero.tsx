@@ -36,7 +36,7 @@ export default function SubHero({
             {heading}
           </h1>
 
-          <div className="max-w-3xl text-base sm:text-lg lg:text-xl font-thin leading-snug">
+          <div className="max-w-203 text-base sm:text-lg lg:text-xl font-thin leading-snug">
             {subHeading}
           </div>
 

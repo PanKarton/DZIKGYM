@@ -1,5 +1,6 @@
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Image from "next/image";
 
 const styles = {
@@ -22,7 +23,8 @@ export default function UniqueProjectSection() {
         <div className="flex flex-col min-[1100px]:flex-row max-w-132 min-[1100px]:max-w-full mx-auto gap-10 items-center">
           <div className="flex-col ">
             <SectionHeading className="text-(--color-brand-blue) text-4xl md:text-[2.5rem]">
-              DZIK GYM to jedyny taki <br /> projekt w Europie
+              <TrademarkText fontWeight={900}>DZIK</TrademarkText>GYM to jedyny
+              taki <br /> projekt w Europie
             </SectionHeading>
 
             <p className={styles.paragraph}>
@@ -41,22 +43,24 @@ export default function UniqueProjectSection() {
 
             <p className={styles.paragraph}>
               Naszym celem jest obniżenie progu wejścia do świata sportu i
-              pokazanie, że trening siłowy nie musi być luksusem. DZIK GYM to
-              siłownia dostępna dla każdego, o każdej porze, w Twoim mieście.
+              pokazanie, że trening siłowy nie musi być luksusem.{" "}
+              <TrademarkText>DZIK</TrademarkText> GYM to siłownia dostępna dla
+              każdego, o każdej porze, w Twoim mieście.
             </p>
 
             <p className={styles.paragraph}>
-              DZIK GYM to nie tylko maszyny i przestrzeń. To projekt, dzięki
-              któremu ludzie zaczynają ze sobą rozmawiać. W miastach powstają
-              lokalne społeczności, które dbają o swoje zdrowie w ramach
-              potrzebnej nam wszystkim aktywności fizycznej.
+              <TrademarkText>DZIK</TrademarkText> GYM to nie tylko maszyny i
+              przestrzeń. To projekt, dzięki któremu ludzie zaczynają ze sobą
+              rozmawiać. W miastach powstają lokalne społeczności, które dbają o
+              swoje zdrowie w ramach potrzebnej nam wszystkim aktywności
+              fizycznej.
             </p>
           </div>
 
           <div className="w-full max-w-132 aspect-square rounded-4xl relative overflow-hidden shrink-0">
             <Image
               src="/images/crowd.jpg"
-              alt="tłum na siłowni DZIK GYM"
+              alt="tłum na siłowni <TrademarkText>DZIK</TrademarkText> GYM"
               fill
             />
           </div>

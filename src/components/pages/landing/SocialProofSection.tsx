@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Link from "next/link";
 
 export default function SocialProofSection() {
@@ -10,10 +11,10 @@ export default function SocialProofSection() {
         </h2>
         <div className="text-left lg:text-center max-w-150 lg:max-w-218  flex flex-col gap-6 mt-6">
           <p>
-            Pierwszy DZIK GYM powstał dokładnie tam, gdzie narodziła się EKIPA
-            WK, i od ponad 2,5 roku nieprzerwanie działa na najwyższym poziomie,
-            oferując pełną jakość, funkcjonalność i realne wsparcie dla
-            mieszkańców warszawskiej Ochoty.
+            Pierwszy <TrademarkText>DZIK</TrademarkText> GYM powstał dokładnie
+            tam, gdzie narodziła się EKIPA WK, i od ponad 2,5 roku nieprzerwanie
+            działa na najwyższym poziomie, oferując pełną jakość, funkcjonalność
+            i realne wsparcie dla mieszkańców warszawskiej Ochoty.
           </p>
           <p>
             Siłownia jest intensywnie użytkowana każdego dnia, niezależnie od
@@ -32,7 +33,10 @@ export default function SocialProofSection() {
           <h3 className="font-black italic text-[3rem] leading-tight mt-6 md:mt-24 max-w-150 lg:max-w-218">
             Sprawdź, jak może wyglądać <br />{" "}
             <span className="text-(--color-brand-blue) ">
-              DZIK GYM w Twoim mieście.
+              <TrademarkText fontWeight={900} top={"0"}>
+                DZIK
+              </TrademarkText>
+              GYM w Twoim mieście.
             </span>
           </h3>
           <div className="w-70 mr-auto lg:mx-auto mt-10">

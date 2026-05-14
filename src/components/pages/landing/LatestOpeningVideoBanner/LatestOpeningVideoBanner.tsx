@@ -7,6 +7,7 @@ import { OpeningVideos } from "@/types/opening-videos";
 import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 import { parseYoutubeUrl } from "@/lib/utils/parseYoutubeUrl";
 import { FaPlay } from "react-icons/fa";
+import { TrademarkText } from "@/components/ui/TradeMark";
 
 export function LatestOpeningVideoBanner({
   videos,
@@ -62,9 +63,10 @@ export function LatestOpeningVideoBanner({
             </h2>
 
             <p className="mx-auto mt-5 max-w-4xl text-left text-base font-light leading-snug text-(--color-primary)  md:text-center md:text-lg">
-              Otwarcie siłowni DZIK GYM to zawsze duże wydarzenie - dla Nas, dla
-              samorządów i dla lokalnej społeczności. Dbamy o to, aby każda nowa
-              lokalizacja miała odpowiedni start.
+              Otwarcie siłowni <TrademarkText>DZIK</TrademarkText> GYM to zawsze
+              duże wydarzenie - dla Nas, dla samorządów i dla lokalnej
+              społeczności. Dbamy o to, aby każda nowa lokalizacja miała
+              odpowiedni start.
             </p>
 
             <div className="mt-8 aspect-video max-w-274 overflow-hidden rounded-2xl">

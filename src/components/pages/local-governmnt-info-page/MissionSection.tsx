@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Image from "next/image";
 
 export default function MissionSection() {
@@ -27,14 +28,15 @@ export default function MissionSection() {
           </div>
           <div className="flex-col flex-center gap-4  mt-auto z-2">
             <h3 className="text-[2.5rem] font-black leading-[1.15] italic text-center text-(--color-brand-blue)">
-              Misja DZIK GYM
+              Misja <TrademarkText fontWeight={900}>DZIK</TrademarkText> GYM
             </h3>
             <p className="text-sm  text-center font-thin leading-relaxed  max-w-4xl">
               Wyobraź sobie miasto, w którym mieszkańcy częściej ćwiczą, a
               rzadziej stoją w kolejce do lekarza. Wyobraź sobie przestrzeń,
               która zapełnia się ruchem, energią i uśmiechem - a nie świeci
               pustką. Wyobraź sobie przestrzeń, która działa, inspiruje i
-              zmienia życia. To właśnie misja DZIK GYM.
+              zmienia życia. To właśnie misja{" "}
+              <TrademarkText>DZIK</TrademarkText> GYM.
             </p>
           </div>
         </div>

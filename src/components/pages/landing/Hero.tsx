@@ -1,5 +1,6 @@
 import ColorLogo from "@/components/ui/ColorLogo";
 import CTA from "@/components/ui/cta";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import { cn } from "@/lib/utils";
 
 const h1Styles = cn(
@@ -38,14 +39,17 @@ export default function Hero() {
               <h1 className={h1Styles}>SIŁOWNIE UZNANE PRZEZ SPOŁECZNOŚĆ</h1>
               <h2 className="text-[1rem] lg:text-[1.125rem]  h2-hero font-light mx-8 sm:mx-16">
                 Tworzymy nowoczesne siłownie plenerowe, które integrują i
-                wspierają zdrowie i formę Polaków. <br /> DZIK GYM to projekt
-                sprawdzony w praktyce, gotowy do wdrożenia w przestrzeni
-                publicznej i półpublicznej.
+                wspierają zdrowie i formę Polaków. <br />{" "}
+                <TrademarkText>DZIK</TrademarkText> GYM to projekt sprawdzony w
+                praktyce, gotowy do wdrożenia w przestrzeni publicznej i
+                półpublicznej.
               </h2>
             </div>
             <div className="w-57">
               <CTA variant="red" scrollToId="map">
-                <span className="font-bold text-lg ">Znajdź DZIK GYM</span>
+                <span className="font-bold text-lg ">
+                  Znajdź <TrademarkText>DZIK</TrademarkText> GYM
+                </span>
               </CTA>
             </div>
           </div>

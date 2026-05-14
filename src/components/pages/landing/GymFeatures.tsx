@@ -1,11 +1,13 @@
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import InfoBubble from "@/components/ui/InfoBubble";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
+import React from "react";
 
 type GymFeature = {
   feature: string;
-  description: string;
+  description: string | React.ReactNode;
 };
 
 type MachineFeature = {
@@ -29,8 +31,12 @@ const GYM_FEATURES: GymFeature[] = [
   },
   {
     feature: "Sportowa aura",
-    description:
-      "Siłownie DZIK GYM cieszą się sporą popularnością, co wzmacnia integracje lokalnych społeczności.",
+    description: (
+      <span>
+        Siłownie <TrademarkText>DZIK</TrademarkText> GYM cieszą się sporą
+        popularnością, co wzmacnia integracje lokalnych społeczności.
+      </span>
+    ),
   },
   {
     feature: "Design",
@@ -98,7 +104,11 @@ function SectionBackground() {
 function SectionHeading() {
   return (
     <h2 className="relative z-10 mx-auto mb-16 max-w-150 text-[3.5rem] font-black leading-none text-(--color-content-emphasis) italic xl:mx-0 xl:max-w-max">
-      Główne cechy <br /> siłowni DZIK GYM
+      Główne cechy <br /> siłowni{" "}
+      <TrademarkText fontWeight={900} top="0" right="-0.1em">
+        DZIK
+      </TrademarkText>
+      GYM
     </h2>
   );
 }

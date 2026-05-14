@@ -6,6 +6,7 @@ import CircleLink from "@/components/ui/CircleLink";
 import BrandInfoSection from "../pages/landing/BrandInfoSection";
 import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 import Image from "next/image";
+import { TrademarkText } from "../ui/TradeMark";
 
 export default function Footer() {
   return (
@@ -35,7 +36,9 @@ export default function Footer() {
             </a>
           </div>
           <nav className="relative z-2 order-3 max-[719px]:text-center">
-            <h3 className="font-bold italic mb-5 text-sm">DZIK GYM</h3>
+            <h3 className="font-bold italic mb-5 text-sm">
+              <TrademarkText fontWeight={700}>DZIK</TrademarkText> GYM
+            </h3>
             <ul className="space-y-2 text-sm text-(--color-off-primary) font-thin">
               {NAV_ITEMS.map((item) => (
                 <li key={item.href}>
@@ -67,7 +70,7 @@ export default function Footer() {
                   target="_blank"
                   className="hover:text-(--color-primary-darker)"
                 >
-                  Instagram DZIK GYM
+                  Instagram <TrademarkText>DZIK</TrademarkText> GYM
                 </Link>
               </li>
             </ul>
