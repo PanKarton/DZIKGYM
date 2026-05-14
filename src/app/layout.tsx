@@ -9,7 +9,7 @@ import { siteConfig } from "./config/site";
 import { Providers } from "@/components/providers/providers";
 
 export const metadata: Metadata = {
-  // metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(siteConfig.url),
 
   title: {
     default: siteConfig.title.default,

@@ -8,7 +8,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "O projekcie",
   description:
-    " DZIKGYM to projekt tworzący nowoczesne siłownie plenerowe, które mają poprawiać zdrowie i aktywność Polaków w całym kraju.",
+    " DZIK GYM to projekt tworzący nowoczesne siłownie plenerowe, które mają poprawiać zdrowie i aktywność Polaków w całym kraju.",
 };
 
 export default function About() {

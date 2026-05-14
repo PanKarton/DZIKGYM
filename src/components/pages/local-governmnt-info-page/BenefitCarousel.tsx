@@ -88,7 +88,7 @@ export default function BenefitCarousel() {
         </div>
 
         {/* Buttons */}
-        <div className="hidden md:flex items-center justify-center gap-24 mt-100">
+        <div className="hidden md:flex items-center justify-center gap-24 mt-36">
           <button onClick={prev} className={circleButtonStyle}>
             <ChevronLeft size={60} style={{ translate: "-2px" }} />
           </button>

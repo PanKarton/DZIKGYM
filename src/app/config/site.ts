@@ -1,9 +1,8 @@
 export const siteConfig = {
   name: "DZIK GYM",
-  //   url: "https://wkdzik.pl",
-  url: "",
+  url: "https://wkdzik.pl",
   description:
-    "Darmowe i nowoczesne siłownie plenerowe dostępne 24/7 z regulowanym obciążeniem. DZIKGYM zachęca Polaków do aktywności fizycznej.",
+    "Darmowe i nowoczesne siłownie plenerowe dostępne 24/7 z regulowanym obciążeniem. DZIK GYM zachęca Polaków do aktywności fizycznej.",
 
   title: {
     default: "DZIK GYM",
