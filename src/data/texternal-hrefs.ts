@@ -7,7 +7,5 @@ const EXTERNAL_HREFS = {
   OPENING_VIDEOS_PLAYLIST:
     "https://www.youtube.com/playlist?list=PLHgc7ECD-8nLVia16d3CdVuLiOgOKo7jQ",
   EBOOK_DOWNLOAD: "https://wkdzik.pl/fundamenty",
-  PRESENTATION:
-    "https://dzikgym.pl/wp-content/uploads/2025/01/Preezka-dzikgym.pdf",
 };
 export default EXTERNAL_HREFS;

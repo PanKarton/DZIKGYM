@@ -48,11 +48,11 @@ export default function OutdoorGymDescriptionSection() {
             lokalnej społeczności.
           </p>
 
-          <a href={EXTERNAL_HREFS.PRESENTATION} about="_blank">
+          <a href="/files/DZIKGYM 30.01.26.pdf" download>
             <div className="w-63">
               <CTA variant="blueGradient">
                 <span className="text-sm font-semibold">
-                  Zobacz prezentację
+                  Pobierz prezentację
                 </span>
                 <span className="relative translate-y-px text-lg font-medium">
                   →
