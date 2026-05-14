@@ -23,9 +23,18 @@ const caruselImages = [
 ];
 
 const gymDetails = [
-  "17 urządzeń treningowych",
-  "Użytkowanie codziennie przez cały rok",
-  "Projekt funkcjonujący od 2023 roku",
+  {
+    text: "17 urządzeń treningowych",
+    icon: "/first-gym-icons/hantel_icon.svg",
+  },
+  {
+    text: "Użytkowanie codziennie przez cały rok",
+    icon: "/first-gym-icons/pory-roku_icon.svg",
+  },
+  {
+    text: "Projekt funkcjonujący od 2023 roku",
+    icon: "/first-gym-icons/kalendarz_icon.svg",
+  },
 ];
 
 const circleButtonStyle =
@@ -72,10 +81,17 @@ export default function FirstGymSection() {
         >
           {gymDetails.map((detail, i) => (
             <div className=" flex items-center" key={i}>
-              <div className="text-(--color-brand-blue) text-4xl mr-4">
-                <IoIosInformationCircleOutline />
+              <div className="text-(--color-brand-blue)  mr-4">
+                <Image
+                  src={detail.icon}
+                  alt={`Ikona ${i + 1}`}
+                  width={32}
+                  height={32}
+                ></Image>
               </div>
-              <p className="text-sm  text-(--color-text-muted)">{detail}</p>
+              <p className="text-sm  text-(--color-text-muted)">
+                {detail.text}
+              </p>
             </div>
           ))}
         </div>

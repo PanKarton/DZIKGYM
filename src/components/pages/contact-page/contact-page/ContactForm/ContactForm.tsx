@@ -3,7 +3,6 @@
 import CTA from "@/components/ui/cta";
 import * as React from "react";
 import { useForm } from "react-hook-form";
-import { FaArrowRightLong } from "react-icons/fa6";
 import { useSubmit } from "./useSubmit";
 import Link from "next/link";
 

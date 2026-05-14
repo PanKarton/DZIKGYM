@@ -1,6 +1,5 @@
 import CTA from "@/components/ui/cta";
 import Link from "next/link";
-import { FaArrowRightLong } from "react-icons/fa6";
 
 const blogData = [
   {

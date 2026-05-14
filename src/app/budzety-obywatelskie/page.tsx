@@ -6,7 +6,6 @@ import ContactSuggestionSection from "@/components/pages/citizens-budget/Contact
 import CTA from "@/components/ui/cta";
 import { Metadata } from "next";
 import Link from "next/link";
-import { FaArrowRightLong } from "react-icons/fa6";
 
 const heading = "Budżety Obywatelskie";
 const subHeadingLineOne =
