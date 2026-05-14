@@ -11,7 +11,10 @@ export default function MobilizationSection() {
         </SectionHeading>
 
         <div className="mt-8 md:mt-16 grid gap-8 text-center md:grid-cols-3 md:gap-12">
-          <Stat number="10" title="siłowni DZIK GYM">
+          <Stat
+            number="10"
+            title="siłowni <TrademarkText>DZIK</TrademarkText> GYM"
+          >
             w całym kraju, a liczba rośnie.
           </Stat>
 

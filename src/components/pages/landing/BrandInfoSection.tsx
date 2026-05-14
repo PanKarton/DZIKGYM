@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,11 +27,17 @@ export default function BrandInfoSection() {
           />
         </div>
         <div className="content-max-width z-3">
-          <h2 className="h2-footer font-black italic mb-3">Marka DZIK</h2>
+          <h2 className="h2-footer font-black italic mb-3">
+            Marka{" "}
+            <TrademarkText fontWeight={900} right="-0.2em">
+              DZIK
+            </TrademarkText>
+          </h2>
           <p className="text-sm/normal font-light max-w-132 mb-12 ">
-            DZIK® to marka sportowa założona w piwnicy przez czterech młodych
-            przyjaciół, obecnie dająca zatrudnienie około 200 osobom. Wszystko
-            zaczęło się od twórczości internetowej, <br />
+            <TrademarkText>DZIK</TrademarkText> to marka sportowa założona w
+            piwnicy przez czterech młodych przyjaciół, obecnie dająca
+            zatrudnienie około 200 osobom. Wszystko zaczęło się od twórczości
+            internetowej, <br />
             aby z czasem ewoluować w wielomilionowy biznes. W ofercie firmy
             znajdują się ubrania sportowe, suplementy diety i żywność
             funkcjonalna.

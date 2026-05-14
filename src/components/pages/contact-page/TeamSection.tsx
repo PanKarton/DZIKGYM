@@ -24,7 +24,7 @@ export default function TeamSection() {
     <section className="bg-(--color-primary-darker) py-24 text-center">
       <div className="content-max-width mx-auto flex-center flex-col">
         <SectionHeading className="mb-12">
-          Osoby odpowiedzialne za DZIK GYM
+          Osoby odpowiedzialne za <TrademarkText>DZIK</TrademarkText> GYM
         </SectionHeading>
 
         <div className="w-full grid grid-cols-3 justify-between gap-8 ">

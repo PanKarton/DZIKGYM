@@ -29,7 +29,7 @@ const steps = [
     number: "2",
     label: "KROK 2",
     title: "Nabór projektów",
-    text: "Na tym etapie składasz wniosek z opisem inwestycji. Możesz zgłosić projekt nowoczesnej siłowni plenerowej takiej jak DZIK GYM. Złożenie projektu jest bezpłatne. Każda gmina ma własny formularz i zasady - warto je przejrzeć przed zgłoszeniem.",
+    text: "Na tym etapie składasz wniosek z opisem inwestycji. Możesz zgłosić projekt nowoczesnej siłowni plenerowej takiej jak <TrademarkText>DZIK</TrademarkText> GYM. Złożenie projektu jest bezpłatne. Każda gmina ma własny formularz i zasady - warto je przejrzeć przed zgłoszeniem.",
     imageSide: "right",
   },
   {

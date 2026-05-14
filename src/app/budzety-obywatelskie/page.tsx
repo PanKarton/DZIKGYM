@@ -4,17 +4,23 @@ import CBSteps from "@/components/pages/citizens-budget/CBSteps";
 import CitizenBudgetSection from "@/components/pages/citizens-budget/CitizenBudgetSection";
 import ContactSuggestionSection from "@/components/pages/citizens-budget/ContactSuggestionSection";
 import CTA from "@/components/ui/cta";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import { Metadata } from "next";
 import Link from "next/link";
 
 const heading = "Budżety Obywatelskie";
-const subHeadingLineOne =
-  "Budżet obywatelski to realna szansa na siłownię plenerową DZIK GYM w Twojej okolicy. Bez kosztów dla Ciebie - wystarczy zgłosić projekt i zebrać głosy.";
+const subHeadingLineOne = (
+  <span>
+    Budżet obywatelski to realna szansa na siłownię plenerową{" "}
+    <TrademarkText>DZIK</TrademarkText> GYM w Twojej okolicy. Bez kosztów dla
+    Ciebie - wystarczy zgłosić projekt i zebrać głosy.
+  </span>
+);
 
 export const metadata: Metadata = {
   title: "Budżety Obywatelskie",
   description:
-    "Stwórz z nami DZIK GYM w twojej okolicy za pomocą budżetu obywatelskiego i wesprzyj swoją społeczność.",
+    "Stwórz z nami DZIK® GYM w twojej okolicy za pomocą budżetu obywatelskiego i wesprzyj swoją społeczność.",
 };
 
 export default async function Home() {

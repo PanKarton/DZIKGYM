@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Link from "next/link";
 
 export default function EncouragementSection() {
@@ -18,15 +19,15 @@ export default function EncouragementSection() {
 
           <div className="text-sm    leading-relaxed space-y-8">
             <p>
-              Projekt siłowni ze zmiennym obciążeniem DZIK GYM działa już w
-              wybranych miastach. Zaufały nam uczelnie, samorządy, firmy
-              prywatne.
+              Projekt siłowni ze zmiennym obciążeniem{" "}
+              <TrademarkText>DZIK</TrademarkText> GYM działa już w wybranych
+              miastach. Zaufały nam uczelnie, samorządy, firmy prywatne.
             </p>
             <p>
               Mamy gotowy model współpracy, zespół ekspertów, realne case’y i
               narzędzia do wdrożenia projektu w Twojej gminie. <br />
-              Chcemy tylko jednego — by DZIK GYM był wszędzie tam, gdzie może
-              zmienić ludzkie życie.
+              Chcemy tylko jednego — by <TrademarkText>DZIK</TrademarkText> GYM
+              był wszędzie tam, gdzie może zmienić ludzkie życie.
             </p>
             <p>
               To Twoja decyzja o zdrowszym, silniejszym i bardziej aktywnym

@@ -4,11 +4,12 @@ import UniqueProjectSection from "@/components/pages/about-page/UniqueProjectSec
 import SubHero from "@/components/layouts/SubHero";
 import GymComparison from "@/components/pages/landing/GymComparison";
 import { Metadata } from "next";
+import { TrademarkText } from "@/components/ui/TradeMark";
 
 export const metadata: Metadata = {
   title: "O projekcie",
   description:
-    " DZIK GYM to projekt tworzący nowoczesne siłownie plenerowe, które mają poprawiać zdrowie i aktywność Polaków w całym kraju.",
+    "DZIK® GYM to projekt tworzący nowoczesne siłownie plenerowe, które mają poprawiać zdrowie i aktywność Polaków w całym kraju.",
 };
 
 export default function About() {
@@ -16,7 +17,12 @@ export default function About() {
     <div>
       <SubHero
         heading="O projekcie"
-        subHeading="Nowoczesna siłownia plenerowa DZIK GYM dla Twojej Gminy."
+        subHeading={
+          <span>
+            Nowoczesna siłownia plenerowa <TrademarkText>DZIK</TrademarkText>{" "}
+            GYM dla Twojej Gminy.
+          </span>
+        }
       />
       <FoundersSection />
       <ProblemStatsSection />

@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
@@ -14,7 +15,7 @@ export default function OutdoorGymDescriptionSection() {
       <div className="absolute top-0 left-0 w-full z-1 flex items-center justify-center">
         <Image
           src="/images/crowd-outdoor.png"
-          alt="tłum na siłowni DZIK GYM"
+          alt="tłum na siłowni <TrademarkText>DZIK</TrademarkText> GYM"
           width={1920}
           height={805}
           priority
@@ -25,8 +26,10 @@ export default function OutdoorGymDescriptionSection() {
       <div className="content-max-width h-full flex justify-center items-center relative z-2">
         <div className="bg-(--color-primary) rounded-xl px-7 py-16 text-left shadow-xl lg:ml-auto max-w-132 ">
           <h2 className="text-[2.5rem] font-black italic leading-tight   mb-4">
-            <span className="text-(--color-content-emphasis)">DZIK GYM</span> to
-            więcej <br />
+            <span className="text-(--color-content-emphasis)">
+              <TrademarkText fontWeight={900}>DZIK</TrademarkText>GYM
+            </span>{" "}
+            to więcej <br />
             niż siłownia plenerowa
           </h2>
 
@@ -43,9 +46,9 @@ export default function OutdoorGymDescriptionSection() {
             Naszym celem jest stworzenie przestrzeni ze sportową infrastrukturą,
             gdzie aktywność fizyczna staje się przyjemnością, a nie obowiązkiem.{" "}
             <strong>Bez karnetu, bez stresu, bez barier finansowych</strong> -
-            ćwiczyć może każdy, niezależnie od wieku czy możliwości. DZIK GYM
-            łączy pokolenia, buduje więzi społeczne i dodaje dumy każdej
-            lokalnej społeczności.
+            ćwiczyć może każdy, niezależnie od wieku czy możliwości.{" "}
+            <TrademarkText>DZIK</TrademarkText> GYM łączy pokolenia, buduje
+            więzi społeczne i dodaje dumy każdej lokalnej społeczności.
           </p>
 
           <a href="/files/DZIKGYM 30.01.26.pdf" download>

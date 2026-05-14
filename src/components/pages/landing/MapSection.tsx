@@ -5,14 +5,15 @@ export default function MapSection() {
     <section className="w-full bg-(--color-primary)  my-16 md:pt-24 ">
       <div className="px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-6xl font-black   italic leading-[1]">
-          DZIK GYM jest tam,
+          <TrademarkText>DZIK</TrademarkText> GYM jest tam,
           <br />
           <span className="text-(--color-content-emphasis) ">
             gdzie fani tego chcą!
           </span>
         </h2>
         <p className="mt-6 text-xl   max-w-5xl mx-auto">
-          DZIK GYM funkcjonuje już w wielu miastach w Polsce.
+          <TrademarkText>DZIK</TrademarkText> GYM funkcjonuje już w wielu
+          miastach w Polsce.
           <br />
           Każda realizacja to aktywnie używana przestrzeń i realna obecność
           mieszkańców.

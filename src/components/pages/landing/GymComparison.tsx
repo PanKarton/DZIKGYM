@@ -3,6 +3,7 @@ import { useEffect, useRef } from "react";
 import GradientBlueGreen from "@/components/ui/GradientBlueGreen";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import { TrademarkText } from "@/components/ui/TradeMark";
 
 const styles = {
   card: "text-(--color-primary)  comp-card-width gap-6 py-14 pl-4 min-[1100px]:px-8 min-[1100px]:rounded-[20px]  overflow-hidden w-full max-w-[26.25rem]",
@@ -102,7 +103,11 @@ export default function GymComparison() {
                 Profesjonalna
               </h3>
               <h2 className={` text-(--color-brand-green) ${styles.cardTitle}`}>
-                Siłownia <br /> DZIK GYM
+                Siłownia <br />{" "}
+                <TrademarkText fontWeight={900} right="-0.1em">
+                  DZIK
+                </TrademarkText>
+                GYM
               </h2>
 
               <ul className="mt-4 space-y-2 text-sm leading-normal font-thin text-(--color-off-primary) text-left">

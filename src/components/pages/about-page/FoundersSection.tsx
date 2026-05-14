@@ -1,5 +1,6 @@
 import CTA from "@/components/ui/cta";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 import Image from "next/image";
 
@@ -8,7 +9,10 @@ export default function FoundersSection() {
     <section className="pt-16">
       <div className="content-max-width ">
         <div className=" mb-12 text-left sm:text-center">
-          <SectionHeading>Kto stworzył DZIK GYM?</SectionHeading>
+          <SectionHeading>
+            Kto stworzył <TrademarkText fontWeight={900}>DZIK</TrademarkText>
+            GYM?
+          </SectionHeading>
           <p className="mt-4  mx-auto text-sm md:text-lg  /80">
             Jesteśmy grupą przyjaciół z Warszawy, która od lat inspiruje i
             motywuje do aktywnego stylu życia.

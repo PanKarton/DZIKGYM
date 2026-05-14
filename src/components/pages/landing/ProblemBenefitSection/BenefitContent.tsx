@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Link from "next/link";
 
 const BenefitContent = () => (
@@ -12,15 +13,16 @@ const BenefitContent = () => (
         <span className="text-(--color-brand-blue)">Za darmo.</span>
       </h2>
       <p className="text-sm mb-4">
-        DZIK GYM to miejsce otwarte dla wszystkich. Nasza przestrzeń pozwala na
-        wykonanie treningu siłowego w warunkach outdoorowych, oferując zarówno
-        komfort, jak i wyzwanie. Prosty w obsłudze mechanizm zmiany ciężaru
-        gwarantuje niski próg wejścia, a jednocześnie daje ogromne możliwości
-        progresu.
+        <TrademarkText>DZIK</TrademarkText> GYM to miejsce otwarte dla
+        wszystkich. Nasza przestrzeń pozwala na wykonanie treningu siłowego w
+        warunkach outdoorowych, oferując zarówno komfort, jak i wyzwanie. Prosty
+        w obsłudze mechanizm zmiany ciężaru gwarantuje niski próg wejścia, a
+        jednocześnie daje ogromne możliwości progresu.
       </p>
       <p className="text-sm mb-6">
-        DZIK GYM to nie tylko maszyny i przestrzeń. To projekt, dzięki któremu
-        ludzie zaczynają ze sobą rozmawiać.{" "}
+        <TrademarkText>DZIK</TrademarkText> GYM to nie tylko maszyny i
+        przestrzeń. To projekt, dzięki któremu ludzie zaczynają ze sobą
+        rozmawiać.{" "}
         <strong className="font-semibold">
           W miastach powstają lokalne społeczności
         </strong>

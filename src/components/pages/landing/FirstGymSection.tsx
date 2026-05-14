@@ -6,6 +6,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 import { IoIosInformationCircleOutline } from "react-icons/io";
 import { cn } from "@/lib/utils";
+import { TrademarkText } from "@/components/ui/TradeMark";
 
 const caruselImages = [
   {
@@ -61,12 +62,20 @@ export default function FirstGymSection() {
       <div className="content-max-width">
         <SectionHeading isBig className="mb-6 sm:mb-10">
           {/* Desktop */}
-          <span className="hidden sm:inline">Pierwszy DZIK GYM - Ochota</span>
+          <span className="hidden sm:inline">
+            Pierwszy{" "}
+            <TrademarkText fontWeight={900} top={"0"}>
+              DZIK
+            </TrademarkText>
+            GYM - Ochota
+          </span>
 
           {/* Mobile */}
           <span className="block sm:hidden text-left max-w-92 mx-auto ">
             <span className="block">Pierwszy </span>
-            <span className="block">DZIK GYM</span>
+            <span className="block">
+              <TrademarkText>DZIK</TrademarkText> GYM
+            </span>
             <span className="block text-(--color-brand-blue) mx-auto">
               Ochota
             </span>

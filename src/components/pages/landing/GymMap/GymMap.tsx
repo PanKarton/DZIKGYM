@@ -11,6 +11,7 @@ import {
 import Image from "next/image";
 import MapScrollHandler from "./MapScrollHandler";
 import { GymLocation } from "@/types/gym-location";
+import { TrademarkText } from "@/components/ui/TradeMark";
 
 export function GymMap({ gymLocations }: { gymLocations: GymLocation[] }) {
   return (
@@ -29,7 +30,7 @@ export function GymMap({ gymLocations }: { gymLocations: GymLocation[] }) {
                 <Image src={"/leaflet/pin.svg"} alt="pinezka" fill />
               </div>
             </MarkerContent>
-            <MarkerTooltip>{`DZIK GYM ${location.city}`}</MarkerTooltip>
+            <MarkerTooltip>{`<TrademarkText>DZIK</TrademarkText> GYM ${location.city}`}</MarkerTooltip>
             <MarkerPopup
               closeButton
               focusAfterOpen={false}
@@ -37,7 +38,7 @@ export function GymMap({ gymLocations }: { gymLocations: GymLocation[] }) {
               className="w-62  border-2 border-(--color-brand-blue) rounded-none translate-y-[-20%] bubble relative"
             >
               <span className="font-black text-base italic mb-1 leading-0.5">
-                DZIK GYM
+                <TrademarkText>DZIK</TrademarkText> GYM
               </span>
               <span className="block font-medium text-base leading-4.5">{`${location.city}`}</span>
               <span className="block font-medium text-base leading-4.5">{`${location.address}`}</span>
