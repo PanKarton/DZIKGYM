@@ -1,3 +1,4 @@
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Image from "next/image";
 import React from "react";
 import { MdOutlineMail } from "react-icons/md";
@@ -29,7 +30,15 @@ const steps = [
     number: "2",
     label: "KROK 2",
     title: "Nabór projektów",
-    text: "Na tym etapie składasz wniosek z opisem inwestycji. Możesz zgłosić projekt nowoczesnej siłowni plenerowej takiej jak <TrademarkText>DZIK</TrademarkText> GYM. Złożenie projektu jest bezpłatne. Każda gmina ma własny formularz i zasady - warto je przejrzeć przed zgłoszeniem.",
+    text: (
+      <span>
+        Na tym etapie składasz wniosek z opisem inwestycji. Możesz zgłosić
+        projekt nowoczesnej siłowni plenerowej takiej jak{" "}
+        <TrademarkText>DZIK</TrademarkText> GYM. Złożenie projektu jest
+        bezpłatne. Każda gmina ma własny formularz i zasady - warto je przejrzeć
+        przed zgłoszeniem.
+      </span>
+    ),
     imageSide: "right",
   },
   {
