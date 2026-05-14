@@ -9,14 +9,12 @@ import Link from "next/link";
 
 const heading = "Budżety Obywatelskie";
 const subHeadingLineOne =
-  "Budżet obywatelski to realna szansa na siłownię plenerową DZIK GYM w Twojej okolicy.";
-const subHeadingLineTwo =
-  "Bez kosztów dla Ciebie - wystarczy zgłosić projekt i zebrać głosy.";
+  "Budżet obywatelski to realna szansa na siłownię plenerową DZIK GYM w Twojej okolicy. Bez kosztów dla Ciebie - wystarczy zgłosić projekt i zebrać głosy.";
 
 export const metadata: Metadata = {
   title: "Budżety Obywatelskie",
   description:
-    "Stwórz z nami DZIKGYM w twojej okolicy za pomocą budżetu obywatelskiego i wesprzyj swoją społeczność.",
+    "Stwórz z nami DZIK GYM w twojej okolicy za pomocą budżetu obywatelskiego i wesprzyj swoją społeczność.",
 };
 
 export default async function Home() {
@@ -25,12 +23,7 @@ export default async function Home() {
       <SubHero
         heading={heading}
         hasButtons
-        subHeading={
-          <>
-            {subHeadingLineOne} <br />
-            {subHeadingLineTwo}
-          </>
-        }
+        subHeading={<>{subHeadingLineOne}</>}
       >
         <div className="flex flex-col md:flex-row gap-8 md:gap-16">
           <div className="w-64">
