@@ -1,3 +1,4 @@
+import { TrademarkText } from "@/components/ui/TradeMark";
 import React from "react";
 
 export default function MapSection() {
@@ -5,7 +6,7 @@ export default function MapSection() {
     <section className="w-full bg-(--color-primary)  my-16 md:pt-24 ">
       <div className="px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl md:text-6xl font-black   italic leading-[1]">
-          <TrademarkText>DZIK</TrademarkText> GYM jest tam,
+          <TrademarkText fontWeight={900}>DZIK</TrademarkText>GYM jest tam,
           <br />
           <span className="text-(--color-content-emphasis) ">
             gdzie fani tego chcą!
