@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
-import { IoIosInformationCircleOutline } from "react-icons/io";
 import { cn } from "@/lib/utils";
 import { TrademarkText } from "@/components/ui/TradeMark";
 

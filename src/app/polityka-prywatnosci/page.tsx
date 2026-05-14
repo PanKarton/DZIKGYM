@@ -15,9 +15,7 @@ export default function PolitykaPrywatnosci() {
           <b>POLITYKA PRYWATNOŚCI</b>
         </p>
         <p className="text-center text-xl mb-12">
-          <b>
-            WWW.<TrademarkText>DZIK</TrademarkText>GYM.PL
-          </b>
+          <b>www.dzikgym.pl</b>
         </p>
         <ol type="I">
           <li>
