@@ -31,7 +31,7 @@ export default function CitizenBudgetSection() {
   ];
 
   return (
-    <section className="py-30 lg:py-20 px-6">
+    <section className="py-30 lg:py-20 px-6" id="CitizenBudgetSection">
       <div className="content-max-width text-center">
         {/* Header */}
         <SectionHeading isBig className="text-(--color-brand-blue)">

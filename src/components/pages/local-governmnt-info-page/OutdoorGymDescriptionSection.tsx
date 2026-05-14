@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
@@ -7,15 +8,17 @@ export default function OutdoorGymDescriptionSection() {
     <section
       className={cn(
         "relative w-full mt-12 lg:mt-24  bg-(--color-secondary) isolate",
-        "pt-48 pb-24 lg:py-24 min-[1920px]:aspect-1920/805",
+        "pt-48 pb-24 lg:py-24 min-[1920px]:aspect-1920/805 overflow-hidden",
       )}
     >
-      <div className="absolute  top-0 left-0 w-full aspect-1920/805 z-1 ">
+      <div className="absolute top-0 left-0 w-full z-1 flex items-center justify-center">
         <Image
           src="/images/crowd-outdoor.png"
           alt="tłum na siłowni DZIK GYM"
-          fill
+          width={1920}
+          height={805}
           priority
+          className="object-cover object-bottom w-full h-full"
         />
         <div className="absolute inset-0 founders-gradient z-10"></div>
       </div>
@@ -45,14 +48,18 @@ export default function OutdoorGymDescriptionSection() {
             lokalnej społeczności.
           </p>
 
-          <div className="w-63">
-            <CTA variant="blueGradient">
-              <span className="text-sm font-semibold">Zobacz prezentację</span>
-              <span className="relative translate-y-px text-lg font-medium">
-                →
-              </span>
-            </CTA>
-          </div>
+          <a href={EXTERNAL_HREFS.PRESENTATION} about="_blank">
+            <div className="w-63">
+              <CTA variant="blueGradient">
+                <span className="text-sm font-semibold">
+                  Zobacz prezentację
+                </span>
+                <span className="relative translate-y-px text-lg font-medium">
+                  →
+                </span>
+              </CTA>
+            </div>
+          </a>
         </div>
       </div>
     </section>
