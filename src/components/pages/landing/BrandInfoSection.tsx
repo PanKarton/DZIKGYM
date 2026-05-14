@@ -42,8 +42,11 @@ export default function BrandInfoSection() {
             rel="noopener noreferrer"
           >
             <CTA variant="blue">
-              <span className="font-light text-sm non-italic">
+              <span className="font-semibold text-sm non-italic">
                 Wejdź na wkdzik.pl
+              </span>
+              <span className="relative translate-y-px text-lg font-medium">
+                →
               </span>
             </CTA>
           </Link>

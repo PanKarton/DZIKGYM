@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useRef } from "react";
 import GradientBlueGreen from "@/components/ui/GradientBlueGreen";
 import GradientBlueRed from "@/components/ui/GradientBlueRed";
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
@@ -23,6 +25,15 @@ const gymDzikFeatures = [
 ];
 
 export default function GymComparison() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    video.play().catch(() => {});
+  }, []);
+
   return (
     <section className="mx-auto pt-16 min-[1100px]:pb-60 text-center flex-center">
       <div className="w-full max-w-360 mx-auto px-[clamp(0.375rem,3vw,3.75rem)]">
@@ -35,17 +46,18 @@ export default function GymComparison() {
         {/* Image Section */}
         <div className="relative flex flex-col min-[1100px]:flex-row justify-center items-center min-[1100px]:gap-4 ">
           {/* Background Image Comparison */}
-          <div className="w-full relative aspect-1230/670 rounded-t-4xl min-[900px]:rounded-4xl overflow-hidden">
+          <div className="w-full relative aspect-1230/670 rounded-t-4xl min-[900px]:rounded-4xl overflow-hidden isolate [mask-image:radial-gradient(white,white)] [-webkit-mask-image:radial-gradient(white,white)]">
             <video
+              ref={videoRef}
               className="absolute z-[-1] inset-0 h-full w-full object-cover"
               autoPlay
               muted
               loop
               playsInline
-              preload="none"
+              preload="auto"
             >
-              <source src="/video/gym-comparison.webm" type="video/webm" />
               <source src="/video/gym-comparison.mp4" type="video/mp4" />
+              <source src="/video/gym-comparison.webm" type="video/webm" />
             </video>
           </div>
 

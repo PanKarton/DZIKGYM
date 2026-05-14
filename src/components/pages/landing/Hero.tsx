@@ -3,7 +3,7 @@ import CTA from "@/components/ui/cta";
 import { cn } from "@/lib/utils";
 
 const h1Styles = cn(
-  "text-[2rem] font-bold italic h1-hero max-w-[17ch]",
+  "text-[2rem] font-black italic h1-hero max-w-[17ch]",
   "md:text-[3rem] lg:text-[4rem] xl:text-[4.5rem]  2xl:text-[5.375rem]",
 );
 
@@ -13,7 +13,7 @@ const videoPriorityProps = {
 
 export default function Hero() {
   return (
-    <section className="px-4 py-2 border  text-(--color-primary)   relative">
+    <section className="px-4 py-2  text-(--color-primary)   relative">
       <div className="relative rounded-[10px] overflow-hidden lg:rounded-none lg:overflow-auto">
         <div className={"clip-hero"}>
           <video
@@ -34,7 +34,7 @@ export default function Hero() {
             <div className="w-66">
               <ColorLogo />
             </div>
-            <div className="flex flex-col items-center gap-6">
+            <div className="flex flex-col items-center gap-6 ">
               <h1 className={h1Styles}>SIŁOWNIE UZNANE PRZEZ SPOŁECZNOŚĆ</h1>
               <h2 className="text-[1rem] lg:text-[1.125rem]  h2-hero font-light mx-8 sm:mx-16">
                 Tworzymy nowoczesne siłownie plenerowe, które integrują i
@@ -45,7 +45,7 @@ export default function Hero() {
             </div>
             <div className="w-57">
               <CTA variant="red" scrollToId="map">
-                <span className="font-medium text-lg ">Znajdź DZIK GYM</span>
+                <span className="font-bold text-lg ">Znajdź DZIK GYM</span>
               </CTA>
             </div>
           </div>

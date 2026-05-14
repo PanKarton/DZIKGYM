@@ -5,7 +5,7 @@ export default function MobilizationSection() {
   return (
     <section className=" pt-12 md:pt-24">
       <div className="content-max-width">
-        <SectionHeading isBig>
+        <SectionHeading isBig className="text-center">
           Mobilizujemy <br className="md:hidden" />
           do ruchu
         </SectionHeading>

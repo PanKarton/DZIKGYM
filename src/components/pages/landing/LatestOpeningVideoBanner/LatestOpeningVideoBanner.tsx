@@ -101,7 +101,7 @@ export function LatestOpeningVideoBanner({
 
                     <div className="absolute inset-0 flex items-center justify-center">
                       <span className="flex h-12 w-12 items-center justify-center rounded-full bg-white/90 text-black transition group-hover:scale-110">
-                        <FaPlay />
+                        <FaPlay className="translate-x-0.5" />
                       </span>
                     </div>
 
@@ -115,7 +115,7 @@ export function LatestOpeningVideoBanner({
                   href={EXTERNAL_HREFS.OPENING_VIDEOS_PLAYLIST}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex aspect-video w-64 shrink-0 items-center justify-center rounded-lg bg-(--color-brand-blue) text-sm font-bold italic transition hover:scale-[1.03] hover:bg-(--color-brand-blue-hover)"
+                  className="group flex aspect-video w-64 shrink-0 items-center justify-center rounded-lg bg-(--color-brand-blue) text-sm text-(--color-primary) font-bold italic transition hover:scale-[1.03] hover:bg-(--color-brand-blue-hover)"
                 >
                   Zobacz wszystkie →
                 </a>

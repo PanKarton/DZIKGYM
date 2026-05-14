@@ -10,7 +10,7 @@ export default function PolitykaPrywatnosci() {
   return (
     <div>
       <SubHero heading="Polityka prywatności"></SubHero>
-      <section className="content-max-width prose prose-lg max-w-none mx-auto px-6 py-12">
+      <section className="content-max-width prose prose-lg max-w-none mx-auto px-6 py-12 text-(--color-text-primary)">
         <p className="text-center text-xl mt-12">
           <b>POLITYKA PRYWATNOŚCI</b>
         </p>

@@ -97,7 +97,7 @@ export default function FirstGymSection() {
           ))}
         </div>
         {/* Przyciski */}
-        <div className="hidden sm:flex items-center justify-center gap-24 mt-24">
+        <div className="hidden sm:flex items-center justify-center gap-24 mt-30 lg:mt-30">
           <button onClick={prev} className={circleButtonStyle}>
             <ChevronLeft size={60} style={{ translate: "-2px" }} />
           </button>

@@ -6,7 +6,7 @@ export default function NearestOnesSection() {
       <div className="content-max-width">
         {/* Mobile */}
         <div className="flex flex-col items-center md:hidden">
-          <h2 className="text-[2rem] font-extrabold italic mb-4 text-left">
+          <h2 className="text-[2rem] font-black  italic mb-4 text-left">
             Dotyczy to naszych najbliższych
           </h2>
           <div className="w-full max-w-60 aspect-square relative">
@@ -26,7 +26,7 @@ export default function NearestOnesSection() {
             <Image src="/images/hands-family.png" alt="ikona rodziny" fill />
           </div>
           <div className="text-left max-w-max">
-            <h2 className="text-[2rem] font-extrabold italic mb-4">
+            <h2 className="text-[2rem] font-black  italic mb-4">
               Dotyczy to naszych najbliższych
             </h2>
             <p className="text-sm leading-relaxed max-w-xl">

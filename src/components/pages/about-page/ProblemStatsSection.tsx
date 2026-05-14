@@ -5,7 +5,7 @@ import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
 const stats = [
   {
     value: 7,
-    secondaryValue: "NA 10",
+    secondaryValue: " NA 10",
     text: "Ponad 7 na 10 dorosłych Polaków zmaga się z nadwagą lub otyłością – to nie jest tylko liczba",
     highlight: "7 na 10 dorosłych Polaków zmaga się z nadwagą lub otyłością",
   },

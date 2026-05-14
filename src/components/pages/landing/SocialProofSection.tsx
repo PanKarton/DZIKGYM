@@ -1,4 +1,5 @@
 import CTA from "@/components/ui/cta";
+import Link from "next/link";
 
 export default function SocialProofSection() {
   return (
@@ -27,15 +28,17 @@ export default function SocialProofSection() {
           </p>
         </div>
 
-        <div>
+        <div className="text-left lg:text-center">
           <h3 className="font-black italic text-[3rem] leading-tight mt-6 md:mt-24 max-w-150 lg:max-w-218">
             Sprawdź, jak może wyglądać <br />{" "}
             <span className="text-(--color-brand-blue) ">
               DZIK GYM w Twoim mieście.
             </span>
           </h3>
-          <div className="w-70 mx-auto mt-10">
-            <CTA variant="blueGradient">Przejdź do fomularza</CTA>
+          <div className="w-70 mr-auto lg:mx-auto mt-10">
+            <Link href="/kontakt">
+              <CTA variant="blueGradient">Przejdź do fomularza</CTA>
+            </Link>
           </div>
         </div>
       </div>

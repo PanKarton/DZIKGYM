@@ -7,7 +7,7 @@ export default function EncouragementSection() {
       <div className="content-max-width">
         <div className="flex flex-col lg:flex-row gap-4 lg:gap-16 items-start max-w-lg mx-auto lg:mx-0 lg:max-w-full">
           <div>
-            <h2 className=" font-extrabold italic text-[2rem] lg:text-[2.5rem]">
+            <h2 className=" font-black  italic text-[2rem] lg:text-[2.5rem]">
               <span className="text-(--color-brand-blue)">Nie musisz</span>{" "}
               <br />
               <span className="text-[3rem] lg:text-[5.375rem]    leading-none mt-1">

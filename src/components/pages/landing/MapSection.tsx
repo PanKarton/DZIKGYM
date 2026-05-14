@@ -12,7 +12,7 @@ export default function MapSection() {
           </span>
         </h2>
         <p className="mt-6 text-xl   max-w-5xl mx-auto">
-          DZIK GYM funkcjonuje już w wielu miastach i miejscowościach w Polsce.
+          DZIK GYM funkcjonuje już w wielu miastach w Polsce.
           <br />
           Każda realizacja to aktywnie używana przestrzeń i realna obecność
           mieszkańców.

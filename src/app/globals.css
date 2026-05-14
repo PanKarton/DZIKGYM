@@ -199,6 +199,13 @@ body {
   }
 }
 
+/* Safari border radius prefix */
+@layer utilities {
+  .overflow-hidden {
+    -webkit-mask-image: radial-gradient(white, white);
+  }
+}
+
 /* Marker clusters */
 
 .marker-cluster {
@@ -328,4 +335,29 @@ body {
 
 .border-t {
   border: 2px solid red;
+}
+
+.bubble::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 15px solid var(--color-brand-blue);
+}
+
+/* gdy popup jest pod pinem (anchor-top) — strzałka na górze */
+.maplibregl-popup-anchor-top .bubble::after {
+  top: auto;
+  bottom: 100%;
+  border-top: none;
+  border-bottom: 15px solid var(--color-brand-blue);
+}
+
+.maplibregl-popup-anchor-top .bubble {
+  transform: translateY(55px);
 }
