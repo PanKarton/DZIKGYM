@@ -1,4 +1,5 @@
 import SectionHeading from "@/components/ui/SectionHeading/SectionHeading";
+import { TrademarkText } from "@/components/ui/TradeMark";
 import Image from "next/image";
 
 export default function MobilizationSection() {
@@ -13,7 +14,11 @@ export default function MobilizationSection() {
         <div className="mt-8 md:mt-16 grid gap-8 text-center md:grid-cols-3 md:gap-12">
           <Stat
             number="10"
-            title="siłowni <TrademarkText>DZIK</TrademarkText> GYM"
+            title={
+              <span>
+                siłowni <TrademarkText>DZIK</TrademarkText>GYM
+              </span>
+            }
           >
             w całym kraju, a liczba rośnie.
           </Stat>
@@ -69,7 +74,7 @@ function Stat({
   children,
 }: {
   number: string;
-  title: string;
+  title: string | React.ReactNode;
   children: React.ReactNode;
 }) {
   return (
