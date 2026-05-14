@@ -5,6 +5,7 @@ import CitizenBudgetSection from "@/components/pages/citizens-budget/CitizenBudg
 import ContactSuggestionSection from "@/components/pages/citizens-budget/ContactSuggestionSection";
 import CTA from "@/components/ui/cta";
 import { Metadata } from "next";
+import Link from "next/link";
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const heading = "Budżety Obywatelskie";
@@ -34,21 +35,24 @@ export default async function Home() {
       >
         <div className="flex flex-col md:flex-row gap-8 md:gap-16">
           <div className="w-64">
-            <CTA variant="redWide">
+            <CTA variant="redWide" scrollToId="CitizenBudgetSection">
               <span className="font-semibold ">Co to jest BO? </span>
               <span className="relative translate-y-px text-lg font-medium">
                 →
               </span>
             </CTA>
           </div>
-          <div className="w-64">
-            <CTA variant="redTransparent">
-              <span className="font-semibold ">Jestem z samorządu </span>
-              <span className="relative translate-y-px text-lg font-medium">
-                →
-              </span>
-            </CTA>
-          </div>
+
+          <Link href="/dla-samorzadow">
+            <div className="w-64">
+              <CTA variant="redTransparent">
+                <span className="font-semibold ">Jestem z samorządu </span>
+                <span className="relative translate-y-px text-lg font-medium">
+                  →
+                </span>
+              </CTA>
+            </div>
+          </Link>
         </div>
       </SubHero>
       <CitizenBudgetSection />
