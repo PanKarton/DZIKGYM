@@ -69,7 +69,7 @@ export default function FoundersSection() {
             </div>
           </div>
           <div className="max-w-133 min-[1150px]:max-w-160">
-            <h3 className="text-[2rem] leading-10 md:text-3xl md:leading-[1.2] font-extrabold italic mb-4">
+            <h3 className="text-[2rem] leading-10 md:text-3xl md:leading-[1.2] font-black italic mb-4">
               <span className="text-(--color-brand-blue)">
                 Zależy nam, abyście działali skutecznie.
               </span>{" "}
@@ -98,7 +98,7 @@ export default function FoundersSection() {
             >
               <div className="w-50 mb">
                 <CTA variant="blueTaller">
-                  <span className="font-medium">Nasze ebooki →</span>
+                  <span className="font-bold">Nasze ebooki →</span>
                 </CTA>
               </div>
             </a>

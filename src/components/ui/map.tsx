@@ -390,7 +390,7 @@ function MarkerContent({ children, className }: MarkerContentProps) {
   const { marker } = useMarkerContext();
 
   return createPortal(
-    <div className={cn("relative cursor-pointer", className)}>
+    <div className={cn("relative", className)}>
       {children || <DefaultMarkerIcon />}
     </div>,
     marker.getElement(),

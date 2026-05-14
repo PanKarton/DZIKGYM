@@ -27,7 +27,12 @@ export default function Footer() {
                 className="max-[719px]:mx-auto"
               />
             </div>
-            <p className="text-(--color-off-primary)">biuro@activeline.eu</p>
+            <a
+              href="mailto:biuro@activeline.eu"
+              className="text-(--color-off-primary) hover:text-(--color-primary)"
+            >
+              biuro@activeline.eu
+            </a>
           </div>
           <nav className="relative z-2 order-3 max-[719px]:text-center">
             <h3 className="font-bold italic mb-5 text-sm">DZIK GYM</h3>
@@ -71,9 +76,12 @@ export default function Footer() {
             <h3 className="text-[2rem] font-bold italic max-w-69 leading-[1.2] mb-10">
               Masz pytania? Napisz do nas
             </h3>
-            <p className="text-(--color-content-emphasis) mt-4 font-semibold italic text-2xl">
+            <a
+              href="mailto:biuro@activeline.eu"
+              className="text-(--color-content-emphasis) mt-4 font-semibold italic text-2xl"
+            >
               gym@wkdzik.pl
-            </p>
+            </a>
           </div>
         </div>
 

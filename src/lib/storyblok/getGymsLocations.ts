@@ -67,8 +67,6 @@ export async function getGymsLocations(): Promise<GymLocation[]> {
 
   const data = await res.json();
 
-  console.log("Fetched gym locations from Storyblok:", data.stories[0].content);
-
   return data.stories.map((story: Story) => ({
     id: story.content._uid,
     city: story.content.Miasto,

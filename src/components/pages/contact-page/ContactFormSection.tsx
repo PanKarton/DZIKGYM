@@ -5,6 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import ContactForm from "./contact-page/ContactForm/ContactForm";
 import Link from "next/link";
 import CompanyDetailsBlock from "./CompanyDetailsBlock";
+import EXTERNAL_HREFS from "@/data/texternal-hrefs";
 
 export default function ContactFormSection() {
   return (
@@ -13,7 +14,7 @@ export default function ContactFormSection() {
         <div className="flex flex-col xl:flex-row gap-16">
           {/* Left column */}
           <div className="sm:min-w-116">
-            <h2 className="text-3xl sm:text-[2.5rem] font-extrabold italic leading-[1.05] ">
+            <h2 className="text-3xl sm:text-[2.5rem] font-black  italic leading-[1.05] ">
               Napisz, a chętnie
               <br />
               dopowiemy co
@@ -43,15 +44,17 @@ export default function ContactFormSection() {
                 <span>gym@wkdzik.pl</span>
               </a>
 
-              <div className="flex items-center gap-3 ">
-                <FaInstagram
-                  style={{
-                    color: "var(--color-brand-blue)",
-                    fontSize: "1.5rem",
-                  }}
-                />
-                <span>@dzikgym</span>
-              </div>
+              <a href={EXTERNAL_HREFS.INSTAGRAM} about="_blank">
+                <div className="flex items-center gap-3 ">
+                  <FaInstagram
+                    style={{
+                      color: "var(--color-brand-blue)",
+                      fontSize: "1.5rem",
+                    }}
+                  />
+                  <span>@dzikgym</span>
+                </div>
+              </a>
             </div>
           </div>
 
