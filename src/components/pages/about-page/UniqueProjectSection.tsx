@@ -60,7 +60,7 @@ export default function UniqueProjectSection() {
           <div className="w-full max-w-132 aspect-square rounded-4xl relative overflow-hidden shrink-0">
             <Image
               src="/images/crowd.jpg"
-              alt="tłum na siłowni <TrademarkText>DZIK</TrademarkText> GYM"
+              alt="tłum na siłowni DZIK GYM"
               fill
             />
           </div>
