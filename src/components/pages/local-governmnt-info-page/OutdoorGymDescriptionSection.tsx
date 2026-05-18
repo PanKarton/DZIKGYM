@@ -15,7 +15,7 @@ export default function OutdoorGymDescriptionSection() {
       <div className="absolute top-0 left-0 w-full z-1 flex items-center justify-center">
         <Image
           src="/images/crowd-outdoor.png"
-          alt="tłum na siłowni <TrademarkText>DZIK</TrademarkText> GYM"
+          alt="tłum na siłowni DZIK GYM"
           width={1920}
           height={805}
           priority
