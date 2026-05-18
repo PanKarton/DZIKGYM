@@ -18,7 +18,7 @@ export default function SocialProofSection() {
           </p>
           <p>
             Siłownia jest intensywnie użytkowana każdego dnia, niezależnie od
-            pory roku i warunków atmosferycznych.. Mimo intensywnej eksploatacji
+            pory roku i warunków atmosferycznych. Mimo intensywnej eksploatacji
             sprzęt pozostaje w pełni sprawny, a cała infrastruktura utrzymana
             jest w bardzo dobrym stanie.
           </p>
@@ -41,7 +41,7 @@ export default function SocialProofSection() {
           </h3>
           <div className="w-70 mr-auto lg:mx-auto mt-10">
             <Link href="/kontakt">
-              <CTA variant="blueGradient">Przejdź do fomularza</CTA>
+              <CTA variant="blueGradient">Przejdź do formularza</CTA>
             </Link>
           </div>
         </div>

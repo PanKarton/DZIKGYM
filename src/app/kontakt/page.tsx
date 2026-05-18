@@ -10,7 +10,7 @@ const heroData = {
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    " Skontaktuj się w sprawie <TrademarkText>DZIK</TrademarkText>GYM i zadbajmy razem o zdrowie Polaków tworząc nowoczesne siłownie plenerowe 24/7.",
+    "Skontaktuj się w sprawie DZIK® GYM i zadbajmy razem o zdrowie Polaków tworząc nowoczesne siłownie plenerowe 24/7.",
 };
 
 export default function Home() {
