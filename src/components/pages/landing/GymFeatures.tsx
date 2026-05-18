@@ -22,7 +22,7 @@ const GYM_FEATURES: GymFeature[] = [
   {
     feature: "Niski próg wejścia",
     description:
-      "Maszyny sa intuicyjne i zawierają instrukcje ćwiczeń, co pomaga na początku sportowej drogi.",
+      "Maszyny są intuicyjne i zawierają instrukcje ćwiczeń, co pomaga na początku sportowej drogi.",
   },
   {
     feature: "Kontrola treningu",
@@ -34,7 +34,7 @@ const GYM_FEATURES: GymFeature[] = [
     description: (
       <span>
         Siłownie <TrademarkText>DZIK</TrademarkText> GYM cieszą się sporą
-        popularnością, co wzmacnia integracje lokalnych społeczności.
+        popularnością, co wzmacnia integrację lokalnych społeczności.
       </span>
     ),
   },
