@@ -30,7 +30,12 @@ export function GymMap({ gymLocations }: { gymLocations: GymLocation[] }) {
                 <Image src={"/leaflet/pin.svg"} alt="pinezka" fill />
               </div>
             </MarkerContent>
-            <MarkerTooltip>{`${(<TrademarkText>DZIK</TrademarkText>)} GYM ${location.city}`}</MarkerTooltip>
+            <MarkerTooltip>
+              <>
+                <TrademarkText>DZIK</TrademarkText>
+                {`GYM ${location.city}`}
+              </>
+            </MarkerTooltip>
             <MarkerPopup
               closeButton
               focusAfterOpen={false}

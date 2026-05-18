@@ -46,7 +46,7 @@ const steps = [
     label: "KROK 3",
     title: "Weryfikacja merytoryczna i formalna",
     text: "Urząd sprawdza projekt pod kątem formalnym i merytorycznym. Możesz otrzymać prośbę o doprecyzowanie szczegółów - bez obaw, to standardowa procedura. Jeśli potrzebujesz wsparcia na tym etapie, napisz do nas.",
-    email: "gym@wkdzi.pl",
+    email: "gym@wkdzik.pl",
     imageSide: "left",
   },
   {

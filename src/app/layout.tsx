@@ -7,7 +7,6 @@ import Footer from "@/components/layouts/Footer";
 import { myFontConfig } from "@/fonts/Obviously/obviously";
 import { siteConfig } from "./config/site";
 import { Providers } from "@/components/providers/providers";
-import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -80,7 +79,6 @@ export default function RootLayout({
         </main>
         <Footer />
         <Copyrights />
-        <Analytics />
       </body>
     </html>
   );

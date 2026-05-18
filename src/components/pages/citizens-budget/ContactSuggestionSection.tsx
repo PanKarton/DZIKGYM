@@ -35,7 +35,7 @@ export default function ContactSuggestionSection() {
               <div className="w-63 pt-8 lg:pt-12">
                 <CTA variant="blueGradient">
                   <span className="text-sm font-bold">
-                    Przejdź do fomularza{" "}
+                    Przejdź do formularza{" "}
                   </span>
                   <span className="relative translate-y-px text-lg font-medium">
                     →
